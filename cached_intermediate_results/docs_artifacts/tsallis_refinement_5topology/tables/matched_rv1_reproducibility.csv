@@ -1,0 +1,11 @@
+field,matched_run_count,maximum_absolute_difference
+mean_alice_reward,15,0.0
+mean_eve_bandit_reward,15,0.0
+mean_bell_qualified_rate_hz,15,0.0
+alice_external_regret_per_turn,15,0.0
+eve_external_regret_per_turn,15,0.0
+exploitability,15,0.0
+false_signal_rate,15,0.0
+false_signal_policy_total_variation,15,0.0
+alice_strategy,15,0.0
+eve_strategy,15,0.0

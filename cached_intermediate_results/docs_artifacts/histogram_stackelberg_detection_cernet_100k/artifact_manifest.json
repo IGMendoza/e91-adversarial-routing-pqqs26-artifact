@@ -1,0 +1,114 @@
+{
+  "complete_run_required": true,
+  "experiment_digest_blake2b_128": "4cb48d4ee92b6598a9c375a954d2221b",
+  "physical_bank_digest_blake2b_128": "e466529c437aa4b2ab2912cccb665463",
+  "files": [
+    {
+      "blake2b_128": "92d16cc524ff3ba4e5653775e93a141f",
+      "bytes": 9459,
+      "path": "STACKELBERG_DETECTION_CERNET_REPORT.md"
+    },
+    {
+      "blake2b_128": "91fab105df16678fb25a8563f401164e",
+      "bytes": 27223,
+      "path": "alice_vulnerability_comparison.pdf"
+    },
+    {
+      "blake2b_128": "799a7539beba81ffc2fc65d1db9d3b32",
+      "bytes": 350056,
+      "path": "alice_vulnerability_comparison.png"
+    },
+    {
+      "blake2b_128": "ec49c960d5103b13f2672e0e8b6e6e0c",
+      "bytes": 59364,
+      "path": "alice_vulnerability_comparison.svg"
+    },
+    {
+      "blake2b_128": "785257c67e1324c73ed38bbe48b67933",
+      "bytes": 30856,
+      "path": "classical_quantum_detection.pdf"
+    },
+    {
+      "blake2b_128": "531812e5a4948ca4ecd23f96df1827d3",
+      "bytes": 341851,
+      "path": "classical_quantum_detection.png"
+    },
+    {
+      "blake2b_128": "ae0320270a016f7dbdfadacddb3ae656",
+      "bytes": 27638,
+      "path": "classical_quantum_detection.svg"
+    },
+    {
+      "blake2b_128": "1855ecd8074ab1d9ab216fc18d55a13d",
+      "bytes": 1419,
+      "path": "colearning_controls.csv"
+    },
+    {
+      "blake2b_128": "d10a0dc1205071210f4c2a31cdb957d4",
+      "bytes": 23428,
+      "path": "detection_performance.pdf"
+    },
+    {
+      "blake2b_128": "f01183aa75d1036908776c34bb4332d1",
+      "bytes": 211166,
+      "path": "detection_performance.png"
+    },
+    {
+      "blake2b_128": "ee4c4ebf520a84281a25448cdf7c4bcd",
+      "bytes": 29128,
+      "path": "detection_performance.svg"
+    },
+    {
+      "blake2b_128": "c91acbf797a12e48a2ea9ecaf6791a54",
+      "bytes": 42081,
+      "path": "detector_evidence_trajectories.pdf"
+    },
+    {
+      "blake2b_128": "50dc418c67caa0cbbe1e59cf2815081d",
+      "bytes": 243383,
+      "path": "detector_evidence_trajectories.png"
+    },
+    {
+      "blake2b_128": "8409156eb4478eaff9f7c6bf2e320dea",
+      "bytes": 184273,
+      "path": "detector_evidence_trajectories.svg"
+    },
+    {
+      "blake2b_128": "8d875a21957e94da5e4d910127bdb0d7",
+      "bytes": 25150,
+      "path": "mitigation_tradeoffs.pdf"
+    },
+    {
+      "blake2b_128": "b946e10f67e0221d9c5260a76700fc6b",
+      "bytes": 243356,
+      "path": "mitigation_tradeoffs.png"
+    },
+    {
+      "blake2b_128": "31b52a9c426d8a96ba06bf47185e1373",
+      "bytes": 42524,
+      "path": "mitigation_tradeoffs.svg"
+    },
+    {
+      "blake2b_128": "36acb6a62786744dc8f9e4d47c0997e8",
+      "bytes": 38694,
+      "path": "steering_policy_trajectories.pdf"
+    },
+    {
+      "blake2b_128": "549a0cc7d5918d506d6d0a04836dbaf0",
+      "bytes": 256460,
+      "path": "steering_policy_trajectories.png"
+    },
+    {
+      "blake2b_128": "79fb09a76400dc6de607c946a1894c3a",
+      "bytes": 115168,
+      "path": "steering_policy_trajectories.svg"
+    },
+    {
+      "blake2b_128": "c4eae997a5251597dfe825f874e44d0d",
+      "bytes": 3102,
+      "path": "study_aggregates.csv"
+    }
+  ],
+  "run_directory": "runs/histogram_stackelberg_detection_cernet_100k",
+  "source_schema": "histogram_stackelberg_detection_mitigation_study.v4"
+}

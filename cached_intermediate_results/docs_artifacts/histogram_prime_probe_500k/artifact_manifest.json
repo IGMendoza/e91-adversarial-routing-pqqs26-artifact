@@ -1,0 +1,162 @@
+{
+  "complete_run_required": true,
+  "files": [
+    {
+      "blake2b_128": "8754ac7feb6fab9a8c4a58d09818ab1f",
+      "bytes": 340591,
+      "path": "prime_probe_phase_protocol.png"
+    },
+    {
+      "blake2b_128": "67cf42868bbbe193cca4e9c3f202d58e",
+      "bytes": 33833,
+      "path": "prime_probe_phase_protocol.pdf"
+    },
+    {
+      "blake2b_128": "8f35c86e4ddd22659c648a75f82ddaf9",
+      "bytes": 34591,
+      "path": "prime_probe_phase_protocol.svg"
+    },
+    {
+      "blake2b_128": "239ce57e04dfb8238c9895a5c8213a47",
+      "bytes": 290117,
+      "path": "prime_probe_network_mechanism.png"
+    },
+    {
+      "blake2b_128": "03c82589c4c811cbdf93f411f90da5ea",
+      "bytes": 27582,
+      "path": "prime_probe_network_mechanism.pdf"
+    },
+    {
+      "blake2b_128": "677c6f850269ef0c28aeda346159c552",
+      "bytes": 60767,
+      "path": "prime_probe_network_mechanism.svg"
+    },
+    {
+      "blake2b_128": "a5bd8261805d0630bf57b1baf0869443",
+      "bytes": 282771,
+      "path": "ordered_phase_dynamics.png"
+    },
+    {
+      "blake2b_128": "87463a9b13beb0dfda0a680e5cb10319",
+      "bytes": 56653,
+      "path": "ordered_phase_dynamics.pdf"
+    },
+    {
+      "blake2b_128": "50ca7931ace8de5e62580ef37f78faba",
+      "bytes": 133423,
+      "path": "ordered_phase_dynamics.svg"
+    },
+    {
+      "blake2b_128": "e2849df32507eff6f0408fac02c0a71f",
+      "bytes": 218892,
+      "path": "timing_matters.png"
+    },
+    {
+      "blake2b_128": "5c125e0ca103f44c9c54e624561a5c69",
+      "bytes": 20825,
+      "path": "timing_matters.pdf"
+    },
+    {
+      "blake2b_128": "919c16c74f709a52f3aaad4897530d2d",
+      "bytes": 42299,
+      "path": "timing_matters.svg"
+    },
+    {
+      "blake2b_128": "26088728d8be4e4af0ab6378effe18e0",
+      "bytes": 293561,
+      "path": "probe_information.png"
+    },
+    {
+      "blake2b_128": "4dbb223bf07f6acee632decd050901be",
+      "bytes": 28502,
+      "path": "probe_information.pdf"
+    },
+    {
+      "blake2b_128": "9fb73f8c0df4e893519fe304a873abcd",
+      "bytes": 74500,
+      "path": "probe_information.svg"
+    },
+    {
+      "blake2b_128": "3a45218e1eddb072687c6b818c92e7dd",
+      "bytes": 224317,
+      "path": "recovery.png"
+    },
+    {
+      "blake2b_128": "4bbd0ceaca7300a2ff9fab1c8f4e6f3c",
+      "bytes": 21886,
+      "path": "recovery.pdf"
+    },
+    {
+      "blake2b_128": "1b95fd9bc9dbe42bafa65fb34371aa25",
+      "bytes": 29978,
+      "path": "recovery.svg"
+    },
+    {
+      "blake2b_128": "9524414b698c694059fe9e476d1f6e8b",
+      "bytes": 313289,
+      "path": "topology_defender_outcomes.png"
+    },
+    {
+      "blake2b_128": "1a829b01ef4eae6f52aaae29d67c5cf5",
+      "bytes": 25191,
+      "path": "topology_defender_outcomes.pdf"
+    },
+    {
+      "blake2b_128": "731d5f22fabe6003483cc3d2c51422f0",
+      "bytes": 35931,
+      "path": "topology_defender_outcomes.svg"
+    },
+    {
+      "blake2b_128": "f0819e99cbd560b08ea31a7e303d07a8",
+      "bytes": 284978,
+      "path": "selected_bottleneck_physics.png"
+    },
+    {
+      "blake2b_128": "f54f6a6d8e838174cc58cdb68a36610f",
+      "bytes": 15962,
+      "path": "selected_bottleneck_physics.pdf"
+    },
+    {
+      "blake2b_128": "eef8a705e20a159c28161ec851d49c29",
+      "bytes": 34849,
+      "path": "selected_bottleneck_physics.svg"
+    },
+    {
+      "blake2b_128": "bb0d877d56e76919518761dccfdd79eb",
+      "bytes": 5230,
+      "path": "prime_probe_paired_results.csv"
+    },
+    {
+      "blake2b_128": "e67aca4f3f0b508fa2b0cdf9ec37d4b3",
+      "bytes": 4638,
+      "path": "PRIME_PROBE_500K_REPORT.md"
+    }
+  ],
+  "graph_count": 5,
+  "ordered_run_count": 30,
+  "paired_comparison_count": 30,
+  "publication_rendering": {
+    "color_encoding": "Okabe-Ito with marker and line-style redundancy",
+    "formats": [
+      "pdf",
+      "svg",
+      "png"
+    ],
+    "pdf_font_embedding": "TrueType",
+    "png_dpi": 400,
+    "primary_figure_width_inches": 7.1,
+    "uncertainty_boundary": "three learner/outcome-resampling seeds conditional on one shared equal-coverage physical bank for each of five predeclared topologies; intervals and distributions are finite-study summaries, not device-calibration, population, or asymptotic confidence claims",
+    "vector_text": true
+  },
+  "schema": "histogram_prime_probe_artifacts.v1",
+  "scientific_boundary": {
+    "audit_split": "scoring only",
+    "claim_scope": "finite-horizon leader/follower experiment",
+    "control": "identical physical action multiset under temporal permutation",
+    "interventions": "declared compiled-histogram Eve instruments",
+    "online_trigger_signal": "count-valued local probe record only",
+    "reward_poisoning": false
+  },
+  "source_corpus_selection_digest_blake2b_128": "ff0cd3732bfaf3479232759a726ae501",
+  "source_study_schema": "histogram_prime_probe_study.v1"
+}

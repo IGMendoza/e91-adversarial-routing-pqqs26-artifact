@@ -1,0 +1,169 @@
+{
+  "analysis": {
+    "common_non_direct_edges": [
+      [
+        "1",
+        "10"
+      ],
+      [
+        "17",
+        "18"
+      ]
+    ],
+    "corpus_graph_count": 105,
+    "direct_route": {
+      "hop_count": 1,
+      "length_km": 5.725326661106478,
+      "linear_probability": 0.198762,
+      "oracle_probability": 0.18670370429884076,
+      "path": [
+        "10",
+        "18"
+      ],
+      "route_id": "route-ac7c1a79db95c074",
+      "route_index": 19,
+      "tsallis_probability": 0.175526
+    },
+    "equilibrium_detour_route": {
+      "hop_count": 4,
+      "length_km": 15.129065888240198,
+      "linear_probability": 0.762098,
+      "oracle_probability": 0.8132962957011592,
+      "path": [
+        "10",
+        "1",
+        "37",
+        "17",
+        "18"
+      ],
+      "route_id": "route-08b361303fef1dfd",
+      "route_index": 18,
+      "tsallis_probability": 0.000102
+    },
+    "eve_action_count": 159,
+    "graph_edge_count": 64,
+    "graph_node_count": 50,
+    "learned_route": {
+      "hop_count": 5,
+      "length_km": 27.826869613566856,
+      "linear_probability": 0.00902,
+      "oracle_probability": 0.0,
+      "path": [
+        "10",
+        "1",
+        "34",
+        "14",
+        "17",
+        "18"
+      ],
+      "route_id": "route-4351826cf8b171f4",
+      "route_index": 4,
+      "tsallis_probability": 0.701252
+    },
+    "linear_tsallis": {
+      "alice_best_response_gap": 0.003096004805909325,
+      "alice_external_regret_per_turn": 0.004239766739134898,
+      "corpus_95th_percentile": 0.029656964676733642,
+      "corpus_maximum": 0.04274246230461465,
+      "corpus_median": 0.00789044140854378,
+      "empirical_percentile": 62.857142857142854,
+      "eve_best_response_gap": 0.0064554286915402825,
+      "eve_external_regret_per_turn": 0.005311666758314709,
+      "false_signal_rate": 3.8e-05,
+      "mean_alice_reward": 0.18583314072037566,
+      "mean_bell_qualified_rate_hz": 46.72383593772551,
+      "nash_gap": 0.009551433497449607,
+      "rank_descending": 40,
+      "seed": 2025620406,
+      "turns": 500000
+    },
+    "max_route_hops_inclusive": 12,
+    "oracle_eve_support": [
+      {
+        "action_id": "swap_denial:1",
+        "action_index": 34,
+        "probability": 0.1867037042988407
+      },
+      {
+        "action_id": "edge_information_probe:10-18",
+        "action_index": 85,
+        "probability": 0.8132962957011594
+      }
+    ],
+    "paired_nash_gap_change_linear_minus_tsallis": -0.04846973035151006,
+    "quality_based_route_pruning": false,
+    "route_count": 20,
+    "route_enumeration_complete_within_scope": true,
+    "route_resource_feature_rank": 14,
+    "route_resource_raw_feature_count": 57,
+    "tsallis_source": {
+      "formal_scope": "bounded finite-arm bandit; adaptive adversarial losses may depend on past actions but not the current sampled action; the theorem bounds expected pseudo-regret",
+      "paper": "Zimmert and Seldin, Tsallis-INF: An Optimal Algorithm for Stochastic and Adversarial Bandits, JMLR 22(28), 2021",
+      "url": "https://www.jmlr.org/papers/v22/19-753.html"
+    },
+    "tsallis_tsallis": {
+      "alice_best_response_gap": 0.05113404545592393,
+      "alice_external_regret_per_turn": 0.05141302141320128,
+      "corpus_95th_percentile": 0.0288815344102052,
+      "corpus_maximum": 0.05802116384895967,
+      "corpus_median": 0.006187289057856149,
+      "empirical_percentile": 100.0,
+      "eve_best_response_gap": 0.0068871183930357405,
+      "eve_external_regret_per_turn": 0.006608142435758385,
+      "false_signal_rate": 4e-05,
+      "mean_alice_reward": 0.1562818440205588,
+      "mean_bell_qualified_rate_hz": 39.29378372322081,
+      "nash_gap": 0.05802116384895967,
+      "rank_descending": 1,
+      "seed": 2025620406,
+      "turns": 500000
+    }
+  },
+  "assignment_id": "corpus_scale_endpoint_pair__10__18",
+  "files": [
+    {
+      "blake2b_128": "ccc747451bb7502a61c68bbcfbb9d35e",
+      "bytes": 397438,
+      "path": "iris_outlier_network.png"
+    },
+    {
+      "blake2b_128": "882f12a7704655bc607a140d9604b0b2",
+      "bytes": 34474,
+      "path": "iris_outlier_network.pdf"
+    },
+    {
+      "blake2b_128": "35e80e688f6ebe3796e72d4f4e96cad9",
+      "bytes": 45141,
+      "path": "iris_outlier_network.svg"
+    },
+    {
+      "blake2b_128": "65fcd44985ea948d401a8f7caef610ff",
+      "bytes": 438560,
+      "path": "iris_outlier_dynamics.png"
+    },
+    {
+      "blake2b_128": "5a09e7b3e98f696cf39cf12c62d4a602",
+      "bytes": 29388,
+      "path": "iris_outlier_dynamics.pdf"
+    },
+    {
+      "blake2b_128": "14107029f14b921c8e76134f1899d294",
+      "bytes": 62775,
+      "path": "iris_outlier_dynamics.svg"
+    },
+    {
+      "blake2b_128": "bca7a9a5742c5671727fd477ea72f837",
+      "bytes": 3535,
+      "path": "IRIS_OUTLIER_REPORT.md"
+    }
+  ],
+  "graph_id": "0051_topology_bench_iris_seed_na",
+  "schema": "histogram_iris_outlier_artifacts.v1",
+  "scientific_boundary": {
+    "learner_claim": "one matched seed identifies an Alice-side outlier and its route concentration; repeated Iris seeds are required to estimate graph-specific failure probability",
+    "network_geometry": "corpus coordinates provide layout only; normalized edge lengths in the frozen case drive histogram physics",
+    "theorem_claim": "no formal Tsallis-INF assumption violation is identified; the measured run is a single realized audited external-regret outcome, whereas the source theorem bounds expected pseudo-regret"
+  },
+  "source_run": "runs/histogram_corpus_500k",
+  "source_selection_digest_blake2b_128": "ff0cd3732bfaf3479232759a726ae501"
+}

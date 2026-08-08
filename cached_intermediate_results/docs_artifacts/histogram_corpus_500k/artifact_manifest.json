@@ -1,0 +1,153 @@
+{
+  "complete_run_required": true,
+  "expected_run_count": 210,
+  "files": [
+    {
+      "blake2b_128": "88e90c8629b566adfa8c8254996f75e7",
+      "bytes": 272429,
+      "path": "nash_gap_summary.png"
+    },
+    {
+      "blake2b_128": "fbb85f048ed23ffb5737c346253edd8b",
+      "bytes": 17597,
+      "path": "nash_gap_summary.pdf"
+    },
+    {
+      "blake2b_128": "3d234710306995e063f3939068983c60",
+      "bytes": 29087,
+      "path": "nash_gap_summary.svg"
+    },
+    {
+      "blake2b_128": "9696342116bdf6dcb68fc478676bc623",
+      "bytes": 425010,
+      "path": "topology_nash_gap_heatmaps.png"
+    },
+    {
+      "blake2b_128": "8b4fd46a243bf1d1fb4d0115afeecd5c",
+      "bytes": 21966,
+      "path": "topology_nash_gap_heatmaps.pdf"
+    },
+    {
+      "blake2b_128": "6b4097aeefd4792eb6b0b775d42cbc00",
+      "bytes": 74834,
+      "path": "topology_nash_gap_heatmaps.svg"
+    },
+    {
+      "blake2b_128": "6ad110b1fa8638fe85d78a3c85c12bce",
+      "bytes": 247366,
+      "path": "pairing_exploitability.png"
+    },
+    {
+      "blake2b_128": "11a54beda5eeca1f0018ca84be54cb9c",
+      "bytes": 19547,
+      "path": "pairing_exploitability.pdf"
+    },
+    {
+      "blake2b_128": "2c24346c34d04534ef3f89981d0b41a6",
+      "bytes": 36923,
+      "path": "pairing_exploitability.svg"
+    },
+    {
+      "blake2b_128": "c52988e6f3dae13e220b7363cd74b3e9",
+      "bytes": 230400,
+      "path": "topology_paired_exploitability.png"
+    },
+    {
+      "blake2b_128": "1aa9a5ec73d3f6d5df6d838854440fb4",
+      "bytes": 16868,
+      "path": "topology_paired_exploitability.pdf"
+    },
+    {
+      "blake2b_128": "422ebe833134a040e651c68c029b2133",
+      "bytes": 65579,
+      "path": "topology_paired_exploitability.svg"
+    },
+    {
+      "blake2b_128": "4d40cf120e07d69ed3fed2b0e58b4a29",
+      "bytes": 249514,
+      "path": "action_geometry_and_gap.png"
+    },
+    {
+      "blake2b_128": "03af1e862b031e8e110f86ddb742e364",
+      "bytes": 18537,
+      "path": "action_geometry_and_gap.pdf"
+    },
+    {
+      "blake2b_128": "db29fc548c41589b7914dff13a7a6bf4",
+      "bytes": 65446,
+      "path": "action_geometry_and_gap.svg"
+    },
+    {
+      "blake2b_128": "6b9c88730e3fc9d9dda9f96ad4a0b47b",
+      "bytes": 558201,
+      "path": "learning_dynamics.png"
+    },
+    {
+      "blake2b_128": "be1cc5d8f5cc6d555f75e4d156ab4009",
+      "bytes": 25892,
+      "path": "learning_dynamics.pdf"
+    },
+    {
+      "blake2b_128": "b876f7b7cbb7c53adf02ad2e34ef4d43",
+      "bytes": 73646,
+      "path": "learning_dynamics.svg"
+    },
+    {
+      "blake2b_128": "29df17c4bd8bc0f9df20195db6865a52",
+      "bytes": 566232,
+      "path": "service_and_signal.png"
+    },
+    {
+      "blake2b_128": "0d7dd1024e0664eb649874d82df1aeab",
+      "bytes": 24133,
+      "path": "service_and_signal.pdf"
+    },
+    {
+      "blake2b_128": "09808da2dd066a3b719caa927f3a84a4",
+      "bytes": 127829,
+      "path": "service_and_signal.svg"
+    },
+    {
+      "blake2b_128": "083887b92c83f5498262aca8148b59de",
+      "bytes": 194437,
+      "path": "corpus_case_geometry.png"
+    },
+    {
+      "blake2b_128": "713b4302cecc4ba20053cbe293d947da",
+      "bytes": 15950,
+      "path": "corpus_case_geometry.pdf"
+    },
+    {
+      "blake2b_128": "3b7f91d96beaa14d487c6f959cadeb87",
+      "bytes": 70173,
+      "path": "corpus_case_geometry.svg"
+    },
+    {
+      "blake2b_128": "d53e71cac68ae53ffe283e3ce6e20e54",
+      "bytes": 61704,
+      "path": "corpus_pairing_results.csv"
+    },
+    {
+      "blake2b_128": "08b372523f6c7d1d6960c58616ebc5db",
+      "bytes": 1755,
+      "path": "CORPUS_500K_REPORT.md"
+    }
+  ],
+  "graph_count": 105,
+  "publication_rendering": {
+    "color_encoding": "Okabe-Ito-derived with marker/line redundancy",
+    "formats": [
+      "pdf",
+      "svg",
+      "png"
+    ],
+    "pdf_font_embedding": "TrueType",
+    "png_dpi": 400,
+    "primary_figure_width_inches": 7.1,
+    "uncertainty_boundary": "topology interquartile ranges and finite-corpus paired topology bootstrap intervals; no repeated-seed per-graph claim",
+    "vector_text": true
+  },
+  "run_count": 210,
+  "schema": "histogram_corpus_scale_artifacts.v1",
+  "selection_digest_blake2b_128": "ff0cd3732bfaf3479232759a726ae501"
+}

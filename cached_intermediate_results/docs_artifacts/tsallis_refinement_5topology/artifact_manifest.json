@@ -1,0 +1,90 @@
+{
+  "confirmation_run_count": 30,
+  "evaluation_partition_loaded": false,
+  "files": [
+    {
+      "path": "TSALLIS_REFINEMENT_REPORT.md",
+      "sha256": "926ad02569a6d328ce90169da393e3f1e74fc2ea3bd8011371321fec0dfa6fa5",
+      "size_bytes": 3155
+    },
+    {
+      "path": "figures/tsallis_confirmation_comparison.pdf",
+      "sha256": "3c67ae1f5d70f27393c5a6e9c935d09c80a4ba37a161d760d598d5dc3623bbbd",
+      "size_bytes": 24484
+    },
+    {
+      "path": "figures/tsallis_confirmation_comparison.png",
+      "sha256": "b18813d0ee73a9e39e1c09e593903d5abeaf1271b00cca7508d0b2af63eeb6de",
+      "size_bytes": 251294
+    },
+    {
+      "path": "figures/tsallis_eta_response.pdf",
+      "sha256": "75f4979078b0c8bbe86ea402297c80a1746c9e3456785d4e0dc453b3f70c6d3c",
+      "size_bytes": 24573
+    },
+    {
+      "path": "figures/tsallis_eta_response.png",
+      "sha256": "f57e54e9b5bacf5222ce6ce1bc28c513de39db79bc33867ed118e374ceee264a",
+      "size_bytes": 229999
+    },
+    {
+      "path": "figures/tsallis_exploration_dynamics.pdf",
+      "sha256": "d65a55effbfcd292035925db7badf4a2fd97c92de8966cdce232e1dbf3d89133",
+      "size_bytes": 35832
+    },
+    {
+      "path": "figures/tsallis_exploration_dynamics.png",
+      "sha256": "912fa88d9f7fab1b4976d1cc8dc0a06ff17a27ddf5c8d8df47a0879a4f53535f",
+      "size_bytes": 1166754
+    },
+    {
+      "path": "figures/tsallis_joint_screen_nash_gap.pdf",
+      "sha256": "ffe1207e356da8ac8594e5f1e7a7adccf053ea11dd10d5f4400d6ac8fa4330f3",
+      "size_bytes": 44878
+    },
+    {
+      "path": "figures/tsallis_joint_screen_nash_gap.png",
+      "sha256": "ac5844e59efad0baa57d606c7517daf0a15bb65f8b67e37eca4136b135608a20",
+      "size_bytes": 171634
+    },
+    {
+      "path": "tables/confirmation_by_topology.csv",
+      "sha256": "78bd9a088fa34fe62fd71ab57aac164063518d4c61ce076cc85e8143c6756c8b",
+      "size_bytes": 2622
+    },
+    {
+      "path": "tables/confirmation_exploration_dynamics.csv",
+      "sha256": "4c93298e993df65b322b07e6ead99c730d064875cf0f0e2bc360324046a1608b",
+      "size_bytes": 34188
+    },
+    {
+      "path": "tables/confirmation_pair_summary.csv",
+      "sha256": "cc203a7c5fb3926cf4fe80724684bef4d737175b533bd2f1f73cc284df5c9080",
+      "size_bytes": 1328
+    },
+    {
+      "path": "tables/confirmation_paired_contrasts.csv",
+      "sha256": "bfda5353ecb4feeb1483e59c77301300bcf28a4810e8743ab82a34bf041ab174",
+      "size_bytes": 1172
+    },
+    {
+      "path": "tables/matched_rv1_reproducibility.csv",
+      "sha256": "c17340841f8f0bdbd9213d61104c6a2ee8fa48a3539c3580fece443026da1b3a",
+      "size_bytes": 348
+    },
+    {
+      "path": "tables/screening_pair_matrix.csv",
+      "sha256": "19294f33dc8b711588382fc1d1940f8d3795a8199754377c301b76d51b8d8be1",
+      "size_bytes": 41816
+    },
+    {
+      "path": "tables/screening_role_profiles.csv",
+      "sha256": "bd982b4accd60f7d4e28439606946a8806732212dbdb14e8a6a7f6f49e974c08",
+      "size_bytes": 3700
+    }
+  ],
+  "schema": "histogram_tsallis_refinement_artifacts.v1",
+  "screening_run_count": 4860,
+  "source_confirmation_schema": "histogram_tsallis_refinement_confirmation.v1",
+  "source_screen_schema": "histogram_tsallis_refinement_screen.v1"
+}

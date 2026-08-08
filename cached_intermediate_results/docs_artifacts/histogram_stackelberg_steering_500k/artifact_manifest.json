@@ -1,0 +1,142 @@
+{
+  "analysis": {
+    "audit_best_response_count": 30,
+    "by_defender": {
+      "linear_exp2_goptimal_eta2": {
+        "mean_eve_utility_change_from_boundary": -0.003655346914797682,
+        "mean_feedback_to_audit_value_loss": 6.477190342005779e-05,
+        "mean_finite_follower_value_loss": -0.0031944543374387495,
+        "mean_intended_route_current_policy_mass": 0.9558141413381572,
+        "mean_intended_route_empirical_mass": 0.8752342666666666,
+        "mean_per_turn_stackelberg_regret": 0.001787387073149845,
+        "mean_pessimism_price_on_audit": 0.004917069507168537,
+        "mean_route_mass_change_from_boundary": 0.49453293333333337,
+        "median_intended_route_empirical_mass": 0.899154,
+        "run_count": 15
+      },
+      "tsallis_inf_rv_eta1": {
+        "mean_eve_utility_change_from_boundary": -0.003916433116563101,
+        "mean_feedback_to_audit_value_loss": 6.477190342005779e-05,
+        "mean_finite_follower_value_loss": -0.001352520723137333,
+        "mean_intended_route_current_policy_mass": 0.9769042692739799,
+        "mean_intended_route_empirical_mass": 0.9083155999999999,
+        "mean_per_turn_stackelberg_regret": 0.0036293206874512614,
+        "mean_pessimism_price_on_audit": 0.004917069507168537,
+        "mean_route_mass_change_from_boundary": 0.48692586666666665,
+        "median_intended_route_empirical_mass": 0.947572,
+        "run_count": 15
+      }
+    },
+    "calibration_margins": [
+      0.0,
+      0.01,
+      0.02,
+      0.03760603093086393,
+      0.05,
+      0.08
+    ],
+    "calibration_run_count": 180,
+    "graph_count": 5,
+    "mean_decomposition_identity_error": 0.0,
+    "median_intended_route_empirical_mass": 0.910445,
+    "median_turns_per_second": 8758.716691486119,
+    "minimum_intended_route_empirical_mass": 0.714594,
+    "selected_margins": [
+      0.01
+    ],
+    "strict_evaluation_run_count": 30
+  },
+  "boundary_source_run": "<repo-root>/runs/histogram_stackelberg_steering_zero_margin_500k",
+  "corpus_source_run": "<repo-root>/runs/histogram_corpus_500k",
+  "files": [
+    {
+      "blake2b_128": "b7a0234d5734f22fd42298c1ce6286a0",
+      "bytes": 676210,
+      "path": "stackelberg_margin_frontier.png"
+    },
+    {
+      "blake2b_128": "914ef96cd9f681c966edd6360ea0c6e7",
+      "bytes": 37445,
+      "path": "stackelberg_margin_frontier.pdf"
+    },
+    {
+      "blake2b_128": "9562d124ac8adad74b7d3f88e0d69b44",
+      "bytes": 133355,
+      "path": "stackelberg_margin_frontier.svg"
+    },
+    {
+      "blake2b_128": "7216a15b7bb1b4b9ec2bbb7700213da7",
+      "bytes": 201760,
+      "path": "stackelberg_strict_evaluation.png"
+    },
+    {
+      "blake2b_128": "0ee30b506cadd0864440ed0350bb2322",
+      "bytes": 28188,
+      "path": "stackelberg_strict_evaluation.pdf"
+    },
+    {
+      "blake2b_128": "3108bea6d128b02f5442b491dcbfe2db",
+      "bytes": 53831,
+      "path": "stackelberg_strict_evaluation.svg"
+    },
+    {
+      "blake2b_128": "9c927f6d7c44ddffaef1476324536dd9",
+      "bytes": 93084,
+      "path": "stackelberg_target_route_mass.png"
+    },
+    {
+      "blake2b_128": "da453f566e996909af043777b574a46a",
+      "bytes": 19142,
+      "path": "stackelberg_target_route_mass.pdf"
+    },
+    {
+      "blake2b_128": "127ce7c23ebceb61a1c8ba249598b909",
+      "bytes": 19772,
+      "path": "stackelberg_target_route_mass.svg"
+    },
+    {
+      "blake2b_128": "1072dfd647222efa7cdd8f227f00837c",
+      "bytes": 176559,
+      "path": "stackelberg_strict_vs_zero.png"
+    },
+    {
+      "blake2b_128": "2dfb6e168ffa0e01d907d3d688a7e390",
+      "bytes": 22767,
+      "path": "stackelberg_strict_vs_zero.pdf"
+    },
+    {
+      "blake2b_128": "3047e57e49ac053f15c1db7a475853c0",
+      "bytes": 36232,
+      "path": "stackelberg_strict_vs_zero.svg"
+    },
+    {
+      "blake2b_128": "45db0e249770e225baa3ba0c040fd56f",
+      "bytes": 544663,
+      "path": "stackelberg_physical_commitments.png"
+    },
+    {
+      "blake2b_128": "11980598b503836b5f2747a67dcf4589",
+      "bytes": 18265,
+      "path": "stackelberg_physical_commitments.pdf"
+    },
+    {
+      "blake2b_128": "1050a88c1480872a8ea6ac41683f6d75",
+      "bytes": 40603,
+      "path": "stackelberg_physical_commitments.svg"
+    },
+    {
+      "blake2b_128": "e0ec6c4dca48a0241ebbdab28af6cbc1",
+      "bytes": 2035,
+      "path": "STACKELBERG_STEERING_REPORT.md"
+    }
+  ],
+  "schema": "histogram_stackelberg_steering_artifacts.v1",
+  "scientific_boundary": {
+    "audit": "fresh evaluation seeds and disjoint equal-coverage payoff bank",
+    "claim": "finite-time route induction under the tested learners and five frozen topology cases",
+    "commitment": "stationary mixture over declared physical interventions with a positive Alice route-response margin",
+    "leader_information": "declared feedback payoff surface and physical Eve action costs; no Alice policy or weight access"
+  },
+  "source_selection_digest_blake2b_128": "ff0cd3732bfaf3479232759a726ae501",
+  "strict_source_run": "<repo-root>/runs/histogram_stackelberg_steering_500k"
+}

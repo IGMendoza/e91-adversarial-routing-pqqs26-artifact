@@ -1,0 +1,79 @@
+{
+  "case": "short_disjoint",
+  "fiber_lengths_m": [
+    7586.321934945789,
+    4513.205448985266,
+    10145.954962468724
+  ],
+  "route_id": "route-28eac690278c0813",
+  "samples": [
+    {
+      "action": {
+        "attack_type": "no_attack",
+        "cost": 0.0,
+        "id": "no_attack",
+        "kind": "none",
+        "target": ""
+      },
+      "label": "Clean",
+      "partition": {
+        "CHSH settings": 0.2494799004164206,
+        "Discarded settings": 0.49895980083284114,
+        "Key: correct": 0.24848397823325707,
+        "Key: error": 0.000995922183163511,
+        "No delivery": 0.0020803983343177235
+      },
+      "row_count": 145,
+      "turn": {
+        "chsh_expected": 2.75780414475274,
+        "chsh_observed": 2.875138073494238,
+        "chsh_pairs": 315,
+        "delivered": 1196,
+        "discarded": 577,
+        "eve_guess_probability": 0.5,
+        "eve_observation_count": 0,
+        "information_exposed": false,
+        "key_errors": 1,
+        "key_pairs": 304,
+        "public_outcome": "accepted",
+        "qber": 0.003289473684210526,
+        "requested": 1200
+      }
+    },
+    {
+      "action": {
+        "attack_type": "edge_information_probe",
+        "cost": 0.05,
+        "id": "edge_information_probe:3-4",
+        "kind": "edge",
+        "target": "3-4"
+      },
+      "label": "X/Z measure--resend",
+      "partition": {
+        "CHSH settings": 0.2494799004164206,
+        "Discarded settings": 0.4989598008328412,
+        "Key: correct": 0.14948574111315494,
+        "Key: error": 0.09999415930326568,
+        "No delivery": 0.0020803983343177235
+      },
+      "row_count": 2305,
+      "turn": {
+        "chsh_expected": 1.362163868635479,
+        "chsh_observed": 1.3529917991292901,
+        "chsh_pairs": 319,
+        "delivered": 1197,
+        "discarded": 597,
+        "eve_guess_probability": 0.599953675383845,
+        "eve_observation_count": 1197,
+        "information_exposed": false,
+        "key_errors": 107,
+        "key_pairs": 281,
+        "public_outcome": "qber_abort",
+        "qber": 0.3807829181494662,
+        "requested": 1200
+      }
+    }
+  ],
+  "seed": 142,
+  "step_index": 0
+}
