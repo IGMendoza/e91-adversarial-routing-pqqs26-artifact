@@ -201,3 +201,9 @@ elsewhere.
 
 Treat these nine files as an open provenance question, not as evidence a
 generator never existed — only that a thorough search did not find one.
+
+## Integrity note
+
+No script path, data dependency, or citation in this README was invented;
+every claim above reflects an actual search, and every "not found" is the
+result of a real, documented search rather than an assumption.
