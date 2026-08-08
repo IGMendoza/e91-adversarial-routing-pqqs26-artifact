@@ -1,0 +1,19 @@
+{
+  "model_name": "fiber_channel_literature_stub",
+  "device_kind": "fiber_channel",
+  "scope": "literature",
+  "reference_tag": "Kucera2024 arXiv:2404.04958; Wu2020 arXiv:2009.12000",
+  "parameters": {
+    "attenuation": 0.0002,
+    "polarization_fidelity": 0.991,
+    "light_speed": 0.0002,
+    "frequency": 80000000.0
+  },
+  "units": {
+    "attenuation": "dB/m (loss rate of optical fiber)",
+    "polarization_fidelity": "dimensionless probability",
+    "light_speed": "m/ps (propagation speed in fiber)",
+    "frequency": "Hz (maximum transmit frequency)"
+  },
+  "notes": "Parameter names mirror sequence.components.optical_channel.QuantumChannel (distance comes from the topology edge, not this model). Literature source: Kucera et al., Demonstration of quantum network protocols over a 14-km urban fiber link, arXiv:2404.04958, reports bare 1550-nm fiber attenuation in the 0.19-0.23 dB/km range and a PDL-derived polarization-process fidelity lower bound F_P >= 0.991; this profile uses the representative 0.2 dB/km value converted to 0.0002 dB/m and maps the lower-bound process fidelity to SeQUeNCe's scalar polarization_fidelity. Wu et al., SeQUeNCe, arXiv:2009.12000, uses c*=2e8 m/s for fiber propagation, converted here to 0.0002 m/ps. The frequency field is a simulator scheduling cap rather than a fiber-material measurement; it is pinned to the current SeQUeNCe QuantumChannel default of 8e7 Hz so resolved configs are explicit and reproducible."
+}

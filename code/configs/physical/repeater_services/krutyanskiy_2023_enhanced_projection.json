@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "profile_id": "krutyanskiy_2023_enhanced_projection",
+  "scope": "literature",
+  "claim_tier": "near_future_projection",
+  "architecture": "two-ion_cavity_node_midpoint_two-photon_links_with_nested_local_swaps",
+  "source": {
+    "citation": "Krutyanskiy et al., Telecom-Wavelength Quantum Repeater Node Based on a Trapped-Ion Processor, Physical Review Letters 130, 213601 (2023)",
+    "doi": "10.1103/PhysRevLett.130.213601",
+    "arxiv": "https://arxiv.org/abs/2210.05418",
+    "parameter_location": "main text enhanced-node projection and Supplementary Sections IV A--B"
+  },
+  "validity": {
+    "edge_length_min_km": 1.0,
+    "edge_length_max_km": 50.0,
+    "distance_semantics": "distance between neighboring ion nodes; the photonic Bell station is at the midpoint",
+    "route_scope": "near-future author projection; 17 such nodes and the complete 800 km chain were not demonstrated"
+  },
+  "hardware": {
+    "memory_qubits_per_node": 2,
+    "memory_slots_per_adjacent_edge_side": 1,
+    "simultaneous_elementary_links_per_node": 2,
+    "resource_semantics": "the source's 17-node model uses two-ion nodes; no unbounded memory-bank assumption"
+  },
+  "rate_model": {
+    "kind": "krutyanskiy_midpoint_two_photon",
+    "per_node_zero_loss_detection_probability": 0.21,
+    "attenuation_exponent_per_km": 0.0173,
+    "attempt_overhead_s": 0.000175,
+    "fiber_speed_m_per_s": 200000000.0,
+    "nested_time_model": "supplementary_equation_S12",
+    "published_formula": "T_tot=(L0/c'+T0)*3^n/[2^(n-1)*(P_link^0)^2*eta_t^2], eta_t=10^(-gamma*L0/2)",
+    "published_validation_target": "16 links x 50 km gives T_tot=0.71 s (1.4 Hz)",
+    "approximation_uncertainty": "the source states that the inherited nesting expression is approximate to within a factor 1.5"
+  },
+  "state_model": {
+    "kind": "krutyanskiy_equations_S13_S15",
+    "ion_photon_bell_fidelity": 0.99,
+    "photonic_bsm_fidelity": 0.99,
+    "local_swap_bell_fidelity": 0.99,
+    "published_validation_target": "16 links give final Bell fidelity 0.61 when memory decoherence is neglected under tau >> 0.7 s",
+    "elementary_channel": "phase-error Bell mixture from Supplementary Eqs. S13--S14",
+    "local_swap_channel": "single-output-qubit depolarizing map from Supplementary Eq. S15"
+  },
+  "memory_model": {
+    "storage_decoherence_model": {
+      "kind": "gaussian_dephasing",
+      "coherence_time_s": 0.63,
+      "coherence_time_definition": "enhanced-node Gaussian memory parameter used by the source's separate one-repeater secret-key-rate model",
+      "source": "Supplementary Section IV B parameter vector"
+    },
+    "detected_decay_lifetime_s": null,
+    "decay_semantics": "the spin-qubit memory has no natural spontaneous-decay loss in the node protocol",
+    "long_chain_warning": "the source's 800 km fidelity prediction assumes tau much greater than 0.7 s and separately says tens-of-seconds memories should be possible; 0.63 s does not satisfy that asymptotic condition and is retained as the conservative executable parameter"
+  },
+  "controller_model": {
+    "kind": "balanced_nested_asynchronous",
+    "local_swap_duration_s": 0.002157,
+    "local_swap_success_probability": 1.0,
+    "scheduling": "parallel adjacent-link generation, storage of the first success, and balanced nested local deterministic Bell swapping",
+    "continuous_demand_queue": false
+  },
+  "histogram_adapter": {
+    "source_wavelength_nm": 854.0,
+    "converted_wavelength_nm": 1550.0,
+    "aggregate_zero-loss_link_probability": true,
+    "recommended_conversion_profile": "configs/physical/conversion/arenskoetter_qfc_854_to_1550.json",
+    "apply_elementary_state_channel": true,
+    "apply_local_swap_state_channel": true,
+    "apply_memory_storage_override": true
+  },
+  "notes": "This is the paper authors' enhanced-node projection, not a demonstrated system. P_link^0=0.21 and all three state-operation fidelities of 0.99 are author-selected improvement targets supported by cited component directions. The active 0.63 s memory value comes from the paper's separate enhanced-node SKR calculation; the model therefore reports when service time is not safely below coherence time instead of silently assuming an ideal memory."
+}

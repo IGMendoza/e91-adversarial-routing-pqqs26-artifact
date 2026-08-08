@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "profile_id": "cui_2025_two_node_ion_ion_demonstrated",
+  "scope": "literature",
+  "claim_tier": "demonstrated_system",
+  "architecture": "two_remote_multiplexed_calcium_ion_nodes_with_midpoint_two_photon_bsm",
+  "source": {
+    "citation": "Cui et al., Multiplexed ion-ion entanglement over 1.2 kilometer fibers, arXiv:2510.20392 (2025)",
+    "arxiv": "https://arxiv.org/abs/2510.20392",
+    "parameter_location": "main text",
+    "provenance_role": "separate two-node ion-ion validation result; not the Cui-2026 metropolitan repeater-node baseline"
+  },
+  "validity": {
+    "edge_length_min_km": 1.2,
+    "edge_length_max_km": 1.2,
+    "distance_semantics": "source-reported fiber length for the demonstrated two-node ion-ion link",
+    "route_scope": "one demonstrated elementary link only; no multi-link controller extrapolation is supplied"
+  },
+  "hardware": {
+    "memory_qubits_per_node": 10,
+    "memory_slots_per_adjacent_edge_side": 10,
+    "simultaneous_elementary_links_per_node": 1,
+    "resource_semantics": "ten demonstrated temporal modes per node"
+  },
+  "rate_model": {
+    "kind": "empirical_elementary_link",
+    "reference_edge_length_km": 1.2,
+    "reference_length_tolerance_km": 0.000001,
+    "measured_success_rate_hz": 0.011,
+    "multiplexing_enhancement": 4.59,
+    "time_bins": 10
+  },
+  "state_model": {
+    "kind": "scalar_bell_fidelity_metadata_only",
+    "reported_bell_fidelity": 0.959,
+    "reported_uncertainty": 0.015,
+    "activation_blocker": "the scalar reconstructed fidelity alone does not identify a CPTP process channel or Bell-diagonal error distribution"
+  },
+  "memory_model": {
+    "storage_decoherence_model": {
+      "kind": "gaussian_dephasing",
+      "coherence_time_s": 0.308,
+      "coherence_time_definition": "shorter of the two reported node memory T2 values (Alice 351 ms, Bob 308 ms)",
+      "source": "main-text memory characterization"
+    },
+    "detected_decay_lifetime_s": null,
+    "decay_semantics": "no separate detected-decay lifetime is mapped from this source"
+  },
+  "controller_model": {
+    "kind": "balanced_nested_asynchronous",
+    "local_swap_duration_s": 0.0,
+    "local_swap_success_probability": 1.0,
+    "scheduling": "not executable beyond one link; fields exist only to satisfy the common service schema",
+    "continuous_demand_queue": false
+  },
+  "histogram_adapter": {
+    "aggregate_zero_loss_link_probability": false,
+    "apply_elementary_state_channel": false,
+    "apply_local_swap_state_channel": false,
+    "apply_memory_storage_override": false,
+    "activation_blockers": [
+      "no process channel can be inferred from the scalar Bell fidelity",
+      "no demonstrated multi-link swapping/controller model is reported"
+    ]
+  },
+  "notes": "Archival two-node validation anchor kept distinct from the Cui-2026 12 km hybrid-multiplexed repeater-node component."
+}

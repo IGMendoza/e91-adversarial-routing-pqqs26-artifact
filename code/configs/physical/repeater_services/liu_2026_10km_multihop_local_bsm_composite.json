@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "profile_id": "liu_2026_10km_multihop_local_bsm_composite",
+  "scope": "empirical_fit",
+  "claim_tier": "near_term_composite",
+  "architecture": "multiplexed_multi_ion_calcium40_nodes_with_single_photon_midpoint_links_and_deterministic_local_two_ion_bell_measurement",
+  "source": {
+    "citation": "Liu et al., Nature 652, 51-57 (2026), combined with Clark et al., PRL 127, 130505 (2021), and Myerson et al., PRL 100, 200502 (2008)",
+    "doi": "10.1038/s41586-026-10177-4; 10.1103/PhysRevLett.127.130505; 10.1103/PhysRevLett.100.200502",
+    "parameter_location": "Liu Fig. 4/Supplement B.3 link state and rate; Liu Supplement A.3 storage; Clark Bell-state preparation; Myerson adaptive optical-qubit readout",
+    "mapping_status": "compatible same-isotope optical-qubit components composed into a repeater node; not demonstrated as one integrated system"
+  },
+  "validity": {
+    "edge_length_min_km": 10.0,
+    "edge_length_max_km": 10.0,
+    "distance_semantics": "each elementary edge is a Liu-style 10 km total fiber link through its midpoint station",
+    "route_scope": "balanced adjacent-link swapping through 16 elementary hops; no distance interpolation"
+  },
+  "hardware": {
+    "memory_qubits_per_node": 8,
+    "communication_qubits_per_node": 8,
+    "memory_slots_per_adjacent_edge_side": 4,
+    "simultaneous_elementary_links_per_node": 2,
+    "resource_semantics": "four fixed calcium-ion link/memory lanes per adjacent edge side; an internal degree-two repeater therefore reserves eight ions, with no route-dependent slot optimizer"
+  },
+  "rate_model": {
+    "kind": "empirical_elementary_link",
+    "reference_edge_length_km": 10.0,
+    "reference_length_tolerance_km": 0.000001,
+    "measured_success_rate_hz": 0.291,
+    "measured_mean_distribution_time_s": 3.436426116838488,
+    "excitation_probability": 0.023,
+    "completion_time_model": "empirical_exponential_renewal",
+    "rate_semantics": "per-lane valid-pair renewal anchor; fixed parallel lanes affect random-time availability but the reported route service remains conservatively based on one aggregate 0.291/s edge stream"
+  },
+  "state_model": {
+    "kind": "bell_diagonal_correlations",
+    "target_bell_state": "psi_minus",
+    "xx_visibility": 0.893365646980309,
+    "yy_visibility": 0.893365646980309,
+    "zz_visibility": 0.928,
+    "correlation_source": "effective Liu 10 km DI transcript constrained by S=2.5758 and QBER=0.0360",
+    "completion_semantics": "Vyy=Vxx Bell-diagonal effective-link completion; using the post-measurement envelope internally is conservative because source SPAM is not deconvolved",
+    "local_swap_model": {
+      "kind": "deterministic_two_ion_bell_measurement",
+      "bell_basis_transform_model": {
+        "kind": "reciprocal_bell_preparation_envelope",
+        "fidelity": 0.9994,
+        "uncertainty": 0.0003,
+        "duration_s": 0.0000352,
+        "mapping_semantics": "Clark's uncorrected Bell-state preparation fidelity is used as a conservative reciprocal Bell-basis-transform classification envelope, not as average gate fidelity"
+      },
+      "readout_model": {
+        "kind": "independent_symmetric_bit_confusion",
+        "readout_fidelity": 0.9999,
+        "duration_s": 0.000145,
+        "mapping_semantics": "two independently reported fluorescence bits identify the complete Bell outcome"
+      },
+      "component_sources": [
+        "Clark et al., High-Fidelity Bell-State Preparation with 40Ca+ Optical Qubits, PRL 127, 130505 (2021)",
+        "Myerson et al., High-fidelity readout of trapped-ion qubits, PRL 100, 200502 (2008)"
+      ],
+      "compatibility": "Liu and Clark both use 40Ca+ S1/2-D5/2 optical qubits with 729 nm single-qubit control; Clark uses a different D5/2 Zeeman sublevel and a 532 nm entangling force, requiring local recalibration but no species or encoding transduction"
+    }
+  },
+  "memory_model": {
+    "storage_decoherence_model": {
+      "kind": "liu_2026_anisotropic_pair_fit",
+      "xx_pair_coherence_time_s": 0.55,
+      "xx_pair_coherence_time_uncertainty_s": 0.036,
+      "zz_initial_visibility": 0.656,
+      "zz_linear_decay_rate_per_s": 0.38,
+      "zz_linear_decay_rate_uncertainty_per_s": 0.05,
+      "local_factorization": "symmetric_square_root",
+      "fit_domain_max_s": 0.45,
+      "extrapolation_policy": "fail_closed",
+      "source": "Liu Supplementary Eq. (1), measured at alpha=17%",
+      "calibration_status": "same Liu memory/KDD apparatus, transferred from the storage operating point to the alpha=2.3% link state as an explicit near-term same-device assumption"
+    },
+    "detected_decay_lifetime_s": null,
+    "decay_semantics": "anisotropic KDD storage errors enter the local stationary-ion Pauli channels"
+  },
+  "controller_model": {
+    "kind": "balanced_nested_asynchronous",
+    "local_swap_duration_s": 0.0001802,
+    "local_swap_success_probability": 1.0,
+    "accepted_output_alive_time_s": 0.45,
+    "empirical_multilink_completion_model": "independent_exponential_balanced_tree",
+    "scheduling": "independent fixed-lane edge renewal, oldest-live-pair reservation, deterministic adjacent Bell measurements, and balanced nested feed-forward",
+    "continuous_demand_queue": false
+  },
+  "histogram_adapter": {
+    "elementary_link_instrument_kind": "empirical_remote_memory_pair",
+    "max_executable_hops": 16,
+    "aggregate_zero_loss_link_probability": false,
+    "apply_elementary_state_channel": false,
+    "apply_quality_restoration": false,
+    "apply_local_swap_state_channel": true,
+    "apply_local_bell_measurement_override": true,
+    "apply_memory_storage_override": true,
+    "endpoint_measurement_aggregated_in_empirical_state": true,
+    "optical_stack_semantics": "Liu link effects are aggregated in each empirical accepted-pair instrument; only the separately declared local Bell measurement is added at repeaters"
+  },
+  "notes": "This profile closes the local-swap composability blocker and executes through 16 hops. It is a raw-chain baseline, not a claim that repeated swapping alone preserves Bell violation; purification or encoding must be layered separately when Bell-qualified delivery is required."
+}

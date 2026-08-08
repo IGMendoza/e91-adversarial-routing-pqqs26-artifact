@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "profile_id": "liu_2026_10km_memory_pair_twirled_composable",
+  "scope": "literature",
+  "claim_tier": "near_term_composite",
+  "architecture": "two_remote_calcium_ion_memories_with_phase_stabilized_single_photon_midpoint_heralding",
+  "source": {
+    "citation": "Liu et al., Long-lived remote ion-ion entanglement for scalable quantum repeaters, Nature 652, 51-57 (2026), arXiv:2602.08472",
+    "doi": "10.1038/s41586-026-10177-4",
+    "arxiv": "https://arxiv.org/abs/2602.08472",
+    "dataset_doi": "10.5281/zenodo.18218281",
+    "parameter_location": "main text Figs. 2-3 and author dataset Fig_3b.xlsx/Fig_3d.xlsx",
+    "mapping_status": "the 10 km memory-memory link, rate, initial fidelity, and storage data were demonstrated in one system; the fidelity-preserving isotropic twirl is an explicit composability adapter and was not reported as part of the experiment"
+  },
+  "validity": {
+    "edge_length_min_km": 10.0,
+    "edge_length_max_km": 10.0,
+    "distance_semantics": "total spooled telecom fiber between the two ion nodes and the midpoint single-photon interference station",
+    "route_scope": "one demonstrated elementary link only; no local memory-memory Bell-swap process was demonstrated in this system"
+  },
+  "hardware": {
+    "memory_qubits_per_node": 1,
+    "communication_qubits_per_node": 1,
+    "memory_slots_per_adjacent_edge_side": 1,
+    "simultaneous_elementary_links_per_node": 1,
+    "resource_semantics": "one calcium-40 ion at each demonstrated remote node; no undeclared spatial multiplexing or additional memory slots"
+  },
+  "rate_model": {
+    "kind": "empirical_elementary_link",
+    "reference_edge_length_km": 10.0,
+    "reference_length_tolerance_km": 0.000001,
+    "measured_success_rate_hz": 2.226,
+    "measured_mean_distribution_time_s": 0.4492362982929021,
+    "excitation_probability": 0.17,
+    "completion_time_model": "empirical_exponential_renewal",
+    "completion_time_evidence": "the author Fig_3d interval histogram is evaluated against the 2.226 Hz exponential probability-density model",
+    "long_run_diqkd_valid_accumulation_rate_hz_metadata_only": 0.291,
+    "rate_semantics": "2.226 cps is the demonstrated link operating-point rate at alpha=17%; 0.291/s is separately reported for the long-running DI-QKD valid-data accumulation and is not substituted into the elementary renewal model"
+  },
+  "state_model": {
+    "kind": "pauli_twirled_bell_fidelity",
+    "target_bell_state": "psi_minus",
+    "reported_bell_fidelity": 0.7964652142900977,
+    "reported_uncertainty": 0.01730643893113068,
+    "reported_operating_point": "alpha=17%, lower central fidelity of the two herald branches in author dataset Fig_3b.xlsx",
+    "twirling_map": "bilateral_clifford_isotropic_twirl",
+    "twirling_semantics": "after each public herald outcome is corrected into the psi-minus Pauli frame, the lower of the two measured central fidelities is used as a conservative common envelope and an explicit bilateral Clifford twirl maps the pair to the isotropic Bell-diagonal state (F,(1-F)/3,(1-F)/3,(1-F)/3) without increasing its measured Bell fidelity; the 2.226 Hz rate retains both herald outcomes",
+    "twirling_implementation_status": "composability adapter grounded in standard LOCC, not reported as executed by Liu et al.; local twirl-control errors and duration are not activated",
+    "activation_blocker_beyond_one_link": "the source does not supply a local two-memory Bell-swap process or Bell-outcome confusion matrix for this node"
+  },
+  "memory_model": {
+    "storage_decoherence_model": {
+      "kind": "exponential_dephasing",
+      "coherence_time_s": 0.55,
+      "coherence_time_uncertainty_s": 0.036,
+      "coherence_time_definition": "exponential fit to the remote-pair XX coherence under 0.5 ms-interval KDD at alpha=17%",
+      "source": "main text Fig. 3d and author dataset Fig_3d.xlsx"
+    },
+    "detected_decay_lifetime_s": null,
+    "natural_d5_2_lifetime_s_metadata_only": 1.16,
+    "kdd_interval_s_metadata_only": 0.0005,
+    "kdd_per_gate_error_probabilities_metadata_only": {
+      "alice": 0.000061,
+      "bob": 0.000057
+    },
+    "decay_semantics": "the 1.16 s D5/2 lifetime and measured linear ZZ degradation are retained as known unmodeled conditional-state effects; they are not relabelled as heralded pair loss",
+    "known_storage_limitation": "the executable histogram applies the measured exponential XX dephasing law, but not the separately observed linear ZZ degradation from accumulated KDD gate errors"
+  },
+  "controller_model": {
+    "kind": "balanced_nested_asynchronous",
+    "local_swap_duration_s": 0.0,
+    "local_swap_success_probability": 1.0,
+    "scheduling": "one-link empirical exponential renewal only; no multi-link controller or swap is activated",
+    "continuous_demand_queue": false
+  },
+  "histogram_adapter": {
+    "elementary_link_instrument_kind": "empirical_remote_memory_pair",
+    "max_executable_hops": 1,
+    "aggregate_zero_loss_link_probability": false,
+    "apply_elementary_state_channel": false,
+    "apply_quality_restoration": false,
+    "apply_local_swap_state_channel": false,
+    "apply_memory_storage_override": true,
+    "endpoint_measurement_aggregated_in_empirical_state": true,
+    "optical_stack_semantics": "the demonstrated source, 393-to-1550 nm conversion, phase stabilization, fiber, SNSPD heralding, and their errors are already aggregated into the measured link rate and conditional pair state; repository Fock optical components are bypassed rather than multiplied again"
+  },
+  "notes": "This is a current 10 km demonstrated-link anchor that executes as an accepted remote-memory-pair instrument. It coexists with the Cui-2026 12 km hybrid-multiplexed repeater-node baseline and the separately archived Cui two-node ion-ion result. Multi-hop use fails closed until an explicit compatible local-swap process is composed."
+}

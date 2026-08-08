@@ -1,0 +1,18 @@
+{
+  "detector_family": "SNSPD",
+  "profile_role": "high_count_rate_threshold_telecom",
+  "reference_name": "PEACOQ high-speed 1550 nm threshold SNSPD profile",
+  "citation_key": "Craiciu2022_PEACOQ_SNSPD",
+  "source": "configs/physical/detector_literature_stub.json notes",
+  "selectable": true,
+  "wavelength_range_nm": [1550.0, 1550.0],
+  "system_detection_efficiency": 0.78,
+  "dark_count_rate_per_s": 158.0,
+  "timing_jitter_or_resolution_ps": 50.0,
+  "dead_time_or_max_count_rate_hz": 1500000000.0,
+  "pnr_capability": false,
+  "max_resolvable_photon_number": 1,
+  "values_are_scalar_or_curves": "scalar",
+  "wavelength_dependency": "scalar_flat_response_assumption",
+  "notes": "Threshold/high-count-rate telecom SNSPD profile. Not the Korzh sub-3 ps detector. Not a photon-number-resolving detector."
+}

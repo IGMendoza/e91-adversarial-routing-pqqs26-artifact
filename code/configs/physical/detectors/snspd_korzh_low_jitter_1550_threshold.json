@@ -1,0 +1,89 @@
+{
+  "detector_family": "SNSPD",
+  "profile_role": "low_timing_jitter",
+  "reference_name": "Korzh low-jitter threshold SNSPD profile",
+  "citation_key": "Korzh2020_NaturePhotonics_s41566_020_0589_x",
+  "doi": "10.1038/s41566-020-0589-x",
+  "source": "https://www.nature.com/articles/s41566-020-0589-x",
+  "supplementary_information_url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41566-020-0589-x/MediaObjects/41566_2020_589_MOESM1_ESM.pdf",
+  "source_documents": [
+    {
+      "kind": "published_article",
+      "url": "https://www.nature.com/articles/s41566-020-0589-x",
+      "used_for": ["headline temporal resolution at visible wavelengths and 1550 nm"]
+    },
+    {
+      "kind": "supplementary_information",
+      "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41566-020-0589-x/MediaObjects/41566_2020_589_MOESM1_ESM.pdf",
+      "used_for": ["latency simulation parameters for the 80 nm SNSPD", "qualitative IRF/PCR simulation context"]
+    },
+    {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/1804.06839",
+      "used_for": ["additional explicitly stated pre-publication wavelength timing and latency values"]
+    }
+  ],
+  "selectable": true,
+  "wavelength_range_nm": [400.0, 1550.0],
+  "system_detection_efficiency": null,
+  "dark_count_rate_per_s": null,
+  "timing_jitter_or_resolution_ps": 4.3,
+  "timing_jitter_fwhm_ps": 4.3,
+  "timing_jitter_fwhm_uncertainty_ps": 0.2,
+  "timing_jitter_response": {
+    "reference_name": "Korzh et al. published low-jitter SNSPD timing values",
+    "citation_key": "Korzh2020_NaturePhotonics_s41566_020_0589_x",
+    "quantity": "timing_jitter_fwhm_ps",
+    "points": [
+      {
+        "wavelength_nm": 400.0,
+        "timing_jitter_fwhm_ps": 2.6,
+        "uncertainty_ps": 0.2,
+        "source_scope": "published article reports 2.6 ps for visible wavelengths; represented at 400 nm because the wavelength sweep includes 400 nm"
+      },
+      {
+        "wavelength_nm": 1550.0,
+        "timing_jitter_fwhm_ps": 4.3,
+        "uncertainty_ps": 0.2,
+        "source_scope": "published article reports 4.3 ps at 1550 nm"
+      }
+    ]
+  },
+  "preprint_additional_timing_points": [
+    {"wavelength_nm": 400.0, "timing_jitter_fwhm_ps": 2.7, "uncertainty_ps": 0.2},
+    {"wavelength_nm": 775.0, "timing_jitter_fwhm_ps": 3.8, "uncertainty_ps": 0.3},
+    {"wavelength_nm": 1550.0, "timing_jitter_fwhm_ps": 4.6, "uncertainty_ps": 0.2}
+  ],
+  "relative_detection_latency_ps": [
+    {
+      "from_wavelength_nm": 775.0,
+      "to_wavelength_nm": 1550.0,
+      "relative_latency_ps": 4.2,
+      "uncertainty_ps": 0.4,
+      "bias_current_uA": 21.5,
+      "source_scope": "arXiv preprint text; supplementary information discusses the 775/1550 relative latency comparison qualitatively"
+    }
+  ],
+  "latency_simulation_parameters_80nm_snspd": {
+    "source": "supplementary_information_table_1",
+    "scope": "parameters for qualitative latency simulation, not a detector-efficiency or dark-count model",
+    "nanowire_width_nm": 80.0,
+    "nanowire_thickness_nm": 7.0,
+    "critical_temperature_K": 8.65,
+    "diffusion_coefficient_cm2_per_s": 0.5,
+    "sheet_resistance_ohm_per_square": 608.0,
+    "phonon_parameter_gamma": 60.0,
+    "hotbelt_length_nm": 40.0,
+    "inelastic_electron_electron_scattering_time_at_Tc_ps": 6.0,
+    "electron_phonon_coupling_time_at_Tc_ps": 24.7,
+    "phonon_escape_time_ps": 20.0,
+    "mean_fraction_photon_energy_deposited": 0.667,
+    "fano_fluctuation_std_meV": 92.0,
+    "spatial_nonuniformity_std_meV": 40.0
+  },
+  "dead_time_or_max_count_rate_hz": null,
+  "pnr_capability": false,
+  "max_resolvable_photon_number": 1,
+  "values_are_scalar_or_curves": "published_timing_curve_and_supplementary_latency_parameters_with_repository_efficiency_dark_fallback",
+  "notes": "Selectable timing-only threshold SNSPD profile from Korzh et al. The supplementary information adds latency-simulation/device parameters, but not a complete system-efficiency, dark-count-rate, dead-time, or PNR operating profile."
+}

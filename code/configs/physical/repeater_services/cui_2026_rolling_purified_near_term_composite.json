@@ -1,0 +1,150 @@
+{
+  "schema_version": 1,
+  "profile_id": "cui_2026_rolling_purified_near_term_composite",
+  "scope": "empirical_fit",
+  "claim_tier": "near_term_composite",
+  "architecture": "fixed_resource_cui_hybrid_multiplexed_midpoint_lanes_with_rolling_reservations_elementary_recurrence_and_nested_local_swaps",
+  "source": {
+    "citation": "Cui et al., Nature Communications 17, 697 (2026), Supplementary Note 8 and author source data; Krutyanskiy et al., PRL 130, 213601 (2023); Dhara et al., PRA 105, 022623 (2022); Bennett et al., PRL 76, 722 (1996); Deutsch et al., PRL 77, 2818 (1996); Clark et al., PRL 127, 130505 (2021); Ballance et al., PRL 117, 060504 (2016); Myerson et al., PRL 100, 200502 (2008)",
+    "doi": "10.1038/s41467-025-67311-5; 10.5281/zenodo.17590282; 10.1103/PhysRevLett.130.213601; 10.1103/PhysRevA.105.022623",
+    "parameter_location": "Cui Supplementary Note 8 and Zenodo FIGS7.xlsx sheet c J/K, N=41 weak-cavity two-photon projection; Krutyanskiy/Dhara fixed-resource asynchronous repeater recipe; cited calcium-ion local operations",
+    "mapping_status": "Cui detector-conditioned elementary lanes inserted into the Krutyanskiy/Dhara fixed-resource rolling and purification architecture; not demonstrated as an integrated chain"
+  },
+  "validity": {
+    "edge_length_min_km": 1.0,
+    "edge_length_max_km": 50.0,
+    "distance_semantics": "distance between neighboring calcium-ion nodes; the midpoint BSM has two equal half-edge arms",
+    "route_scope": "Cui source-data anchor has 12 km node-to-midpoint arms (24 km node separation); 1--50 km edge evaluation applies only explicit C-band attenuation and herald-latency scaling"
+  },
+  "hardware": {
+    "memory_qubits_per_node": 16,
+    "communication_qubits_per_node": 64,
+    "memory_slots_per_adjacent_edge_side": 8,
+    "purified_output_slots_per_adjacent_edge_side": 4,
+    "parallel_purification_lanes_per_edge": 4,
+    "simultaneous_elementary_links_per_node": 2,
+    "communication_qubits_per_raw_generation_mode": 4,
+    "total_ions_per_internal_node": 80,
+    "resource_semantics": "four fixed purification lanes per adjacent edge side; each lane has two independent four-communication-ion Cui hybrid raw-generation modules and two raw memory slots. A degree-two node therefore reserves 64 communication and 16 memory ions. This copies fixed modules and queues their accepted outputs; it is not a route-availability optimizer.",
+    "resource_source": "Cui demonstrates four communication ions per hybrid-multiplexed node; the fixed replicated-module inventory follows the Krutyanskiy/Dhara rolling-resource recipe and lies within Dhara's analyzed tens-to-hundreds-ion regime"
+  },
+  "rate_model": {
+    "kind": "cui_note8_midpoint_two_photon_projection",
+    "reference_edge_length_km": 24.0,
+    "reference_half_link_length_km": 12.0,
+    "reference_success_rate_hz": 41.53588043088802,
+    "source_data_total_modes": 41,
+    "source_data_operating_point": "weak_cavity_two_photon_current_controller",
+    "source_data_location": "Cui author dataset DOI 10.5281/zenodo.17590282, FIGS7.xlsx, sheet c, cells J6/K6",
+    "completion_time_model": "empirical_exponential_renewal",
+    "fiber_attenuation_db_per_km": 0.2,
+    "fiber_speed_m_per_s": 200000000.0,
+    "rate_semantics": "per raw-generation module aggregate ion-ion renewal rate after the Cui correlated repeated-excitation/shuttling mode train and midpoint two-photon BSM; the profile never substitutes the demonstrated 4.28/s one-node ion-photon rate",
+    "distance_mapping": "R(D)=R(24 km)*10^[-0.2*(D-24 km)/10]; D is total neighboring-node fiber, so this is the joint two-arm transmission scaling",
+    "projection_boundary": "the weak-cavity operating point is an author-simulated compatible component projection, not the demonstrated free-space 12 km ion-photon apparatus"
+  },
+  "state_model": {
+    "kind": "detector_conditioned_fock_bsm",
+    "conditional_state_semantics": "histogram_detector_conditioned_density_matrix",
+    "service_estimate_raw_bell_fidelity": 0.99998,
+    "service_estimate_calibration": "conservative empirical fit to the repository Cui 866->1558 detector-conditioned Fock/PNR one-edge kernel: Bell fidelity 0.9999968734/0.9999961498/0.9999946793/0.9999903051 at 1/10/24/50 km; active scalar 0.99998 is below the worst sampled value and is used only for analytic purification acceptance and pre-storage service diagnostics",
+    "elementary_state_semantics": "the histogram retains its full detector-conditioned density operator and does not apply Cui's scalar ion-photon tomography fidelity as a second memory channel",
+    "interface_uncertainty": "Cui reports scalar ion-photon Bell fidelities but not a constructor process matrix; those values remain validation benchmarks rather than an invented Pauli channel",
+    "quality_restoration": {
+      "kind": "bilateral_phase_error_recurrence",
+      "protocol": "bilateral_phase_parity_basis_exchange",
+      "rounds": 1,
+      "placement": "elementary_links_before_swapping",
+      "raw_pairs_per_round": 2,
+      "parallel_raw_pair_generation_modes_per_edge": 2,
+      "retained_pair_selection": "youngest_raw_pair_as_control",
+      "local_two_qubit_gate_model": {
+        "kind": "pauli_depolarizing_from_average_gate_fidelity",
+        "average_gate_fidelity": 0.999,
+        "duration_s": 0.0001,
+        "source": "Ballance et al., PRL 117, 060504 (2016), 99.9(1)% at 100 us"
+      },
+      "local_single_qubit_gate_model": {
+        "kind": "pauli_depolarizing_from_average_gate_fidelity",
+        "average_gate_fidelity": 0.999934,
+        "layer_duration_s": 0.0000075,
+        "source": "Ballance et al., PRL 117, 060504 (2016), 0.066(3)e-3 error at 7.5 us"
+      },
+      "measurement_model": {
+        "kind": "independent_symmetric_bit_confusion",
+        "readout_fidelity": 0.9999,
+        "duration_s": 0.000145,
+        "source": "Myerson et al., PRL 100, 200502 (2008)"
+      },
+      "classical_comparison_model": {
+        "kind": "one_way_parity_comparison",
+        "speed_m_per_s": 200000000.0
+      },
+      "component_sources": [
+        "Bennett et al., PRL 76, 722 (1996)",
+        "Deutsch et al., PRL 77, 2818 (1996)",
+        "Reichle et al., Nature 443, 838 (2006)",
+        "Ballance et al., PRL 117, 060504 (2016)",
+        "Myerson et al., PRL 100, 200502 (2008)"
+      ]
+    },
+    "local_swap_model": {
+      "kind": "deterministic_two_ion_bell_measurement",
+      "bell_basis_transform_model": {
+        "kind": "reciprocal_bell_preparation_envelope",
+        "fidelity": 0.9994,
+        "uncertainty": 0.0003,
+        "duration_s": 0.0000352,
+        "mapping_semantics": "Clark's uncorrected Bell preparation is used as a conservative reciprocal Bell-transform classification envelope"
+      },
+      "readout_model": {
+        "kind": "independent_symmetric_bit_confusion",
+        "readout_fidelity": 0.9999,
+        "duration_s": 0.000145,
+        "mapping_semantics": "two fluorescence bits identify the complete local Bell outcome"
+      },
+      "component_sources": [
+        "Clark et al., PRL 127, 130505 (2021)",
+        "Myerson et al., PRL 100, 200502 (2008)"
+      ],
+      "compatibility": "Cui and Clark use calcium-ion optical-qubit control; the integrated multi-zone node requires local recalibration but no species transduction"
+    }
+  },
+  "memory_model": {
+    "storage_decoherence_model": {
+      "kind": "gaussian_dephasing",
+      "coherence_time_s": 0.366,
+      "coherence_time_uncertainty_s": 0.011,
+      "coherence_time_definition": "Cui protected-memory Ramsey-with-echo Gaussian fit",
+      "source": "Cui et al. Fig. 4"
+    },
+    "detected_decay_lifetime_s": 0.958,
+    "detected_decay_semantics": "Cui mid-circuit detection converts D5/2 decay into heralded loss in the rolling availability, not conditional-state noise",
+    "purification_wait_semantics": "two independent aggregate raw renewals are modeled exponentially; the exact |X1-X2| exponential wait law is averaged through Cui's Gaussian memory coherence"
+  },
+  "controller_model": {
+    "kind": "balanced_nested_asynchronous",
+    "local_swap_duration_s": 0.0001802,
+    "local_swap_success_probability": 1.0,
+    "accepted_output_alive_time_s": 0.1,
+    "accepted_output_alive_time_semantics": "fixed post-purification rolling staleness cutoff, not an optimized availability target",
+    "empirical_multilink_completion_model": "independent_exponential_balanced_tree",
+    "scheduling": "Krutyanskiy/Dhara fixed-resource recipe: independent Cui raw modules feed four purification lanes per edge, accepted outputs fill rolling pools, and deterministic local Bell measurements execute in a balanced nested tree",
+    "continuous_demand_queue": false
+  },
+  "histogram_adapter": {
+    "elementary_link_instrument_kind": "fock_midpoint_two_photon",
+    "max_executable_hops": 16,
+    "source_wavelength_nm": 866.0,
+    "converted_wavelength_nm": 1558.0,
+    "aggregate_zero_loss_link_probability": false,
+    "recommended_conversion_profile": "configs/physical/conversion/cui_dfg_866_to_1558.json",
+    "apply_elementary_state_channel": false,
+    "apply_quality_restoration": true,
+    "apply_local_swap_state_channel": true,
+    "apply_local_bell_measurement_override": true,
+    "apply_memory_storage_override": true,
+    "apply_endpoint_measurement_from_quality_restoration_components": true
+  },
+  "notes": "Operational restoration of the Cui rolling lane. Cui supplies the correlated hybrid-multiplexed midpoint-link projection and protected memory; Krutyanskiy/Dhara supply the fixed-resource rolling reservation recipe; the existing noisy LOCC and calcium-ion local BSM close purification and swapping. The demonstrated Cui node profile remains separate and unchanged."
+}

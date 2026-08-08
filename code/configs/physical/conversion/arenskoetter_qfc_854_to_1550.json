@@ -1,0 +1,21 @@
+{
+  "reference_name": "Arenskoetter 2022 polarization-preserving QFC 854 nm -> 1550 nm (Sagnac PPLN DFG)",
+  "citation_key": "Arenskoetter2022_arXiv_2211_08841",
+  "scope": "literature",
+  "wavelengths_nm": [854.0],
+  "throughput": [0.572],
+  "output_wavelength_nm": 1550.0,
+  "throughput_semantics": "external device efficiency including all optical-component and spectral-filtering losses, operated at the polarization-matched point 57.2% (H-arm pump reduced to match the V-arm maximum; H max 60.1%, V max 57.2%)",
+  "conversion_noise_rate_per_s": 24.0,
+  "conversion_noise_semantics": "total detected conversion-induced in-band background counts per second per converted optical channel after the full filter stack, dominated by anti-Stokes Raman scattering of the 1904 nm pump; the histogram kernel maps two converted BSM input channels onto four analyzer detector modes as rate/2 per detector",
+  "filter_stage": {
+    "bandpass_bandwidth_ghz": 1500.0,
+    "volume_bragg_grating_bandwidth_ghz": 25.0,
+    "fabry_perot_etalon_bandwidth_mhz": 250.0,
+    "effective_transmission_bandwidth_mhz": 250.0
+  },
+  "polarization_process_fidelity": 0.99947,
+  "polarization_process_fidelity_semantics": "process fidelity of polarization preservation measured with attenuated laser light (99.947(2)%); not consumed by the kernel's throughput-only conversion model",
+  "coincidence_window_conventions": "companion-source conventions: detection window 1.5*tau_mean captures 78% of the exponential photon wavepacket, 5*tau_mean captures 91%; source photon wavepacket tau_H=15.78 ns, tau_V=12.94 ns (SPDC cavity photons, not ion emission)",
+  "limitations": "this is the Saarbruecken 854 nm D5/2-P3/2 interface companion device, not the Cui 866 nm P1/2-D3/2 node converter; all values in this file are internally same-device consistent. Throughput-only conversion model plus a detected background rate; bandwidth/temporal-mode/polarization-process effects are recorded as metadata only."
+}

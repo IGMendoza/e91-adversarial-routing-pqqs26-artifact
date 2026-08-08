@@ -1,0 +1,19 @@
+{
+  "model_name": "detector_literature_stub",
+  "device_kind": "detector",
+  "scope": "literature",
+  "reference_tag": "Craiciu2022 arXiv:2210.11644",
+  "parameters": {
+    "efficiency": 0.78,
+    "dark_count": 158.0,
+    "count_rate": 1500000000.0,
+    "time_resolution": 50
+  },
+  "units": {
+    "efficiency": "dimensionless probability in [0, 1]",
+    "dark_count": "1/s (false positive detections per second)",
+    "count_rate": "Hz (maximum detection rate)",
+    "time_resolution": "ps (minimum arrival-time resolving power)"
+  },
+  "notes": "Parameter names mirror sequence.components.detector.Detector. Literature source: Craiciu et al., High-speed detection of 1550 nm single photons with superconducting nanowire detectors, arXiv:2210.11644, reports a 1550-nm PEACOQ SNSPD with up to 78% detection efficiency, 158 counts/s dark-count rate, 1.5 giga-counts/s maximum count rate at 3 dB compression, and timing jitter below 50 ps FWHM. The SeQUeNCe time_resolution field is a ps bin size, so this profile uses the conservative upper bound 50 ps. No photon-number-resolving behaviour is modelled or claimed."
+}

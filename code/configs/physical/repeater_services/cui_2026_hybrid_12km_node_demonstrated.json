@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "profile_id": "cui_2026_hybrid_12km_node_demonstrated",
+  "scope": "literature",
+  "claim_tier": "demonstrated_component",
+  "architecture": "five_ion_dual_type_hybrid_multiplexed_metropolitan_quantum_network_node",
+  "source": {
+    "citation": "Cui et al., Metropolitan-scale ion-photon entanglement via a quantum network node with hybrid multiplexing enhancements, Nature Communications 17, 697 (2026)",
+    "doi": "10.1038/s41467-025-67311-5",
+    "arxiv": "https://arxiv.org/abs/2503.13898",
+    "parameter_location": "main text Figs. 2, 4, and 6; Supplementary Information",
+    "provenance_role": "primary Cui repeater-node baseline for the histogram device stack"
+  },
+  "validity": {
+    "edge_length_min_km": 12.0,
+    "edge_length_max_km": 12.0,
+    "distance_semantics": "source-reported one-way fiber from the ion node to the remote photon detector",
+    "route_scope": "demonstrated one-node ion-photon repeater component; the paper's two-node midpoint-BSM mapping is projected rather than demonstrated"
+  },
+  "hardware": {
+    "memory_qubits_per_node": 1,
+    "communication_qubits_per_node": 4,
+    "memory_slots_per_adjacent_edge_side": 1,
+    "simultaneous_elementary_links_per_node": 1,
+    "resource_semantics": "demonstrated five-ion crystal with four shuttled communication ions and one protected D5/2 memory ion"
+  },
+  "rate_model": {
+    "kind": "empirical_ion_photon_node_component",
+    "reference_edge_length_km": 12.0,
+    "reference_length_tolerance_km": 0.000001,
+    "measured_success_rate_hz": 4.28,
+    "measured_mean_distribution_time_s": 0.2336448598130841,
+    "measured_multiplexing_enhancement": 15.6,
+    "communication_ions": 4,
+    "time_bins_per_ion": 11,
+    "total_time_bins": 44,
+    "entangling_train_duration_s": 0.000087,
+    "ion_shuttling_time_s": 0.000025,
+    "periodic_cooling_duration_s": 0.00065,
+    "periodic_cooling_every_rounds": 10,
+    "rate_semantics": "measured heralded ion-photon rate at one node; never substituted directly for a two-node memory-memory pair rate"
+  },
+  "state_model": {
+    "kind": "scalar_bell_fidelity_metadata_only",
+    "reported_bell_fidelity": 0.898,
+    "reported_uncertainty": 0.011,
+    "state_semantics": "heralded ion-photon Bell fidelity after mode-dependent feed-forward",
+    "merging_operation_fidelity_metadata_only": 0.967,
+    "merging_operation_uncertainty_metadata_only": 0.033,
+    "activation_blocker": "ion-photon fidelity is not a remote memory-memory process channel; synchronized two-node joint-mode statistics and midpoint-BSM conditioning remain required"
+  },
+  "memory_model": {
+    "storage_decoherence_model": {
+      "kind": "gaussian_dephasing",
+      "coherence_time_s": 0.366,
+      "coherence_time_uncertainty_s": 0.011,
+      "coherence_time_definition": "source-reported Ramsey-with-echo Gaussian fit for the protected D5/2 memory ion",
+      "source": "Cui et al. Fig. 4"
+    },
+    "detected_decay_lifetime_s": 0.958,
+    "detected_decay_semantics": "D5/2 spontaneous decay is detected by mid-circuit measurement and enters heralded delivery loss, not conditional-state noise",
+    "memory_survival_at_300ms": 0.74,
+    "memory_fidelity_at_300ms": 0.787,
+    "memory_fidelity_uncertainty_at_300ms": 0.014
+  },
+  "controller_model": {
+    "kind": "balanced_nested_asynchronous",
+    "local_swap_duration_s": 0.0,
+    "local_swap_success_probability": 1.0,
+    "scheduling": "component descriptor delegates to configs/physical/controllers/cui_hybrid_12km_component_literature.json and remains fail-closed for a two-node elementary pair",
+    "continuous_demand_queue": false
+  },
+  "histogram_adapter": {
+    "aggregate_zero_loss_link_probability": false,
+    "apply_elementary_state_channel": false,
+    "apply_local_swap_state_channel": false,
+    "apply_memory_storage_override": false,
+    "controller_descriptor": "configs/physical/controllers/cui_hybrid_12km_component_literature.json",
+    "activation_blockers": [
+      "the demonstrated 4.28/s rate is ion-photon, not ion-ion",
+      "the 44 mode launches reuse four communication ions and are population-correlated",
+      "two-node synchronized joint-mode probabilities and midpoint-BSM conditioning are not reported",
+      "the exact nonuniform launch schedule and periodic-cooling phase are not fully specified for the compiled controller"
+    ]
+  },
+  "notes": "Primary demonstrated Cui repeater-node baseline. Existing low-level histogram memory, conversion, and controller descriptors already use this 12 km experiment; adding this service profile changes provenance selection only and does not replace runtime defaults."
+}

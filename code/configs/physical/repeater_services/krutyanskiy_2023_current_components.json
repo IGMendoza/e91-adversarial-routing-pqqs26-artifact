@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "profile_id": "krutyanskiy_2023_current_components",
+  "scope": "literature",
+  "claim_tier": "demonstrated_component",
+  "architecture": "two-ion_cavity_node_midpoint_two-photon_links_with_nested_local_swaps",
+  "source": {
+    "citation": "Krutyanskiy et al., Telecom-Wavelength Quantum Repeater Node Based on a Trapped-Ion Processor, Physical Review Letters 130, 213601 (2023)",
+    "doi": "10.1103/PhysRevLett.130.213601",
+    "arxiv": "https://arxiv.org/abs/2210.05418",
+    "parameter_location": "main text and Supplementary Sections II--IV"
+  },
+  "validity": {
+    "edge_length_min_km": 1.0,
+    "edge_length_max_km": 50.0,
+    "distance_semantics": "distance between neighboring ion nodes; the photonic Bell station is at the midpoint",
+    "route_scope": "component-based extrapolation only; a multi-node chain with these current parameters was not demonstrated"
+  },
+  "hardware": {
+    "memory_qubits_per_node": 2,
+    "memory_slots_per_adjacent_edge_side": 1,
+    "simultaneous_elementary_links_per_node": 2,
+    "resource_semantics": "one trapped ion per adjacent link in the two-ion node; no unbounded pool provisioning"
+  },
+  "rate_model": {
+    "kind": "krutyanskiy_midpoint_two_photon",
+    "per_node_zero_loss_detection_probability": 0.018,
+    "attenuation_exponent_per_km": 0.0173,
+    "attempt_overhead_s": 0.000175,
+    "fiber_speed_m_per_s": 200000000.0,
+    "nested_time_model": "supplementary_equation_S12",
+    "published_formula": "T_tot=(L0/c'+T0)*3^n/[2^(n-1)*(P_link^0)^2*eta_t^2], eta_t=10^(-gamma*L0/2)",
+    "approximation_uncertainty": "the source states that the inherited nesting expression is approximate to within a factor 1.5"
+  },
+  "state_model": {
+    "kind": "krutyanskiy_equations_S13_S15",
+    "ion_photon_bell_fidelity": 0.96,
+    "photonic_bsm_fidelity": 0.69,
+    "local_swap_bell_fidelity": 0.95,
+    "elementary_channel": "phase-error Bell mixture from Supplementary Eqs. S13--S14",
+    "local_swap_channel": "single-output-qubit depolarizing map from Supplementary Eq. S15"
+  },
+  "memory_model": {
+    "storage_decoherence_model": {
+      "kind": "gaussian_dephasing",
+      "coherence_time_s": 0.062,
+      "coherence_time_definition": "Gaussian fit parameter measured with neighboring-ion photon-generation attempts active",
+      "source": "main text Fig. 4 and Supplementary Eq. S11"
+    },
+    "detected_decay_lifetime_s": null,
+    "decay_semantics": "the stored spin-qubit states have no natural spontaneous-decay rate in this protocol; storage error is modeled as Gaussian dephasing"
+  },
+  "controller_model": {
+    "kind": "balanced_nested_asynchronous",
+    "local_swap_duration_s": 0.002157,
+    "local_swap_success_probability": 1.0,
+    "scheduling": "parallel adjacent-link generation, storage of the first success, and local deterministic Bell swapping",
+    "continuous_demand_queue": false
+  },
+  "histogram_adapter": {
+    "source_wavelength_nm": 854.0,
+    "converted_wavelength_nm": 1550.0,
+    "aggregate_zero-loss_link_probability": true,
+    "recommended_conversion_profile": "configs/physical/conversion/arenskoetter_qfc_854_to_1550.json",
+    "apply_elementary_state_channel": true,
+    "apply_local_swap_state_channel": true,
+    "apply_memory_storage_override": true
+  },
+  "notes": "The numerical parameters are demonstrated in one two-ion repeater node, including a 128-fold memory enhancement and 5.9 Hz absolute repeater delivery over two 25 km fibers. Applying them to a chain is a demonstrated-component extrapolation, not a demonstrated multi-node system. The profile intentionally has one slot per adjacent edge side; it must never be used to synthesize dozens of independent memories merely to hit a requested route-availability target."
+}

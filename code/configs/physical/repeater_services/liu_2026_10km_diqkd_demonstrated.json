@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "profile_id": "liu_2026_10km_diqkd_demonstrated",
+  "scope": "empirical_fit",
+  "claim_tier": "demonstrated_system",
+  "architecture": "two_remote_calcium_ion_memories_with_phase_stabilized_single_photon_midpoint_heralding_and_immediate_diqkd_measurement",
+  "source": {
+    "citation": "Liu et al., Long-lived remote ion-ion entanglement for scalable quantum repeaters, Nature 652, 51-57 (2026), Fig. 4 and Supplementary Sec. B.3",
+    "doi": "10.1038/s41586-026-10177-4",
+    "dataset_doi": "10.5281/zenodo.18218281",
+    "parameter_location": "10 km DI-QKD run: alpha=2.3%, S=2.5758(59), QBER=0.0360(6), valid-data rate 0.291/s",
+    "mapping_status": "the two measured DI observables determine Vzz and the sum entering the fixed CHSH geometry; Vyy=Vxx completes a positive Bell-diagonal effective transcript state"
+  },
+  "validity": {
+    "edge_length_min_km": 10.0,
+    "edge_length_max_km": 10.0,
+    "distance_semantics": "10 km total spooled telecom fiber",
+    "route_scope": "one demonstrated immediately measured link; not a stored or swapped repeater-chain state"
+  },
+  "hardware": {
+    "memory_qubits_per_node": 1,
+    "communication_qubits_per_node": 1,
+    "memory_slots_per_adjacent_edge_side": 1,
+    "simultaneous_elementary_links_per_node": 1,
+    "resource_semantics": "one calcium-40 ion per node; measurements follow each herald"
+  },
+  "rate_model": {
+    "kind": "empirical_elementary_link",
+    "reference_edge_length_km": 10.0,
+    "reference_length_tolerance_km": 0.000001,
+    "measured_success_rate_hz": 0.291,
+    "measured_mean_distribution_time_s": 3.436426116838488,
+    "excitation_probability": 0.023,
+    "completion_time_model": "empirical_exponential_renewal",
+    "rate_semantics": "long-run valid DI-QKD data accumulation rate, not the alpha=17% storage-link rate"
+  },
+  "state_model": {
+    "kind": "bell_diagonal_correlations",
+    "target_bell_state": "psi_minus",
+    "xx_visibility": 0.893365646980309,
+    "yy_visibility": 0.893365646980309,
+    "zz_visibility": 0.928,
+    "correlation_source": "Vzz=1-2Q and Vxx=S/sqrt(2)-Vzz for Liu's published fixed XZ-plane settings",
+    "completion_semantics": "effective post-measurement Bell-diagonal transcript completion with Vyy=Vxx; it reproduces the reported CHSH and key-basis QBER but is not full tomography",
+    "reported_chsh_s": 2.5758,
+    "reported_chsh_uncertainty": 0.0059,
+    "reported_qber": 0.036,
+    "reported_qber_uncertainty": 0.0006,
+    "counterfactual_axis_optimization": {
+      "status": "derived_from_effective_xz_correlations_not_executed_in_source",
+      "bob_angle_from_z_deg": 43.91061790505908,
+      "optimized_chsh_s": 2.5762656533863475,
+      "gain_over_published_fixed_axes": 0.0004656533863474088,
+      "semantics": "Alice remains on Z/X; Bob axes are proportional to Vzz*Z plus_or_minus Vxx*X. The published 45-degree axes remain the validation default."
+    }
+  },
+  "memory_model": {
+    "storage_decoherence_model": {
+      "kind": "none",
+      "semantics": "immediate-measurement DI transcript anchor; storage extrapolation is forbidden"
+    },
+    "detected_decay_lifetime_s": null,
+    "decay_semantics": "not applicable to the immediately measured DI transcript anchor"
+  },
+  "controller_model": {
+    "kind": "balanced_nested_asynchronous",
+    "local_swap_duration_s": 0.0,
+    "local_swap_success_probability": 1.0,
+    "scheduling": "one-link valid-round empirical renewal only",
+    "continuous_demand_queue": false
+  },
+  "histogram_adapter": {
+    "elementary_link_instrument_kind": "empirical_remote_memory_pair",
+    "max_executable_hops": 1,
+    "aggregate_zero_loss_link_probability": false,
+    "apply_elementary_state_channel": false,
+    "apply_quality_restoration": false,
+    "apply_local_swap_state_channel": false,
+    "apply_memory_storage_override": true,
+    "endpoint_measurement_aggregated_in_empirical_state": true,
+    "optical_stack_semantics": "all source, link, detector, rotation, and readout errors are already aggregated in the observed effective DI transcript state and must not be applied twice"
+  },
+  "notes": "This is a demonstrated one-link Bell-test/transcript anchor, not a finite-key security implementation and not a storage profile. Authentication, information reconciliation, privacy amplification, and composable finite-key accounting remain outside the histogram backend."
+}

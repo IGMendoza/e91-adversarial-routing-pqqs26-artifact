@@ -1,0 +1,160 @@
+{
+  "schema_version": 1,
+  "profile_id": "krutyanskiy_2023_purified_near_term_composite",
+  "scope": "literature",
+  "claim_tier": "near_term_composite",
+  "architecture": "dual_species_multi_ion_midpoint_links_with_elementary_recurrence_and_nested_local_swaps",
+  "source": {
+    "citation": "Krutyanskiy et al., PRL 130, 213601 (2023); Bennett et al., PRL 76, 722 (1996); Deutsch et al., PRL 77, 2818 (1996); Ballance et al., PRL 117, 060504 (2016); Myerson et al., PRL 100, 200502 (2008); Dhara et al., PRA 105, 022623 (2022)",
+    "component_sources": [
+      {
+        "role": "raw telecom trapped-ion link, memory, local swap, and rate projection",
+        "doi": "10.1103/PhysRevLett.130.213601",
+        "arxiv": "https://arxiv.org/abs/2210.05418"
+      },
+      {
+        "role": "two-copy recurrence purification protocol",
+        "doi": "10.1103/PhysRevLett.76.722",
+        "arxiv": "https://arxiv.org/abs/quant-ph/9511027"
+      },
+      {
+        "role": "phase-error recurrence improvement",
+        "doi": "10.1103/PhysRevLett.77.2818",
+        "arxiv": "https://arxiv.org/abs/quant-ph/9604039"
+      },
+      {
+        "role": "calcium-ion local one- and two-qubit operation fidelities and durations",
+        "doi": "10.1103/PhysRevLett.117.060504",
+        "arxiv": "https://arxiv.org/abs/1512.04600"
+      },
+      {
+        "role": "calcium-ion fluorescence readout fidelity and duration",
+        "doi": "10.1103/PhysRevLett.100.200502",
+        "arxiv": "https://arxiv.org/abs/0802.1684"
+      },
+      {
+        "role": "fixed-ion-resource spatially and temporally multiplexed dual-species repeater architecture",
+        "doi": "10.1103/PhysRevA.105.022623",
+        "arxiv": "https://arxiv.org/abs/2105.06707"
+      },
+      {
+        "role": "experimental non-destructive two-pair atomic-qubit purification",
+        "doi": "10.1038/nature05146"
+      }
+    ],
+    "mapping_status": "near-term component composition; not an end-to-end demonstrated repeater chain"
+  },
+  "validity": {
+    "edge_length_min_km": 1.0,
+    "edge_length_max_km": 50.0,
+    "distance_semantics": "distance between neighboring ion nodes; the photonic Bell station is at the midpoint",
+    "route_scope": "fixed-resource near-term composite evaluated only within the raw-link source's 1--50 km v1 range"
+  },
+  "hardware": {
+    "memory_qubits_per_node": 16,
+    "communication_qubits_per_node": 16,
+    "memory_slots_per_adjacent_edge_side": 8,
+    "purified_output_slots_per_adjacent_edge_side": 4,
+    "parallel_purification_lanes_per_edge": 4,
+    "simultaneous_elementary_links_per_node": 2,
+    "total_ions_per_internal_node": 32,
+    "resource_semantics": "each internal node has four independent purifier lanes per adjacent edge; every lane reserves two memory ions and two communication ions, consumes two raw pairs into one accepted purified pair, and maintains at most one live output. Four is a fixed profile choice, not a per-route target-availability optimizer",
+    "resource_source": "bounded multi-ion extension of the dual-species multiplexed repeater architecture analyzed by Dhara et al.; their resource study explicitly analyzes tens to hundreds of communication/memory ions per node (including 170 communication and 55 memory ions in a reported 150 km operating example), but this exact 16+16-ion Krutyanskiy composite was not demonstrated"
+  },
+  "rate_model": {
+    "kind": "krutyanskiy_midpoint_two_photon",
+    "per_node_zero_loss_detection_probability": 0.21,
+    "attenuation_exponent_per_km": 0.0173,
+    "attempt_overhead_s": 0.000175,
+    "fiber_speed_m_per_s": 200000000.0,
+    "nested_time_model": "supplementary_equation_S12",
+    "published_formula": "raw T_link=(L/c'+T0)/[(P_link^0)^2 eta_t^2]; purified edge renewal adds E[max(G1,G2)] raw rounds, noisy-recurrence acceptance, local operation time, and one-way classical parity comparison",
+    "raw_projection_validation_target": "without purification, 16 links x 50 km gives about 0.71 s under Supplementary Eq. S12",
+    "approximation_uncertainty": "the balanced controller above purified elementary links generalizes rather than claims the source's raw-link-only S12 prediction"
+  },
+  "state_model": {
+    "kind": "krutyanskiy_equations_S13_S15",
+    "ion_photon_bell_fidelity": 0.99,
+    "photonic_bsm_fidelity": 0.99,
+    "local_swap_bell_fidelity": 0.99,
+    "raw_published_validation_target": "16 unpurified links give final Bell fidelity 0.61 when memory decoherence is neglected",
+    "elementary_channel": "phase-error Bell mixture from Krutyanskiy Supplementary Eqs. S13--S14",
+    "local_swap_channel": "single-output-qubit depolarizing map from Krutyanskiy Supplementary Eq. S15",
+    "quality_restoration": {
+      "kind": "bilateral_phase_error_recurrence",
+      "protocol": "bilateral_phase_parity_basis_exchange",
+      "rounds": 1,
+      "placement": "elementary_links_before_swapping",
+      "raw_pairs_per_round": 2,
+      "parallel_raw_pair_generation_modes_per_edge": 2,
+      "retained_pair_selection": "youngest_raw_pair_as_control",
+      "local_two_qubit_gate_model": {
+        "kind": "pauli_depolarizing_from_average_gate_fidelity",
+        "average_gate_fidelity": 0.999,
+        "duration_s": 0.0001,
+        "fidelity_semantics": "reported two-qubit gate fidelity central value; explicitly mapped to a d=4 Pauli channel, p=5(1-F_avg)/4",
+        "source": "Ballance et al., PRL 117, 060504 (2016), 99.9(1)% at 100 us"
+      },
+      "local_single_qubit_gate_model": {
+        "kind": "pauli_depolarizing_from_average_gate_fidelity",
+        "average_gate_fidelity": 0.999934,
+        "layer_duration_s": 0.0000075,
+        "fidelity_semantics": "reported randomized-benchmarking average single-qubit gate fidelity; explicitly mapped to a d=2 Pauli channel, p=3(1-F_avg)/2",
+        "source": "Ballance et al., PRL 117, 060504 (2016), 0.066(3)e-3 error at 7.5 us"
+      },
+      "measurement_model": {
+        "kind": "independent_symmetric_bit_confusion",
+        "readout_fidelity": 0.9999,
+        "duration_s": 0.000145,
+        "source": "Myerson et al., PRL 100, 200502 (2008), adaptive 40Ca+ readout reaches 99.99% in 145 us average",
+        "mapping": "readout bit confusion changes accept/reject post-selection probabilities; it is not applied as output depolarization"
+      },
+      "classical_comparison_model": {
+        "kind": "one_way_parity_comparison",
+        "speed_m_per_s": 200000000.0,
+        "distance_semantics": "one full neighboring-node edge length; local operations at Alice and Bob execute in parallel"
+      },
+      "component_sources": [
+        "Bennett et al., PRL 76, 722 (1996)",
+        "Deutsch et al., PRL 77, 2818 (1996)",
+        "Reichle et al., Nature 443, 838 (2006)",
+        "Ballance et al., PRL 117, 060504 (2016)",
+        "Myerson et al., PRL 100, 200502 (2008)"
+      ],
+      "unmodeled_local_effect": "species-selective sacrificial-ion detection crosstalk onto retained memory is not assigned an invented channel; the profile requires a dual-species/multi-zone implementation and reports this as a remaining component-integration uncertainty"
+    }
+  },
+  "memory_model": {
+    "storage_decoherence_model": {
+      "kind": "gaussian_dephasing",
+      "coherence_time_s": 0.63,
+      "coherence_time_definition": "enhanced-node Gaussian memory parameter used by the raw-link source's separate one-repeater secret-key-rate model",
+      "source": "Krutyanskiy et al. Supplementary Section IV B parameter vector"
+    },
+    "detected_decay_lifetime_s": null,
+    "decay_semantics": "the spin-qubit memory has no natural spontaneous-decay loss in the selected node abstraction",
+    "purification_wait_semantics": "the exact two-geometric-mode wait-gap distribution is averaged through the Gaussian coherence law on both sacrificial-pair memories before the recurrence circuit",
+    "long_chain_warning": "0.63 s is retained rather than silently replacing it with an ideal or tens-of-seconds memory"
+  },
+  "controller_model": {
+    "kind": "balanced_nested_asynchronous",
+    "local_swap_duration_s": 0.002157,
+    "local_swap_success_probability": 1.0,
+    "accepted_output_alive_time_s": 0.1,
+    "accepted_output_alive_time_semantics": "fixed controller staleness cutoff measured from purified-pair pool acceptance; selected to remain well inside the 0.63 s Gaussian memory scale and validated, not assumed, against 1--50 km links through 16 hops",
+    "scheduling": "four parallel purifier lanes per edge, two-mode raw-pair generation within each lane, one purified output buffer per lane, and balanced nested local deterministic Bell swapping",
+    "continuous_demand_queue": false
+  },
+  "histogram_adapter": {
+    "source_wavelength_nm": 854.0,
+    "converted_wavelength_nm": 1550.0,
+    "aggregate_zero_loss_link_probability": true,
+    "recommended_conversion_profile": "configs/physical/conversion/arenskoetter_qfc_854_to_1550.json",
+    "apply_elementary_state_channel": true,
+    "apply_quality_restoration": true,
+    "apply_local_swap_state_channel": true,
+    "apply_memory_storage_override": true,
+    "apply_endpoint_measurement_from_quality_restoration_components": true
+  },
+  "notes": "This profile is a transparent near-term composite, not a claim that one experiment combined all components. Its quantum-quality restoration is a full noisy two-copy LOCC instrument, while rate loss, post-selection, fixed ion inventory, sacrificial-pair wait decoherence, gate/readout durations, and classical comparison are explicit. Encoded/error-corrected repeaters are intentionally not activated because one bounded recurrence round is sufficient to restore zero-age 12- and 16-link CHSH violation under the declared component model."
+}

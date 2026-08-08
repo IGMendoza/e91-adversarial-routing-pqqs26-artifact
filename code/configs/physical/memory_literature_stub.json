@@ -1,0 +1,97 @@
+{
+  "model_name": "memory_literature_stub",
+  "device_kind": "memory",
+  "scope": "literature",
+  "reference_tag": "Cui2025 arXiv:2503.13898",
+  "parameters": {
+    "fidelity": 0.933,
+    "frequency": 76000000.0,
+    "efficiency": 0.06,
+    "coherence_time": 0.366,
+    "wavelength": 866.0,
+    "multiplexing_model": {
+      "kind": "effective_branching_ratio",
+      "single_mode_branching_ratio": 0.06,
+      "effective_branching_ratio": 0.544,
+      "enhancement_factor": 9.07,
+      "modes_at_saturation": 10,
+      "source": "Cui2025 arXiv:2503.13898",
+      "source_claims": "Multiple-excitation scheme 'pushes the branching ratio' of the 866 nm transition from the single-mode 6% toward unity; the optimal effective branching ratio achievable is BR_max = 54.4% (limited by ion decay to |D_3/2> during optical pumping), saturating at N~=10 time-bin modes. The realized method also reports 'roughly a 5-fold enhancement in efficiency compared to the single-mode case'.",
+      "model_use": "SeQUeNCe repeater backend only. SeQUeNCe Memory has a single per-attempt efficiency scalar and no native multiplexing, so the multiplexed node is approximated by substituting the effective branching ratio for the single-mode 6% via the repeater builder's memory_efficiency_override. Selected value: effective_branching_ratio (BR_max = 0.544, ideal saturated). The active parameters.efficiency (0.06) is left unchanged so the compiled/direct backends keep the single-mode value.",
+      "compiled_histogram_controller_descriptor": "configs/physical/controllers/cui_hybrid_12km_component_literature.json",
+      "compiled_histogram_controller_status": "the standalone demonstrated-component descriptor remains provenance-only; the executable Cui rolling composite uses the paper's Supplementary Note 8 midpoint-BSM construction and author FIGS7 aggregate two-node renewal data without an IID-mode substitution",
+      "mapping_assumption": "The paper's effective 866 nm branching ratio is mapped 1:1 onto SeQUeNCe Memory.efficiency (per-attempt photon-emission/branching probability). Meet-in-the-middle BSM then squares it across the two link arms, as it did for the 6% single-mode value.",
+      "scope": "literature"
+    },
+    "memory_process_model": {
+      "kind": "none",
+      "calibration_status": "Cui2025 reports heralded ion-photon Bell-state fidelities and memory-storage benchmarks, but does not supply a calibrated constructor/interface process matrix or per-memory-qubit Pauli/depolarizing channel; no constructor/interface process noise is applied by default",
+      "source": "Cui2025 arXiv:2503.13898"
+    },
+    "ion_photon_entanglement_benchmark": {
+      "quantity": "heralded ion-photon Bell-state fidelity to the closest maximally entangled state",
+      "model_use": "benchmark/provenance only; not consumed as memory_process_model and not mapped to per-memory-qubit depolarizing noise",
+      "source": "Cui2025 arXiv:2503.13898",
+      "values": [
+        {
+          "fiber_length_m": 3.0,
+          "fidelity": 0.968,
+          "uncertainty": 0.004
+        },
+        {
+          "fiber_length_m": 1000.0,
+          "fidelity": 0.946,
+          "uncertainty": 0.007
+        },
+        {
+          "fiber_length_m": 12000.0,
+          "fidelity": 0.898,
+          "uncertainty": 0.011
+        }
+      ]
+    },
+    "detected_decay_lifetime_s": 0.958,
+    "memory_storage_decoherence_model": {
+      "kind": "gaussian_dephasing",
+      "coherence_time_s": 0.366,
+      "coherence_time_definition": "source-reported Gaussian fit parameter; exact 1/e/sigma convention not independently rederived here",
+      "source": "Cui2025 arXiv:2503.13898"
+    },
+    "memory_readout_model": {
+      "kind": "none"
+    },
+    "endpoint_analysis_rotation_model": {
+      "kind": "none"
+    }
+  },
+  "units": {
+    "fidelity": "dimensionless in [0, 1] (reported memory-state/storage benchmark; not a process probability)",
+    "frequency": "Hz (maximum excitation cadence)",
+    "efficiency": "dimensionless in [0, 1] (per-excitation 866-nm photon branch / single-excitation probability)",
+    "multiplexing_model": "typed multiplexing descriptor; effective_branching_ratio is dimensionless in [0, 1] and is the SeQUeNCe-repeater-only substitute for the single-mode efficiency (does not modify parameters.efficiency)",
+    "coherence_time": "s (reported memory coherence time; source fit is Gaussian)",
+    "wavelength": "nm (emitted photon wavelength)",
+    "memory_process_model": "typed memory/interface process model descriptor; kind=none for the Cui profile because the paper does not report a calibrated process channel",
+    "ion_photon_entanglement_benchmark": "dimensionless fidelity benchmark/provenance object; not an active process parameter",
+    "detected_decay_lifetime_s": "s (fitted |D_5/2> lifetime; spontaneous decay is detected by mid-circuit measurement and converts to heralded loss booked as no_delivery failure stage memory_decay_detected; consumed by the kernel as per-memory survival exp(-storage age / lifetime))",
+    "endpoint_analysis_rotation_model": "typed endpoint analysis-rotation error descriptor (non-Z settings only); TODO(scientific): kind=none because no node-specific single-qubit analysis-pulse fidelity is reported in the archived sources",
+    "memory_storage_decoherence_model": "typed stationary-memory storage decoherence model descriptor",
+    "memory_readout_model": "typed endpoint memory-readout assignment model descriptor"
+  },
+  "photon_wavepacket": {
+    "shape": "exponential_decay",
+    "characteristic_time_ns": 7.0,
+    "source": "Cui2025 arXiv:2503.13898 (P_1/2 spontaneous decay time 7 ns; free-space emission)",
+    "indistinguishability_note": "the source paper argues matched exponential wavepackets from two free-space ions give indistinguishable photons for the two-photon BSM (App. C); residual mismatch is not quantified, so photon_indistinguishability_model stays kind=none (mode_overlap 1)",
+    "model_use": "metadata for HOM overlap decisions; not consumed by the kernel"
+  },
+  "memory_storage_benchmark": {
+    "fidelity": 0.933,
+    "storage_time_s": 0.100,
+    "basis_or_state_set": "six mutually unbiased basis states",
+    "source": "Cui2025 arXiv:2503.13898",
+    "model_use": "calibration_target_or_metadata_not_constructor_noise",
+    "includes_readout_error": "not_resolved_in_current_stub"
+  },
+  "notes": "Parameter names mirror sequence.components.memory.Memory where possible. Literature source: Cui et al., A metropolitan-scale trapped-ion quantum network node with hybrid multiplexing enhancements, arXiv:2503.13898. This profile models the reported Ca-40 trapped-ion network-node memory/communication interface: 93.3% memory-qubit fidelity after 100 ms storage is retained as a storage/benchmark datum and is not a process-channel probability; consecutive excitation pulses at 13 ns give a 76 MHz excitation cadence; the 866-nm photon branch has 6% single-excitation probability; and the fitted memory-qubit coherence time 366 ms is converted to 0.366 s. The paper also discusses an effective 54.4% branching ratio under repeated excitation; that multiplexing improvement is not used for SeQUeNCe Memory.efficiency because this field is per excitation. Decoherence-channel options (decoherence_errors, cutoff_ratio) remain omitted because this source reports a Gaussian decay fit, not a Pauli error distribution. The reported ion-photon entanglement fidelities of 96.8% / 94.6% / 89.8% at 3 m / 1 km / 12 km are stored as ion_photon_entanglement_benchmark provenance only. They are tomography-reconstructed Bell-state fidelities for the heralded ion-photon interface, not calibrated per-memory-qubit depolarizing probabilities, not final repeater-chain fidelities, and not applied as active constructor/interface process noise. The explicit memory_process_model is therefore kind=none by default. The memory_storage_decoherence_model is Gaussian dephasing (coherence measured by Ramsey-with-echo, fitted F = a*exp(-(t/tau)^2)+1/2 with tau = 366 ms), a one-parameter storage approximation. The 958 ms |D_5/2> lifetime is recorded as detected_decay_lifetime_s: the paper detects spontaneous-decay errors with a mid-circuit measurement (survival 89%/79%/74% at 100/240/300 ms), so this channel is heralded loss that belongs in delivery/no-delivery mass, not in the storage decoherence state channel; the kernel consumes it as independent per-memory survival over represented storage ages and books detected failures as no_delivery. The explicit memory_readout_model is none: ion readout and analysis-rotation fidelities are not separately quantified in the archived source (the 98.5%/98.2%/96.7% merging fidelities are subspace-conversion operations, not endpoint readout), so endpoint readout stays ideal rather than miscalibrated."
+}

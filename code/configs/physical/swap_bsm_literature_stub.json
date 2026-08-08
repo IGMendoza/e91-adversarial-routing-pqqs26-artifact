@@ -1,0 +1,20 @@
+{
+  "model_name": "swap_bsm_literature_stub",
+  "device_kind": "swap_bsm",
+  "scope": "literature",
+  "reference_tag": "Cui2025 arXiv:2503.13898; Lai2025 PhysRevLett.134.070801; Calsamiglia2000 arXiv:quant-ph/0007058",
+  "parameters": {
+    "phase_error": 0.0,
+    "success_probability": 1.0
+  },
+  "units": {
+    "phase_error": "dimensionless (phase error applied to polarization photons)",
+    "success_probability": "dimensionless probability in [0, 1]"
+  },
+  "error_budget_mapping_recipes": {
+    "swapping_degradation_from_two_qubit_gate_fidelity": "The kernel's swap degradation channel is a uniform two-qubit Pauli mixture with total non-identity probability p = 1 - swapping_degradation, for which the entanglement/process fidelity is F_pro = 1 - p and the average gate fidelity is F_avg = 1 - (4/5)p. Given a reported two-qubit AVERAGE gate fidelity, set p = (5/4)(1 - F_avg); given a PROCESS/entanglement fidelity, set p = 1 - F_pro.",
+    "bell_outcome_confusion_from_readout_errors": "A gate-based local Bell measurement reads two classical bits (parity, phase) via per-ion fluorescence readout. A readout flip of one bit maps the true Bell label to one specific wrong label (bit1 flip: phi+<->psi+, phi-<->psi-; bit2 flip: phi+<->phi-, psi+<->psi-; both: phi+<->psi-, phi-<->psi+). With per-ion readout error probabilities e1, e2, build the 4x4 bell_outcome_confusion_matrix rows from {(1-e1)(1-e2), e1(1-e2), (1-e1)e2, e1e2} placed by that label permutation; this is structured confusion, not symmetric_bell_label_error.",
+    "status": "TODO(scientific): recipes only; no node-specific two-qubit gate fidelity or per-ion readout error is reported in the archived sources, so both knobs stay neutral until values are supplied"
+  },
+  "notes": "Literature source: Cui et al., arXiv:2503.13898, and Lai et al., PRL 134, 070801. Architecture decision: internal repeater entanglement swaps in the selected Ca-40 trapped-ion chain are LOCAL two-qubit gate + readout operations between two co-trapped ions inside one node (the dual-type two-ion node of Lai et al., PRL 134, 070801, which is the node design Cui et al., arXiv:2503.13898, builds on), not a linear-optical photonic Bell-state analyzer. Local trapped-ion Bell measurements are deterministic, so success_probability=1.0. The previous 0.5 value was the Calsamiglia/Lutkenhaus passive linear-optical BSM ceiling, which applies to the ELEMENTARY-LINK photonic BSM (modeled separately by the Fock/SNSPD analyzer instrument) and not to memory-memory swaps in this architecture. TODO(scientific): the swap error budget is NOT calibrated: neither a measured two-qubit gate fidelity nor a Bell-label readout confusion matrix for this specific node is reported in the archived sources (Cui cites >99.9% local gate fidelities from other platforms, which must not be substituted by analogy; the 98.5%/98.2%/96.7% merging fidelities in Cui are single-qubit-subspace conversion operations, not two-qubit gates). Therefore swapping_degradation stays at its neutral fallback and bell_outcome_confusion_model stays none until node-specific gate/readout values are supplied. phase_error=0.0 keeps no additional random swap phase flip at this abstraction."
+}

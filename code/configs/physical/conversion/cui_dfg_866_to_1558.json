@@ -1,0 +1,12 @@
+{
+  "reference_name": "Cui 2025 DFG conversion 866 nm -> 1558 nm (in-experiment operating point)",
+  "citation_key": "Cui2025_arXiv_2503_13898",
+  "scope": "literature",
+  "wavelengths_nm": [866.0],
+  "throughput": [0.12],
+  "output_wavelength_nm": 1558.0,
+  "throughput_semantics": "wavelength-conversion efficiency of the DFG stage used in the 12 km experiment ('optimizing the efficiency of wavelength conversion from 12% in this experiment to the current best 57%', Cui2025 Discussion); scalar device throughput, no spectral curve reported",
+  "conversion_noise_rate_per_s_status": "NOT REPORTED for this device; Cui2025 describes the 866->1558 DFG as 'high efficiency and low noise' without a numeric background rate. Do not copy the 24/s value from the companion 854->1550 converter (arXiv:2211.08841) into this profile by analogy; load that profile instead if its device is the intended narrative.",
+  "filter_stage": "not described numerically in the archived source",
+  "limitations": "throughput-only conversion model; conversion noise, bandwidth, temporal-mode, and polarization-process effects of this specific device are not reported in the archived source. Note: with the repository scalar fiber reference at 1550 nm, the 1558 nm output is outside the 1 nm scalar-reference tolerance, so the kernel's wavelength compatibility check will flag the scalar-fiber lookup unless a C-band fiber response curve is supplied or the diagnostic override is used."
+}

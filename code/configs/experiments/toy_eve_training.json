@@ -1,0 +1,50 @@
+{
+  "description": "Tiny toy Eve Q-learning experiment. Scope: toy game mechanics, no physical or security claims.",
+  "scope": "toy",
+  "seed": 12345,
+  "topology": {
+    "n": 4,
+    "p": 1.0,
+    "seed": 7,
+    "fixed_edge_length_m": 1000.0,
+    "require_connected": true
+  },
+  "roles": {
+    "alice": "n0",
+    "bob": "n3",
+    "eve_eligible_nodes": "all_non_endpoint",
+    "eve_eligible_edges": "all"
+  },
+  "routing": {
+    "policy": "shortest_hop"
+  },
+  "actions": [
+    {"type": "no_attack"},
+    {"type": "denial", "target_type": "edge", "target_id": "e2", "cost": 0.2},
+    {"type": "denial", "target_type": "node", "target_id": "n1", "cost": 0.4}
+  ],
+  "trial": {
+    "num_pairs": 30,
+    "matched_flip_probability": 0.02,
+    "qber_threshold": 0.12,
+    "min_sifted_samples": 4
+  },
+  "observation": {
+    "expose_route_id": false,
+    "expose_qber": true,
+    "qber_bucket_edges": [0.05, 0.12]
+  },
+  "reward": {
+    "accept_reward": 0.0,
+    "abort_reward": 1.0,
+    "cost_weight": 1.0
+  },
+  "training": {
+    "episodes": 15,
+    "steps_per_episode": 8,
+    "alpha": 0.3,
+    "gamma": 0.6,
+    "epsilon_start": 1.0,
+    "epsilon_end": 0.05
+  }
+}

@@ -1,0 +1,24 @@
+# Dependency pins copied verbatim from the source project's own root
+# requirements.txt, minus the `-e ./sequence-toolbox-SeQUeNCe`
+# editable-install line, since that submodule is not bundled in this
+# artifact (see README.md, "What was deliberately left out").
+
+# Core simulation / math
+matplotlib>=3.10.7
+numpy>=2.3.5
+scikit-learn
+scipy>=1.16.3
+scipy-stubs~=1.16.3
+
+# SeQUeNCe quantum-network simulator -- NOT bundled here, but required.
+# `sequence_game`'s own package __init__ chain imports it eagerly (e.g.
+# sequence_game/sequence_build/builder.py: `from sequence.components...`),
+# so even the fully-reproducible histogram_anatomy.pdf figure cannot be
+# imported without it, despite not using SeQUeNCe's simulation runtime
+# itself. Install separately:
+#   pip install "sequence @ git+https://github.com/sequence-toolbox/SeQUeNCe.git@v1.0.0"
+# or clone https://github.com/sequence-toolbox/SeQUeNCe.git, check out the
+# v1.0.0 tag, and `pip install -e .` from within it. This also transitively
+# installs SeQUeNCe's own dependencies (networkx, qutip, stim, ...). The
+# upstream package's own project name (see its pyproject.toml) is
+# "sequence", imported as `import sequence`.

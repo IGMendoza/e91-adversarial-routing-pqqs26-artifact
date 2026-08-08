@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "controller_kind": "cui_hybrid_repeated_excitation_ion_shuttling",
+  "scope": "literature",
+  "reference": "Cui et al., Nature Communications 17, 697 (2026), DOI 10.1038/s41467-025-67311-5; arXiv:2503.13898",
+  "published_component": {
+    "experiment_geometry": "one trapped-ion node heralded against a remotely detected photon; the paper's midpoint two-node BSM is a proposed network mapping, not the reported experiment",
+    "fiber_length_m": 12000.0,
+    "communication_ions": 4,
+    "time_bins_per_ion": 11,
+    "total_time_bins": 44,
+    "entangling_train_duration_s": 8.7e-5,
+    "ion_shuttling_time_s": 2.5e-5,
+    "periodic_cooling": {
+      "duration_s": 0.00065,
+      "every_rounds": 10
+    },
+    "measured_ion_photon_success_rate_per_s": 4.28,
+    "measured_multiplexing_enhancement": 15.6
+  },
+  "activation_blockers": [
+    "this file is the demonstrated one-node component descriptor, not the operational rolling service profile",
+    "the measured 4.28/s one-node ion-photon rate must not be substituted for the two-node midpoint-BSM rate"
+  ],
+  "operational_composition": "configs/physical/repeater_services/cui_2026_rolling_purified_near_term_composite.json",
+  "notes": "Demonstrated-component provenance descriptor. The operational composite uses Cui Supplementary Note 8 and the author FIGS7 two-node rate data, so it does not require treating the population-correlated launches as IID or substituting the 4.28/s ion-photon rate."
+}

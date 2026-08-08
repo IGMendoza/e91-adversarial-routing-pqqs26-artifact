@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "controller_kind": "independent_time_bin_bank",
+  "scope": "toy",
+  "reference": "software wiring example; not a device claim",
+  "topology_mapping": "synchronized_two_node_midpoint_bsm",
+  "mode_probability_model": "iid_full_instrument",
+  "conditional_instrument_model": "mode_invariant",
+  "herald_selection_policy": "first_success",
+  "multiple_success_policy": "keep_first_discard_later",
+  "mode_offsets_s": [0.0, 2e-7, 4e-7],
+  "mode_resource_ids": ["mode_memory_0", "mode_memory_1", "mode_memory_2"],
+  "fixed_round_overhead_s": 0.0,
+  "periodic_cooling": {
+    "duration_s": 0.0,
+    "every_rounds": null
+  },
+  "activation_blockers": [],
+  "notes": "Executable deterministic test/example for three independent time-bin memories. The 200 ns spacing is chosen only to exceed the repository Colangelo-profile 160 ns count-rate lower-bound period; it is not attributed to a demonstrated three-memory device."
+}
