@@ -1,0 +1,1663 @@
+[
+  {
+    "depth": 1,
+    "exploitability": {
+      "r2_in_sample": 0.242,
+      "r2_loo": 0.1675,
+      "target_key": "exploitability"
+    },
+    "model": "haiku",
+    "response_path": "/tank-hdd/Dropbox/Inti/Career/Thesis/xAI/paper submissions/2026/QCE26/qce2026-genai-qkd-game/runs/histogram_corpus_full105_backend/500k/llm_digest_tsallis_rv_eta1_vs_tsallis_rv_eta1/claude_family_responses/depth1.haiku.txt",
+    "retention": {
+      "r2_in_sample": 0.4249,
+      "r2_loo": 0.1898,
+      "target_key": "histogram_final_retention"
+    },
+    "score": {
+      "depth": 1,
+      "dominant_feature_exploitability": {
+        "feature": "shape_shortest_hops",
+        "matched_synonym": "shortest_hops",
+        "named": true
+      },
+      "dominant_feature_retention": {
+        "feature": "shape_max_cut_edge_betweenness",
+        "matched_synonym": null,
+        "named": false
+      },
+      "duration_ms": null,
+      "faithfulness": {
+        "grounded": [
+          "0.086",
+          "2.",
+          "0.428",
+          "0.193",
+          "5.5",
+          "0.021",
+          "0.007",
+          "1",
+          "2",
+          "0.4249",
+          "2",
+          "0.1898",
+          "0.086",
+          "0.193",
+          "30",
+          "0.086",
+          "0.428",
+          "75",
+          "2",
+          "2",
+          "0.242",
+          "2",
+          "0.1675",
+          "5.5",
+          "0.007",
+          "95",
+          "5.5",
+          "0.021",
+          "10",
+          "1",
+          "1",
+          "1.0",
+          "2",
+          "1.0",
+          "1",
+          "2",
+          "0.1898",
+          "0.1675",
+          "105",
+          "2",
+          "1",
+          "2"
+        ],
+        "hallucinated": [],
+        "score": 1.0,
+        "total_numeric_claims": 42
+      },
+      "model": "haiku",
+      "prompt_tokens": null,
+      "response_tokens": null,
+      "scope_overclaim": {
+        "clean": true,
+        "violations": []
+      },
+      "sections": {
+        "missing": [],
+        "present": [
+          "shape-driven prediction",
+          "decision-tree evidence",
+          "ablation caveats",
+          "scope caveats",
+          "rubric self-check"
+        ]
+      }
+    }
+  },
+  {
+    "depth": 1,
+    "exploitability": {
+      "r2_in_sample": 0.242,
+      "r2_loo": 0.1675,
+      "target_key": "exploitability"
+    },
+    "model": "sonnet",
+    "response_path": "/tank-hdd/Dropbox/Inti/Career/Thesis/xAI/paper submissions/2026/QCE26/qce2026-genai-qkd-game/runs/histogram_corpus_full105_backend/500k/llm_digest_tsallis_rv_eta1_vs_tsallis_rv_eta1/claude_family_responses/depth1.sonnet.txt",
+    "retention": {
+      "r2_in_sample": 0.4249,
+      "r2_loo": 0.1898,
+      "target_key": "histogram_final_retention"
+    },
+    "score": {
+      "depth": 1,
+      "dominant_feature_exploitability": {
+        "feature": "shape_shortest_hops",
+        "matched_synonym": "shortest_hops",
+        "named": true
+      },
+      "dominant_feature_retention": {
+        "feature": "shape_max_cut_edge_betweenness",
+        "matched_synonym": null,
+        "named": false
+      },
+      "duration_ms": null,
+      "faithfulness": {
+        "grounded": [
+          "0.086",
+          "0.193",
+          "0.086",
+          "0.428",
+          "5.5",
+          "0.007",
+          "5.5",
+          "0.021",
+          "1",
+          "1",
+          "2",
+          "0.086",
+          "0.193",
+          "30",
+          "0.086",
+          "0.428",
+          "75",
+          "2",
+          "0.4249",
+          "2",
+          "105",
+          "0.1898",
+          "2",
+          "1",
+          "2",
+          "5.500",
+          "0.007",
+          "95",
+          "5.500",
+          "0.021",
+          "10",
+          "2",
+          "0.242",
+          "2",
+          "105",
+          "0.1675",
+          "1",
+          "1.0",
+          "1",
+          "2",
+          "1",
+          "2",
+          "105",
+          "2",
+          "1",
+          "2",
+          "1.0",
+          "2",
+          "0.1898",
+          "0.1675"
+        ],
+        "hallucinated": [],
+        "score": 1.0,
+        "total_numeric_claims": 50
+      },
+      "model": "sonnet",
+      "prompt_tokens": null,
+      "response_tokens": null,
+      "scope_overclaim": {
+        "clean": true,
+        "violations": []
+      },
+      "sections": {
+        "missing": [],
+        "present": [
+          "shape-driven prediction",
+          "decision-tree evidence",
+          "ablation caveats",
+          "scope caveats",
+          "rubric self-check"
+        ]
+      }
+    }
+  },
+  {
+    "depth": 1,
+    "exploitability": {
+      "r2_in_sample": 0.242,
+      "r2_loo": 0.1675,
+      "target_key": "exploitability"
+    },
+    "model": "fable",
+    "response_path": "/tank-hdd/Dropbox/Inti/Career/Thesis/xAI/paper submissions/2026/QCE26/qce2026-genai-qkd-game/runs/histogram_corpus_full105_backend/500k/llm_digest_tsallis_rv_eta1_vs_tsallis_rv_eta1/claude_family_responses/depth1.fable.txt",
+    "retention": {
+      "r2_in_sample": 0.4249,
+      "r2_loo": 0.1898,
+      "target_key": "histogram_final_retention"
+    },
+    "score": {
+      "depth": 1,
+      "dominant_feature_exploitability": {
+        "feature": "shape_shortest_hops",
+        "matched_synonym": "shortest_hops",
+        "named": true
+      },
+      "dominant_feature_retention": {
+        "feature": "shape_max_cut_edge_betweenness",
+        "matched_synonym": null,
+        "named": false
+      },
+      "duration_ms": null,
+      "faithfulness": {
+        "grounded": [
+          "1",
+          "0.428",
+          "0.193",
+          "5.5",
+          "0.007",
+          "0.021",
+          "5.5",
+          "2",
+          "1",
+          "2",
+          "0.4249",
+          "2",
+          "0.1898",
+          "105",
+          "0.086",
+          "0.193",
+          "30",
+          "0.086",
+          "0.428",
+          "75",
+          "2",
+          "2",
+          "0.242",
+          "2",
+          "0.1675",
+          "105",
+          "5.500",
+          "0.007",
+          "95",
+          "5.500",
+          "0.021",
+          "10",
+          "3",
+          "1",
+          "1.0",
+          "0",
+          "1",
+          "2",
+          "4",
+          "1",
+          "105",
+          "2",
+          "0.42",
+          "0.24",
+          "2",
+          "0.19",
+          "5",
+          "1",
+          "2",
+          "2"
+        ],
+        "hallucinated": [
+          "0.17"
+        ],
+        "score": 0.9803921568627451,
+        "total_numeric_claims": 51
+      },
+      "model": "fable",
+      "prompt_tokens": null,
+      "response_tokens": null,
+      "scope_overclaim": {
+        "clean": true,
+        "violations": []
+      },
+      "sections": {
+        "missing": [],
+        "present": [
+          "shape-driven prediction",
+          "decision-tree evidence",
+          "ablation caveats",
+          "scope caveats",
+          "rubric self-check"
+        ]
+      }
+    }
+  },
+  {
+    "depth": 1,
+    "exploitability": {
+      "r2_in_sample": 0.242,
+      "r2_loo": 0.1675,
+      "target_key": "exploitability"
+    },
+    "model": "opus",
+    "response_path": "/tank-hdd/Dropbox/Inti/Career/Thesis/xAI/paper submissions/2026/QCE26/qce2026-genai-qkd-game/runs/histogram_corpus_full105_backend/500k/llm_digest_tsallis_rv_eta1_vs_tsallis_rv_eta1/claude_family_responses/depth1.opus.txt",
+    "retention": {
+      "r2_in_sample": 0.4249,
+      "r2_loo": 0.1898,
+      "target_key": "histogram_final_retention"
+    },
+    "score": {
+      "depth": 1,
+      "dominant_feature_exploitability": {
+        "feature": "shape_shortest_hops",
+        "matched_synonym": "shortest_hops",
+        "named": true
+      },
+      "dominant_feature_retention": {
+        "feature": "shape_max_cut_edge_betweenness",
+        "matched_synonym": null,
+        "named": false
+      },
+      "duration_ms": null,
+      "faithfulness": {
+        "grounded": [
+          "0.086",
+          "0.193",
+          "0.086",
+          "0.428",
+          "5.5",
+          "0.007",
+          "5.5",
+          "0.021",
+          "1",
+          "1",
+          "2",
+          "0.086",
+          "0.193",
+          "30",
+          "0.428",
+          "75",
+          "2",
+          "0.4249",
+          "2",
+          "0.1898",
+          "105",
+          "2",
+          "1",
+          "2",
+          "5.500",
+          "0.007",
+          "95",
+          "0.021",
+          "10",
+          "2",
+          "0.242",
+          "2",
+          "0.1675",
+          "10",
+          "1.0",
+          "1.0",
+          "1",
+          "1",
+          "105",
+          "102",
+          "105",
+          "2"
+        ],
+        "hallucinated": [],
+        "score": 1.0,
+        "total_numeric_claims": 42
+      },
+      "model": "opus",
+      "prompt_tokens": null,
+      "response_tokens": null,
+      "scope_overclaim": {
+        "clean": true,
+        "violations": []
+      },
+      "sections": {
+        "missing": [],
+        "present": [
+          "shape-driven prediction",
+          "decision-tree evidence",
+          "ablation caveats",
+          "scope caveats",
+          "rubric self-check"
+        ]
+      }
+    }
+  },
+  {
+    "depth": 2,
+    "exploitability": {
+      "r2_in_sample": 0.6156,
+      "r2_loo": 0.3213,
+      "target_key": "exploitability"
+    },
+    "model": "haiku",
+    "response_path": "/tank-hdd/Dropbox/Inti/Career/Thesis/xAI/paper submissions/2026/QCE26/qce2026-genai-qkd-game/runs/histogram_corpus_full105_backend/500k/llm_digest_tsallis_rv_eta1_vs_tsallis_rv_eta1/claude_family_responses/depth2.haiku.txt",
+    "retention": {
+      "r2_in_sample": 0.7397,
+      "r2_loo": 0.5203,
+      "target_key": "histogram_final_retention"
+    },
+    "score": {
+      "depth": 2,
+      "dominant_feature_exploitability": {
+        "feature": "shape_max_edge_betweenness",
+        "matched_synonym": null,
+        "named": false
+      },
+      "dominant_feature_retention": {
+        "feature": "shape_max_cut_edge_betweenness",
+        "matched_synonym": null,
+        "named": false
+      },
+      "duration_ms": null,
+      "faithfulness": {
+        "grounded": [
+          "1",
+          "0.452",
+          "18",
+          "0.509",
+          "18",
+          "0.182",
+          "1",
+          "0.000",
+          "5.5",
+          "0.024",
+          "0.007",
+          "93",
+          "5.5",
+          "0.031",
+          "0.027",
+          "0.361",
+          "0.004",
+          "1",
+          "2",
+          "0.5203",
+          "0.7397",
+          "105",
+          "1",
+          "29",
+          "71",
+          "4",
+          "2",
+          "2",
+          "0.3213",
+          "0.6156",
+          "105",
+          "2",
+          "93",
+          "6",
+          "4",
+          "1",
+          "0.5744",
+          "0.3754",
+          "0.0502",
+          "2",
+          "0.4182",
+          "0.393",
+          "0.1887",
+          "2",
+          "105",
+          "102",
+          "2",
+          "2",
+          "1",
+          "0.5744",
+          "2",
+          "0.4182"
+        ],
+        "hallucinated": [],
+        "score": 1.0,
+        "total_numeric_claims": 52
+      },
+      "model": "haiku",
+      "prompt_tokens": null,
+      "response_tokens": null,
+      "scope_overclaim": {
+        "clean": true,
+        "violations": []
+      },
+      "sections": {
+        "missing": [],
+        "present": [
+          "shape-driven prediction",
+          "decision-tree evidence",
+          "ablation caveats",
+          "scope caveats",
+          "rubric self-check"
+        ]
+      }
+    }
+  },
+  {
+    "depth": 2,
+    "exploitability": {
+      "r2_in_sample": 0.6156,
+      "r2_loo": 0.3213,
+      "target_key": "exploitability"
+    },
+    "model": "sonnet",
+    "response_path": "/tank-hdd/Dropbox/Inti/Career/Thesis/xAI/paper submissions/2026/QCE26/qce2026-genai-qkd-game/runs/histogram_corpus_full105_backend/500k/llm_digest_tsallis_rv_eta1_vs_tsallis_rv_eta1/claude_family_responses/depth2.sonnet.txt",
+    "retention": {
+      "r2_in_sample": 0.7397,
+      "r2_loo": 0.5203,
+      "target_key": "histogram_final_retention"
+    },
+    "score": {
+      "depth": 2,
+      "dominant_feature_exploitability": {
+        "feature": "shape_max_edge_betweenness",
+        "matched_synonym": "max edge betweenness",
+        "named": true
+      },
+      "dominant_feature_retention": {
+        "feature": "shape_max_cut_edge_betweenness",
+        "matched_synonym": null,
+        "named": false
+      },
+      "duration_ms": null,
+      "faithfulness": {
+        "grounded": [
+          "0.086",
+          "1",
+          "0.452",
+          "18",
+          "0.182",
+          "1",
+          "0.000",
+          "5.5",
+          "0.007",
+          "0.027",
+          "5.5",
+          "0.361",
+          "0.031",
+          "2",
+          "0.7397",
+          "2",
+          "0.5203",
+          "2",
+          "4",
+          "0.086",
+          "1",
+          "0.452",
+          "71",
+          "0.086",
+          "18",
+          "0.182",
+          "29",
+          "0.086",
+          "1",
+          "0.000",
+          "4",
+          "2",
+          "0.6156",
+          "2",
+          "0.3213",
+          "2",
+          "4",
+          "5.5",
+          "0.024",
+          "0.007",
+          "93",
+          "5.5",
+          "0.361",
+          "0.031",
+          "6",
+          "0.5744",
+          "0.3754",
+          "0.0502",
+          "0.4182",
+          "0.393",
+          "0.1887",
+          "2",
+          "105",
+          "2",
+          "0.5203",
+          "0.3213",
+          "0.3213",
+          "2"
+        ],
+        "hallucinated": [],
+        "score": 1.0,
+        "total_numeric_claims": 58
+      },
+      "model": "sonnet",
+      "prompt_tokens": null,
+      "response_tokens": null,
+      "scope_overclaim": {
+        "clean": true,
+        "violations": []
+      },
+      "sections": {
+        "missing": [],
+        "present": [
+          "shape-driven prediction",
+          "decision-tree evidence",
+          "ablation caveats",
+          "scope caveats",
+          "rubric self-check"
+        ]
+      }
+    }
+  },
+  {
+    "depth": 2,
+    "exploitability": {
+      "r2_in_sample": 0.6156,
+      "r2_loo": 0.3213,
+      "target_key": "exploitability"
+    },
+    "model": "fable",
+    "response_path": "/tank-hdd/Dropbox/Inti/Career/Thesis/xAI/paper submissions/2026/QCE26/qce2026-genai-qkd-game/runs/histogram_corpus_full105_backend/500k/llm_digest_tsallis_rv_eta1_vs_tsallis_rv_eta1/claude_family_responses/depth2.fable.txt",
+    "retention": {
+      "r2_in_sample": 0.7397,
+      "r2_loo": 0.5203,
+      "target_key": "histogram_final_retention"
+    },
+    "score": {
+      "depth": 2,
+      "dominant_feature_exploitability": {
+        "feature": "shape_max_edge_betweenness",
+        "matched_synonym": null,
+        "named": false
+      },
+      "dominant_feature_retention": {
+        "feature": "shape_max_cut_edge_betweenness",
+        "matched_synonym": null,
+        "named": false
+      },
+      "duration_ms": null,
+      "faithfulness": {
+        "grounded": [
+          "1",
+          "0.182",
+          "29",
+          "18",
+          "5.5",
+          "0.024",
+          "93",
+          "0.007",
+          "0.027",
+          "0.031",
+          "2",
+          "1",
+          "2",
+          "0.7397",
+          "2",
+          "0.5203",
+          "0.086",
+          "1",
+          "0.452",
+          "71",
+          "1",
+          "0.000",
+          "4",
+          "0.086",
+          "18",
+          "0.182",
+          "29",
+          "0.086",
+          "18",
+          "0.509",
+          "1",
+          "2",
+          "2",
+          "0.6156",
+          "2",
+          "0.3213",
+          "5.5",
+          "0.024",
+          "0.007",
+          "93",
+          "5.5",
+          "0.024",
+          "0.027",
+          "2",
+          "5.5",
+          "0.361",
+          "0.031",
+          "6",
+          "0.361",
+          "0.004",
+          "4",
+          "3",
+          "1",
+          "0.5744",
+          "0.3754",
+          "0.0502",
+          "2",
+          "0.4182",
+          "0.1887",
+          "4",
+          "2",
+          "105",
+          "2",
+          "2",
+          "0.3213",
+          "5",
+          "2"
+        ],
+        "hallucinated": [
+          "0.3930"
+        ],
+        "score": 0.9852941176470589,
+        "total_numeric_claims": 68
+      },
+      "model": "fable",
+      "prompt_tokens": null,
+      "response_tokens": null,
+      "scope_overclaim": {
+        "clean": true,
+        "violations": []
+      },
+      "sections": {
+        "missing": [],
+        "present": [
+          "shape-driven prediction",
+          "decision-tree evidence",
+          "ablation caveats",
+          "scope caveats",
+          "rubric self-check"
+        ]
+      }
+    }
+  },
+  {
+    "depth": 2,
+    "exploitability": {
+      "r2_in_sample": 0.6156,
+      "r2_loo": 0.3213,
+      "target_key": "exploitability"
+    },
+    "model": "opus",
+    "response_path": "/tank-hdd/Dropbox/Inti/Career/Thesis/xAI/paper submissions/2026/QCE26/qce2026-genai-qkd-game/runs/histogram_corpus_full105_backend/500k/llm_digest_tsallis_rv_eta1_vs_tsallis_rv_eta1/claude_family_responses/depth2.opus.txt",
+    "retention": {
+      "r2_in_sample": 0.7397,
+      "r2_loo": 0.5203,
+      "target_key": "histogram_final_retention"
+    },
+    "score": {
+      "depth": 2,
+      "dominant_feature_exploitability": {
+        "feature": "shape_max_edge_betweenness",
+        "matched_synonym": "max edge betweenness",
+        "named": true
+      },
+      "dominant_feature_retention": {
+        "feature": "shape_max_cut_edge_betweenness",
+        "matched_synonym": null,
+        "named": false
+      },
+      "duration_ms": null,
+      "faithfulness": {
+        "grounded": [
+          "1",
+          "0.086",
+          "18",
+          "0.182",
+          "0.086",
+          "0.452",
+          "0.000",
+          "5.5",
+          "0.024",
+          "0.007",
+          "0.031",
+          "0.027",
+          "2",
+          "2",
+          "2",
+          "0.7397",
+          "2",
+          "0.5203",
+          "105",
+          "4",
+          "1",
+          "29",
+          "71",
+          "4",
+          "2",
+          "0.6156",
+          "2",
+          "0.3213",
+          "4",
+          "2",
+          "93",
+          "6",
+          "4",
+          "3",
+          "0.5744",
+          "0.3754",
+          "0.0502",
+          "0.4182",
+          "0.393",
+          "0.1887",
+          "4",
+          "2",
+          "105",
+          "102",
+          "105",
+          "1",
+          "2",
+          "5"
+        ],
+        "hallucinated": [],
+        "score": 1.0,
+        "total_numeric_claims": 48
+      },
+      "model": "opus",
+      "prompt_tokens": null,
+      "response_tokens": null,
+      "scope_overclaim": {
+        "clean": true,
+        "violations": []
+      },
+      "sections": {
+        "missing": [],
+        "present": [
+          "shape-driven prediction",
+          "decision-tree evidence",
+          "ablation caveats",
+          "scope caveats",
+          "rubric self-check"
+        ]
+      }
+    }
+  },
+  {
+    "depth": 4,
+    "exploitability": {
+      "r2_in_sample": 0.8612,
+      "r2_loo": 0.4796,
+      "target_key": "exploitability"
+    },
+    "model": "haiku",
+    "response_path": "/tank-hdd/Dropbox/Inti/Career/Thesis/xAI/paper submissions/2026/QCE26/qce2026-genai-qkd-game/runs/histogram_corpus_full105_backend/500k/llm_digest_tsallis_rv_eta1_vs_tsallis_rv_eta1/claude_family_responses/depth4.haiku.txt",
+    "retention": {
+      "r2_in_sample": 0.9212,
+      "r2_loo": 0.5372,
+      "target_key": "histogram_final_retention"
+    },
+    "score": {
+      "depth": 4,
+      "dominant_feature_exploitability": {
+        "feature": "shape_max_edge_betweenness",
+        "matched_synonym": null,
+        "named": false
+      },
+      "dominant_feature_retention": {
+        "feature": "shape_max_cut_edge_betweenness",
+        "matched_synonym": null,
+        "named": false
+      },
+      "duration_ms": null,
+      "faithfulness": {
+        "grounded": [
+          "0.086",
+          "1.5",
+          "1.5",
+          "0.457",
+          "0.548",
+          "0.186",
+          "31.5",
+          "2",
+          "1.5",
+          "5.5",
+          "0.154",
+          "17.5",
+          "0.003",
+          "0.007",
+          "5.5",
+          "0.026",
+          "0.036",
+          "1",
+          "2",
+          "0.9212",
+          "2",
+          "0.5372",
+          "105",
+          "0.086",
+          "1.5",
+          "1.5",
+          "3.5",
+          "0.457",
+          "60",
+          "0.0",
+          "6",
+          "2",
+          "2",
+          "0.8612",
+          "2",
+          "0.4796",
+          "5.5",
+          "0.024",
+          "0.154",
+          "17.5",
+          "0.007",
+          "69",
+          "1",
+          "0.4612",
+          "0.3218",
+          "0.1331",
+          "5",
+          "2",
+          "0.4299",
+          "0.281",
+          "0.1349",
+          "0.0917",
+          "4",
+          "105",
+          "2",
+          "0.5372",
+          "0.4796",
+          "1",
+          "0.4612",
+          "2",
+          "0.4299",
+          "4"
+        ],
+        "hallucinated": [],
+        "score": 1.0,
+        "total_numeric_claims": 62
+      },
+      "model": "haiku",
+      "prompt_tokens": null,
+      "response_tokens": null,
+      "scope_overclaim": {
+        "clean": true,
+        "violations": []
+      },
+      "sections": {
+        "missing": [],
+        "present": [
+          "shape-driven prediction",
+          "decision-tree evidence",
+          "ablation caveats",
+          "scope caveats",
+          "rubric self-check"
+        ]
+      }
+    }
+  },
+  {
+    "depth": 4,
+    "exploitability": {
+      "r2_in_sample": 0.8612,
+      "r2_loo": 0.4796,
+      "target_key": "exploitability"
+    },
+    "model": "sonnet",
+    "response_path": "/tank-hdd/Dropbox/Inti/Career/Thesis/xAI/paper submissions/2026/QCE26/qce2026-genai-qkd-game/runs/histogram_corpus_full105_backend/500k/llm_digest_tsallis_rv_eta1_vs_tsallis_rv_eta1/claude_family_responses/depth4.sonnet.txt",
+    "retention": {
+      "r2_in_sample": 0.9212,
+      "r2_loo": 0.5372,
+      "target_key": "histogram_final_retention"
+    },
+    "score": {
+      "depth": 4,
+      "dominant_feature_exploitability": {
+        "feature": "shape_max_edge_betweenness",
+        "matched_synonym": null,
+        "named": false
+      },
+      "dominant_feature_retention": {
+        "feature": "shape_max_cut_edge_betweenness",
+        "matched_synonym": null,
+        "named": false
+      },
+      "duration_ms": null,
+      "faithfulness": {
+        "grounded": [
+          "1",
+          "0.457",
+          "0.548",
+          "0.086",
+          "1.5",
+          "1.5",
+          "0",
+          "0.086",
+          "1.5",
+          "0",
+          "0.003",
+          "0.008",
+          "5.5",
+          "0.154",
+          "0.024",
+          "0.026",
+          "0.043",
+          "2",
+          "1",
+          "2",
+          "0.9212",
+          "2",
+          "0.5372",
+          "0.086",
+          "3.5",
+          "0.548",
+          "7",
+          "0.086",
+          "18",
+          "31.5",
+          "1.5",
+          "0.001",
+          "1",
+          "2",
+          "2",
+          "0.8612",
+          "2",
+          "0.4796",
+          "5.5",
+          "0.024",
+          "0.154",
+          "17.5",
+          "0.007",
+          "69",
+          "5.5",
+          "0.361",
+          "0.266",
+          "0.031",
+          "0.036",
+          "4",
+          "1",
+          "3",
+          "1",
+          "0.4612",
+          "0.3218",
+          "0.0403",
+          "0.0431",
+          "2",
+          "0.4299",
+          "0.281",
+          "0.0611",
+          "4",
+          "4",
+          "105",
+          "102",
+          "105",
+          "2",
+          "0.5372",
+          "0.4796",
+          "2",
+          "5",
+          "1",
+          "2",
+          "2"
+        ],
+        "hallucinated": [],
+        "score": 1.0,
+        "total_numeric_claims": 74
+      },
+      "model": "sonnet",
+      "prompt_tokens": null,
+      "response_tokens": null,
+      "scope_overclaim": {
+        "clean": true,
+        "violations": []
+      },
+      "sections": {
+        "missing": [],
+        "present": [
+          "shape-driven prediction",
+          "decision-tree evidence",
+          "ablation caveats",
+          "scope caveats",
+          "rubric self-check"
+        ]
+      }
+    }
+  },
+  {
+    "depth": 4,
+    "exploitability": {
+      "r2_in_sample": 0.8612,
+      "r2_loo": 0.4796,
+      "target_key": "exploitability"
+    },
+    "model": "fable",
+    "response_path": "/tank-hdd/Dropbox/Inti/Career/Thesis/xAI/paper submissions/2026/QCE26/qce2026-genai-qkd-game/runs/histogram_corpus_full105_backend/500k/llm_digest_tsallis_rv_eta1_vs_tsallis_rv_eta1/claude_family_responses/depth4.fable.txt",
+    "retention": {
+      "r2_in_sample": 0.9212,
+      "r2_loo": 0.5372,
+      "target_key": "histogram_final_retention"
+    },
+    "score": {
+      "depth": 4,
+      "dominant_feature_exploitability": {
+        "feature": "shape_max_edge_betweenness",
+        "matched_synonym": null,
+        "named": false
+      },
+      "dominant_feature_retention": {
+        "feature": "shape_max_cut_edge_betweenness",
+        "matched_synonym": null,
+        "named": false
+      },
+      "duration_ms": null,
+      "faithfulness": {
+        "grounded": [
+          "1",
+          "1.5",
+          "0.457",
+          "0.548",
+          "0",
+          "1.5",
+          "5.5",
+          "0.154",
+          "17.5",
+          "0.007",
+          "0.026",
+          "0.036",
+          "2",
+          "1",
+          "2",
+          "0.9212",
+          "2",
+          "0.5372",
+          "105",
+          "0.086",
+          "1.500",
+          "1.500",
+          "3.500",
+          "0.457",
+          "60",
+          "2",
+          "2",
+          "0.8612",
+          "2",
+          "0.4796",
+          "105",
+          "5.500",
+          "0.024",
+          "0.154",
+          "17.500",
+          "0.007",
+          "69",
+          "3",
+          "1",
+          "0.4612",
+          "0.3218",
+          "0.0431",
+          "0.0403",
+          "2",
+          "0.4299",
+          "0.281",
+          "0.0917",
+          "0.0611",
+          "4",
+          "4",
+          "105",
+          "5",
+          "1",
+          "2",
+          "2"
+        ],
+        "hallucinated": [],
+        "score": 1.0,
+        "total_numeric_claims": 55
+      },
+      "model": "fable",
+      "prompt_tokens": null,
+      "response_tokens": null,
+      "scope_overclaim": {
+        "clean": true,
+        "violations": []
+      },
+      "sections": {
+        "missing": [],
+        "present": [
+          "shape-driven prediction",
+          "decision-tree evidence",
+          "ablation caveats",
+          "scope caveats",
+          "rubric self-check"
+        ]
+      }
+    }
+  },
+  {
+    "depth": 4,
+    "exploitability": {
+      "r2_in_sample": 0.8612,
+      "r2_loo": 0.4796,
+      "target_key": "exploitability"
+    },
+    "model": "opus",
+    "response_path": "/tank-hdd/Dropbox/Inti/Career/Thesis/xAI/paper submissions/2026/QCE26/qce2026-genai-qkd-game/runs/histogram_corpus_full105_backend/500k/llm_digest_tsallis_rv_eta1_vs_tsallis_rv_eta1/claude_family_responses/depth4.opus.txt",
+    "retention": {
+      "r2_in_sample": 0.9212,
+      "r2_loo": 0.5372,
+      "target_key": "histogram_final_retention"
+    },
+    "score": {
+      "depth": 4,
+      "dominant_feature_exploitability": {
+        "feature": "shape_max_edge_betweenness",
+        "matched_synonym": null,
+        "named": false
+      },
+      "dominant_feature_retention": {
+        "feature": "shape_max_cut_edge_betweenness",
+        "matched_synonym": null,
+        "named": false
+      },
+      "duration_ms": null,
+      "faithfulness": {
+        "grounded": [
+          "105",
+          "1",
+          "0.086",
+          "1.500",
+          "1.500",
+          "0.457",
+          "2",
+          "3",
+          "0.548",
+          "3.5",
+          "1.500",
+          "0.000",
+          "0.086",
+          "18",
+          "0.186",
+          "2",
+          "5.500",
+          "0.154",
+          "0.003",
+          "22",
+          "0.007",
+          "69",
+          "5.5",
+          "0.361",
+          "0.026",
+          "0.036",
+          "2",
+          "2",
+          "0.9212",
+          "2",
+          "0.5372",
+          "105",
+          "12",
+          "2",
+          "0.8612",
+          "2",
+          "0.4796",
+          "105",
+          "13",
+          "3",
+          "0.4612",
+          "0.3218",
+          "0.0431",
+          "0.0403",
+          "0.4299",
+          "0.0917",
+          "0.0611",
+          "4",
+          "4",
+          "1",
+          "2",
+          "5",
+          "2"
+        ],
+        "hallucinated": [
+          "0.2810"
+        ],
+        "score": 0.9814814814814815,
+        "total_numeric_claims": 54
+      },
+      "model": "opus",
+      "prompt_tokens": null,
+      "response_tokens": null,
+      "scope_overclaim": {
+        "clean": true,
+        "violations": []
+      },
+      "sections": {
+        "missing": [],
+        "present": [
+          "shape-driven prediction",
+          "decision-tree evidence",
+          "ablation caveats",
+          "scope caveats",
+          "rubric self-check"
+        ]
+      }
+    }
+  },
+  {
+    "depth": 8,
+    "exploitability": {
+      "r2_in_sample": 0.9296,
+      "r2_loo": 0.3778,
+      "target_key": "exploitability"
+    },
+    "model": "haiku",
+    "response_path": "/tank-hdd/Dropbox/Inti/Career/Thesis/xAI/paper submissions/2026/QCE26/qce2026-genai-qkd-game/runs/histogram_corpus_full105_backend/500k/llm_digest_tsallis_rv_eta1_vs_tsallis_rv_eta1/claude_family_responses/depth8.haiku.txt",
+    "retention": {
+      "r2_in_sample": 0.9754,
+      "r2_loo": 0.5424,
+      "target_key": "histogram_final_retention"
+    },
+    "score": {
+      "depth": 8,
+      "dominant_feature_exploitability": {
+        "feature": "shape_max_edge_betweenness",
+        "matched_synonym": null,
+        "named": false
+      },
+      "dominant_feature_retention": {
+        "feature": "shape_max_cut_edge_betweenness",
+        "matched_synonym": null,
+        "named": false
+      },
+      "duration_ms": null,
+      "faithfulness": {
+        "grounded": [
+          "1",
+          "2",
+          "0.9754",
+          "2",
+          "0.5424",
+          "105",
+          "43",
+          "0.4513",
+          "0.2847",
+          "0.1257",
+          "2",
+          "2",
+          "0.9296",
+          "2",
+          "0.3778",
+          "0.395",
+          "0.2609",
+          "0.1562",
+          "1",
+          "2",
+          "5",
+          "8",
+          "2",
+          "0.54",
+          "2"
+        ],
+        "hallucinated": [
+          "55",
+          "0.34"
+        ],
+        "score": 0.9259259259259259,
+        "total_numeric_claims": 27
+      },
+      "model": "haiku",
+      "prompt_tokens": null,
+      "response_tokens": null,
+      "scope_overclaim": {
+        "clean": true,
+        "violations": []
+      },
+      "sections": {
+        "missing": [],
+        "present": [
+          "shape-driven prediction",
+          "decision-tree evidence",
+          "ablation caveats",
+          "scope caveats",
+          "rubric self-check"
+        ]
+      }
+    }
+  },
+  {
+    "depth": 8,
+    "exploitability": {
+      "r2_in_sample": 0.9296,
+      "r2_loo": 0.3778,
+      "target_key": "exploitability"
+    },
+    "model": "sonnet",
+    "response_path": "/tank-hdd/Dropbox/Inti/Career/Thesis/xAI/paper submissions/2026/QCE26/qce2026-genai-qkd-game/runs/histogram_corpus_full105_backend/500k/llm_digest_tsallis_rv_eta1_vs_tsallis_rv_eta1/claude_family_responses/depth8.sonnet.txt",
+    "retention": {
+      "r2_in_sample": 0.9754,
+      "r2_loo": 0.5424,
+      "target_key": "histogram_final_retention"
+    },
+    "score": {
+      "depth": 8,
+      "dominant_feature_exploitability": {
+        "feature": "shape_max_edge_betweenness",
+        "matched_synonym": null,
+        "named": false
+      },
+      "dominant_feature_retention": {
+        "feature": "shape_max_cut_edge_betweenness",
+        "matched_synonym": null,
+        "named": false
+      },
+      "duration_ms": null,
+      "faithfulness": {
+        "grounded": [
+          "1",
+          "2",
+          "1",
+          "2",
+          "0.9754",
+          "2",
+          "0.5424",
+          "38",
+          "102",
+          "105",
+          "2",
+          "2",
+          "0.9296",
+          "2",
+          "0.3778",
+          "33",
+          "102",
+          "105",
+          "105",
+          "3",
+          "1",
+          "0.4513",
+          "0.2847",
+          "0.0192",
+          "0.0213",
+          "2",
+          "0.395",
+          "0.2609",
+          "0.0121",
+          "0.051",
+          "4",
+          "8",
+          "105",
+          "2",
+          "105",
+          "2",
+          "2",
+          "0.3778",
+          "5",
+          "2",
+          "1",
+          "2",
+          "2"
+        ],
+        "hallucinated": [],
+        "score": 1.0,
+        "total_numeric_claims": 43
+      },
+      "model": "sonnet",
+      "prompt_tokens": null,
+      "response_tokens": null,
+      "scope_overclaim": {
+        "clean": true,
+        "violations": []
+      },
+      "sections": {
+        "missing": [],
+        "present": [
+          "shape-driven prediction",
+          "decision-tree evidence",
+          "ablation caveats",
+          "scope caveats",
+          "rubric self-check"
+        ]
+      }
+    }
+  },
+  {
+    "depth": 8,
+    "exploitability": {
+      "r2_in_sample": 0.9296,
+      "r2_loo": 0.3778,
+      "target_key": "exploitability"
+    },
+    "model": "fable",
+    "response_path": "/tank-hdd/Dropbox/Inti/Career/Thesis/xAI/paper submissions/2026/QCE26/qce2026-genai-qkd-game/runs/histogram_corpus_full105_backend/500k/llm_digest_tsallis_rv_eta1_vs_tsallis_rv_eta1/claude_family_responses/depth8.fable.txt",
+    "retention": {
+      "r2_in_sample": 0.9754,
+      "r2_loo": 0.5424,
+      "target_key": "histogram_final_retention"
+    },
+    "score": {
+      "depth": 8,
+      "dominant_feature_exploitability": {
+        "feature": "shape_max_edge_betweenness",
+        "matched_synonym": null,
+        "named": false
+      },
+      "dominant_feature_retention": {
+        "feature": "shape_max_cut_edge_betweenness",
+        "matched_synonym": null,
+        "named": false
+      },
+      "duration_ms": null,
+      "faithfulness": {
+        "grounded": [
+          "105",
+          "1",
+          "2",
+          "1",
+          "8",
+          "38",
+          "102",
+          "105",
+          "2",
+          "0.9754",
+          "2",
+          "0.5424",
+          "105",
+          "2",
+          "8",
+          "33",
+          "102",
+          "105",
+          "2",
+          "0.9296",
+          "2",
+          "0.3778",
+          "105",
+          "3",
+          "1",
+          "0.4513",
+          "0.2847",
+          "0.0213",
+          "0.0192",
+          "2",
+          "0.395",
+          "0.2609",
+          "0.0121",
+          "4",
+          "8",
+          "2",
+          "0.9754",
+          "0.9296",
+          "2",
+          "0.5424",
+          "0.3778",
+          "2",
+          "2",
+          "0.3778",
+          "5",
+          "1",
+          "2"
+        ],
+        "hallucinated": [],
+        "score": 1.0,
+        "total_numeric_claims": 47
+      },
+      "model": "fable",
+      "prompt_tokens": null,
+      "response_tokens": null,
+      "scope_overclaim": {
+        "clean": true,
+        "violations": []
+      },
+      "sections": {
+        "missing": [],
+        "present": [
+          "shape-driven prediction",
+          "decision-tree evidence",
+          "ablation caveats",
+          "scope caveats",
+          "rubric self-check"
+        ]
+      }
+    }
+  },
+  {
+    "depth": 8,
+    "exploitability": {
+      "r2_in_sample": 0.9296,
+      "r2_loo": 0.3778,
+      "target_key": "exploitability"
+    },
+    "model": "opus",
+    "response_path": "/tank-hdd/Dropbox/Inti/Career/Thesis/xAI/paper submissions/2026/QCE26/qce2026-genai-qkd-game/runs/histogram_corpus_full105_backend/500k/llm_digest_tsallis_rv_eta1_vs_tsallis_rv_eta1/claude_family_responses/depth8.opus.txt",
+    "retention": {
+      "r2_in_sample": 0.9754,
+      "r2_loo": 0.5424,
+      "target_key": "histogram_final_retention"
+    },
+    "score": {
+      "depth": 8,
+      "dominant_feature_exploitability": {
+        "feature": "shape_max_edge_betweenness",
+        "matched_synonym": null,
+        "named": false
+      },
+      "dominant_feature_retention": {
+        "feature": "shape_max_cut_edge_betweenness",
+        "matched_synonym": null,
+        "named": false
+      },
+      "duration_ms": null,
+      "faithfulness": {
+        "grounded": [
+          "105",
+          "1",
+          "2",
+          "1",
+          "2",
+          "0.9754",
+          "2",
+          "0.5424",
+          "105",
+          "38",
+          "2",
+          "2",
+          "0.9296",
+          "2",
+          "0.3778",
+          "33",
+          "2",
+          "0.3778",
+          "102",
+          "105",
+          "3",
+          "1",
+          "0.4513",
+          "0.2847",
+          "0.0213",
+          "0.0192",
+          "2",
+          "0.395",
+          "0.2609",
+          "0.0121",
+          "4",
+          "8",
+          "2",
+          "5",
+          "1",
+          "2"
+        ],
+        "hallucinated": [],
+        "score": 1.0,
+        "total_numeric_claims": 36
+      },
+      "model": "opus",
+      "prompt_tokens": null,
+      "response_tokens": null,
+      "scope_overclaim": {
+        "clean": true,
+        "violations": []
+      },
+      "sections": {
+        "missing": [],
+        "present": [
+          "shape-driven prediction",
+          "decision-tree evidence",
+          "ablation caveats",
+          "scope caveats",
+          "rubric self-check"
+        ]
+      }
+    }
+  }
+]

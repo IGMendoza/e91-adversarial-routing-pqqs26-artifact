@@ -1,0 +1,1439 @@
+[
+  {
+    "depth": 1,
+    "exploitability": {
+      "num_leaves": 2,
+      "r2_in_sample": 0.242,
+      "r2_loo": 0.1675,
+      "target_key": "exploitability",
+      "top_features": [
+        [
+          "shape_shortest_hops",
+          1.0
+        ]
+      ]
+    },
+    "model": "phi4:14b",
+    "prompt_path": "runs/histogram_corpus_full105_backend/500k/llm_digest_tsallis_rv_eta1_vs_tsallis_rv_eta1/prompts/depth1.txt",
+    "response_path": "runs/histogram_corpus_full105_backend/500k/llm_digest_tsallis_rv_eta1_vs_tsallis_rv_eta1/responses/depth1.phi4_14b.txt",
+    "retention": {
+      "num_leaves": 2,
+      "r2_in_sample": 0.4249,
+      "r2_loo": 0.1898,
+      "target_key": "histogram_final_retention",
+      "top_features": [
+        [
+          "shape_max_cut_edge_betweenness",
+          1.0
+        ]
+      ]
+    },
+    "score": {
+      "depth": 1,
+      "dominant_feature_exploitability": {
+        "feature": "shape_shortest_hops",
+        "matched_synonym": "shortest_hops",
+        "named": true
+      },
+      "dominant_feature_retention": {
+        "feature": "shape_max_cut_edge_betweenness",
+        "matched_synonym": null,
+        "named": false
+      },
+      "duration_ms": 86228.830459,
+      "faithfulness": {
+        "grounded": [
+          "0.086",
+          "0.086",
+          "5.500",
+          "0.4249",
+          "0.1898",
+          "0.086",
+          "0.193",
+          "30",
+          "0.086",
+          "0.428",
+          "75",
+          "0.242",
+          "0.1675",
+          "5.500",
+          "0.007",
+          "95",
+          "5.500",
+          "0.021",
+          "10",
+          "1"
+        ],
+        "hallucinated": [],
+        "score": 1.0,
+        "total_numeric_claims": 20
+      },
+      "model": "phi4:14b",
+      "prompt_tokens": 969,
+      "response_tokens": 486,
+      "scope_overclaim": {
+        "clean": true,
+        "violations": []
+      },
+      "sections": {
+        "missing": [],
+        "present": [
+          "shape-driven prediction",
+          "decision-tree evidence",
+          "ablation caveats",
+          "scope caveats",
+          "rubric self-check"
+        ]
+      }
+    }
+  },
+  {
+    "depth": 1,
+    "exploitability": {
+      "num_leaves": 2,
+      "r2_in_sample": 0.242,
+      "r2_loo": 0.1675,
+      "target_key": "exploitability",
+      "top_features": [
+        [
+          "shape_shortest_hops",
+          1.0
+        ]
+      ]
+    },
+    "model": "llama3.1:8b",
+    "prompt_path": "runs/histogram_corpus_full105_backend/500k/llm_digest_tsallis_rv_eta1_vs_tsallis_rv_eta1/prompts/depth1.txt",
+    "response_path": "runs/histogram_corpus_full105_backend/500k/llm_digest_tsallis_rv_eta1_vs_tsallis_rv_eta1/responses/depth1.llama3.1_8b.txt",
+    "retention": {
+      "num_leaves": 2,
+      "r2_in_sample": 0.4249,
+      "r2_loo": 0.1898,
+      "target_key": "histogram_final_retention",
+      "top_features": [
+        [
+          "shape_max_cut_edge_betweenness",
+          1.0
+        ]
+      ]
+    },
+    "score": {
+      "depth": 1,
+      "dominant_feature_exploitability": {
+        "feature": "shape_shortest_hops",
+        "matched_synonym": "shortest_hops",
+        "named": true
+      },
+      "dominant_feature_retention": {
+        "feature": "shape_max_cut_edge_betweenness",
+        "matched_synonym": null,
+        "named": false
+      },
+      "duration_ms": 101599.686995,
+      "faithfulness": {
+        "grounded": [
+          "1",
+          "2",
+          "1",
+          "0.086",
+          "0.193",
+          "30",
+          "0.086",
+          "0.428",
+          "75",
+          "2",
+          "0.4249",
+          "2",
+          "0.1898",
+          "2",
+          "5.500",
+          "0.007",
+          "95",
+          "5.500",
+          "0.021",
+          "10",
+          "2",
+          "0.242",
+          "2",
+          "0.1675",
+          "1"
+        ],
+        "hallucinated": [],
+        "score": 1.0,
+        "total_numeric_claims": 25
+      },
+      "model": "llama3.1:8b",
+      "prompt_tokens": 969,
+      "response_tokens": 420,
+      "scope_overclaim": {
+        "clean": true,
+        "violations": []
+      },
+      "sections": {
+        "missing": [],
+        "present": [
+          "shape-driven prediction",
+          "decision-tree evidence",
+          "ablation caveats",
+          "scope caveats",
+          "rubric self-check"
+        ]
+      }
+    }
+  },
+  {
+    "depth": 2,
+    "exploitability": {
+      "num_leaves": 4,
+      "r2_in_sample": 0.6156,
+      "r2_loo": 0.3213,
+      "target_key": "exploitability",
+      "top_features": [
+        [
+          "shape_max_edge_betweenness",
+          0.4182
+        ],
+        [
+          "shape_shortest_hops",
+          0.393
+        ],
+        [
+          "shape_mean_cut_edge_betweenness",
+          0.1887
+        ]
+      ]
+    },
+    "model": "phi4:14b",
+    "prompt_path": "runs/histogram_corpus_full105_backend/500k/llm_digest_tsallis_rv_eta1_vs_tsallis_rv_eta1/prompts/depth2.txt",
+    "response_path": "runs/histogram_corpus_full105_backend/500k/llm_digest_tsallis_rv_eta1_vs_tsallis_rv_eta1/responses/depth2.phi4_14b.txt",
+    "retention": {
+      "num_leaves": 4,
+      "r2_in_sample": 0.7397,
+      "r2_loo": 0.5203,
+      "target_key": "histogram_final_retention",
+      "top_features": [
+        [
+          "shape_max_cut_edge_betweenness",
+          0.5744
+        ],
+        [
+          "shape_bridges_on_shortest_path",
+          0.3754
+        ],
+        [
+          "shape_node_count",
+          0.0502
+        ]
+      ]
+    },
+    "score": {
+      "depth": 2,
+      "dominant_feature_exploitability": {
+        "feature": "shape_max_edge_betweenness",
+        "matched_synonym": "max edge betweenness",
+        "named": true
+      },
+      "dominant_feature_retention": {
+        "feature": "shape_max_cut_edge_betweenness",
+        "matched_synonym": null,
+        "named": false
+      },
+      "duration_ms": 108034.19827,
+      "faithfulness": {
+        "grounded": [
+          "0.086",
+          "0.086",
+          "1",
+          "5.500",
+          "5.500",
+          "0.361",
+          "1",
+          "0.086",
+          "18",
+          "0.509",
+          "0.086",
+          "1",
+          "0.452",
+          "0.7397",
+          "0.5203",
+          "2",
+          "5.500",
+          "0.024",
+          "0.007",
+          "5.500",
+          "0.361",
+          "0.004",
+          "0.6156",
+          "0.3213",
+          "1",
+          "0.5744",
+          "0.0502",
+          "2",
+          "0.393",
+          "0.1887",
+          "2"
+        ],
+        "hallucinated": [],
+        "score": 1.0,
+        "total_numeric_claims": 31
+      },
+      "model": "phi4:14b",
+      "prompt_tokens": 1229,
+      "response_tokens": 654,
+      "scope_overclaim": {
+        "clean": true,
+        "violations": []
+      },
+      "sections": {
+        "missing": [],
+        "present": [
+          "shape-driven prediction",
+          "decision-tree evidence",
+          "ablation caveats",
+          "scope caveats",
+          "rubric self-check"
+        ]
+      }
+    }
+  },
+  {
+    "depth": 2,
+    "exploitability": {
+      "num_leaves": 4,
+      "r2_in_sample": 0.6156,
+      "r2_loo": 0.3213,
+      "target_key": "exploitability",
+      "top_features": [
+        [
+          "shape_max_edge_betweenness",
+          0.4182
+        ],
+        [
+          "shape_shortest_hops",
+          0.393
+        ],
+        [
+          "shape_mean_cut_edge_betweenness",
+          0.1887
+        ]
+      ]
+    },
+    "model": "llama3.1:8b",
+    "prompt_path": "runs/histogram_corpus_full105_backend/500k/llm_digest_tsallis_rv_eta1_vs_tsallis_rv_eta1/prompts/depth2.txt",
+    "response_path": "runs/histogram_corpus_full105_backend/500k/llm_digest_tsallis_rv_eta1_vs_tsallis_rv_eta1/responses/depth2.llama3.1_8b.txt",
+    "retention": {
+      "num_leaves": 4,
+      "r2_in_sample": 0.7397,
+      "r2_loo": 0.5203,
+      "target_key": "histogram_final_retention",
+      "top_features": [
+        [
+          "shape_max_cut_edge_betweenness",
+          0.5744
+        ],
+        [
+          "shape_bridges_on_shortest_path",
+          0.3754
+        ],
+        [
+          "shape_node_count",
+          0.0502
+        ]
+      ]
+    },
+    "score": {
+      "depth": 2,
+      "dominant_feature_exploitability": {
+        "feature": "shape_max_edge_betweenness",
+        "matched_synonym": null,
+        "named": false
+      },
+      "dominant_feature_retention": {
+        "feature": "shape_max_cut_edge_betweenness",
+        "matched_synonym": null,
+        "named": false
+      },
+      "duration_ms": 77385.239625,
+      "faithfulness": {
+        "grounded": [
+          "18",
+          "1",
+          "0.086",
+          "18.000",
+          "0.509",
+          "2",
+          "0.5203",
+          "2",
+          "5.500",
+          "0.024",
+          "0.027",
+          "2",
+          "0.3213",
+          "1",
+          "2",
+          "2"
+        ],
+        "hallucinated": [
+          "57.44",
+          "37.54",
+          "5.02",
+          "41.82",
+          "39.3",
+          "18.87"
+        ],
+        "score": 0.7272727272727273,
+        "total_numeric_claims": 22
+      },
+      "model": "llama3.1:8b",
+      "prompt_tokens": 1229,
+      "response_tokens": 377,
+      "scope_overclaim": {
+        "clean": true,
+        "violations": []
+      },
+      "sections": {
+        "missing": [],
+        "present": [
+          "shape-driven prediction",
+          "decision-tree evidence",
+          "ablation caveats",
+          "scope caveats",
+          "rubric self-check"
+        ]
+      }
+    }
+  },
+  {
+    "depth": 3,
+    "exploitability": {
+      "num_leaves": 8,
+      "r2_in_sample": 0.8143,
+      "r2_loo": 0.3656,
+      "target_key": "exploitability",
+      "top_features": [
+        [
+          "shape_max_edge_betweenness",
+          0.4488
+        ],
+        [
+          "shape_shortest_hops",
+          0.2971
+        ],
+        [
+          "shape_mean_cut_edge_betweenness",
+          0.1427
+        ],
+        [
+          "shape_bridge_count",
+          0.097
+        ]
+      ]
+    },
+    "model": "phi4:14b",
+    "prompt_path": "runs/histogram_corpus_full105_backend/500k/llm_digest_tsallis_rv_eta1_vs_tsallis_rv_eta1/prompts/depth3.txt",
+    "response_path": "runs/histogram_corpus_full105_backend/500k/llm_digest_tsallis_rv_eta1_vs_tsallis_rv_eta1/responses/depth3.phi4_14b.txt",
+    "retention": {
+      "num_leaves": 7,
+      "r2_in_sample": 0.8682,
+      "r2_loo": 0.5166,
+      "target_key": "histogram_final_retention",
+      "top_features": [
+        [
+          "shape_max_cut_edge_betweenness",
+          0.4894
+        ],
+        [
+          "shape_bridges_on_shortest_path",
+          0.3199
+        ],
+        [
+          "shape_shortest_hops",
+          0.1023
+        ],
+        [
+          "shape_edge_count",
+          0.0457
+        ],
+        [
+          "shape_node_count",
+          0.0428
+        ]
+      ]
+    },
+    "score": {
+      "depth": 3,
+      "dominant_feature_exploitability": {
+        "feature": "shape_max_edge_betweenness",
+        "matched_synonym": "max edge betweenness",
+        "named": true
+      },
+      "dominant_feature_retention": {
+        "feature": "shape_max_cut_edge_betweenness",
+        "matched_synonym": null,
+        "named": false
+      },
+      "duration_ms": 109129.472152,
+      "faithfulness": {
+        "grounded": [
+          "0.086",
+          "18",
+          "31.5",
+          "0.086",
+          "1",
+          "1.5",
+          "5.5",
+          "0.024",
+          "0.154",
+          "5.5",
+          "0.361",
+          "1.5",
+          "1",
+          "0.086",
+          "18",
+          "31.5",
+          "0.203",
+          "0.086",
+          "1",
+          "1.5",
+          "0.466",
+          "0.8682",
+          "0.5166",
+          "2",
+          "5.5",
+          "0.024",
+          "0.154",
+          "0.006",
+          "5.5",
+          "0.361",
+          "1.5",
+          "0.008",
+          "0.8143",
+          "0.3656",
+          "1",
+          "0.4894",
+          "2",
+          "0.4488",
+          "0.097",
+          "3"
+        ],
+        "hallucinated": [],
+        "score": 1.0,
+        "total_numeric_claims": 40
+      },
+      "model": "phi4:14b",
+      "prompt_tokens": 1690,
+      "response_tokens": 665,
+      "scope_overclaim": {
+        "clean": true,
+        "violations": []
+      },
+      "sections": {
+        "missing": [],
+        "present": [
+          "shape-driven prediction",
+          "decision-tree evidence",
+          "ablation caveats",
+          "scope caveats",
+          "rubric self-check"
+        ]
+      }
+    }
+  },
+  {
+    "depth": 3,
+    "exploitability": {
+      "num_leaves": 8,
+      "r2_in_sample": 0.8143,
+      "r2_loo": 0.3656,
+      "target_key": "exploitability",
+      "top_features": [
+        [
+          "shape_max_edge_betweenness",
+          0.4488
+        ],
+        [
+          "shape_shortest_hops",
+          0.2971
+        ],
+        [
+          "shape_mean_cut_edge_betweenness",
+          0.1427
+        ],
+        [
+          "shape_bridge_count",
+          0.097
+        ]
+      ]
+    },
+    "model": "llama3.1:8b",
+    "prompt_path": "runs/histogram_corpus_full105_backend/500k/llm_digest_tsallis_rv_eta1_vs_tsallis_rv_eta1/prompts/depth3.txt",
+    "response_path": "runs/histogram_corpus_full105_backend/500k/llm_digest_tsallis_rv_eta1_vs_tsallis_rv_eta1/responses/depth3.llama3.1_8b.txt",
+    "retention": {
+      "num_leaves": 7,
+      "r2_in_sample": 0.8682,
+      "r2_loo": 0.5166,
+      "target_key": "histogram_final_retention",
+      "top_features": [
+        [
+          "shape_max_cut_edge_betweenness",
+          0.4894
+        ],
+        [
+          "shape_bridges_on_shortest_path",
+          0.3199
+        ],
+        [
+          "shape_shortest_hops",
+          0.1023
+        ],
+        [
+          "shape_edge_count",
+          0.0457
+        ],
+        [
+          "shape_node_count",
+          0.0428
+        ]
+      ]
+    },
+    "score": {
+      "depth": 3,
+      "dominant_feature_exploitability": {
+        "feature": "shape_max_edge_betweenness",
+        "matched_synonym": null,
+        "named": false
+      },
+      "dominant_feature_retention": {
+        "feature": "shape_max_cut_edge_betweenness",
+        "matched_synonym": null,
+        "named": false
+      },
+      "duration_ms": 67348.873573,
+      "faithfulness": {
+        "grounded": [
+          "0.086",
+          "18.000",
+          "5.500",
+          "0.024",
+          "1",
+          "2",
+          "0.8682",
+          "2",
+          "0.5166",
+          "0.086",
+          "18.000",
+          "0.509",
+          "1",
+          "2",
+          "2",
+          "0.8143",
+          "2",
+          "0.3656",
+          "5.500",
+          "0.024",
+          "4.000",
+          "0.010",
+          "1",
+          "1",
+          "2",
+          "3"
+        ],
+        "hallucinated": [],
+        "score": 1.0,
+        "total_numeric_claims": 26
+      },
+      "model": "llama3.1:8b",
+      "prompt_tokens": 1690,
+      "response_tokens": 397,
+      "scope_overclaim": {
+        "clean": true,
+        "violations": []
+      },
+      "sections": {
+        "missing": [],
+        "present": [
+          "shape-driven prediction",
+          "decision-tree evidence",
+          "ablation caveats",
+          "scope caveats",
+          "rubric self-check"
+        ]
+      }
+    }
+  },
+  {
+    "depth": 4,
+    "exploitability": {
+      "num_leaves": 13,
+      "r2_in_sample": 0.8612,
+      "r2_loo": 0.4796,
+      "target_key": "exploitability",
+      "top_features": [
+        [
+          "shape_max_edge_betweenness",
+          0.4299
+        ],
+        [
+          "shape_shortest_hops",
+          0.281
+        ],
+        [
+          "shape_mean_cut_edge_betweenness",
+          0.1349
+        ],
+        [
+          "shape_bridge_count",
+          0.0917
+        ],
+        [
+          "shape_edge_count",
+          0.0611
+        ]
+      ]
+    },
+    "model": "phi4:14b",
+    "prompt_path": "runs/histogram_corpus_full105_backend/500k/llm_digest_tsallis_rv_eta1_vs_tsallis_rv_eta1/prompts/depth4.txt",
+    "response_path": "runs/histogram_corpus_full105_backend/500k/llm_digest_tsallis_rv_eta1_vs_tsallis_rv_eta1/responses/depth4.phi4_14b.txt",
+    "retention": {
+      "num_leaves": 12,
+      "r2_in_sample": 0.9212,
+      "r2_loo": 0.5372,
+      "target_key": "histogram_final_retention",
+      "top_features": [
+        [
+          "shape_max_cut_edge_betweenness",
+          0.4612
+        ],
+        [
+          "shape_edge_cut_size",
+          0.3218
+        ],
+        [
+          "shape_shortest_hops",
+          0.1331
+        ],
+        [
+          "shape_edge_count",
+          0.0431
+        ],
+        [
+          "shape_node_count",
+          0.0403
+        ]
+      ]
+    },
+    "score": {
+      "depth": 4,
+      "dominant_feature_exploitability": {
+        "feature": "shape_max_edge_betweenness",
+        "matched_synonym": null,
+        "named": false
+      },
+      "dominant_feature_retention": {
+        "feature": "shape_max_cut_edge_betweenness",
+        "matched_synonym": null,
+        "named": false
+      },
+      "duration_ms": 95127.829741,
+      "faithfulness": {
+        "grounded": [
+          "1",
+          "0.086",
+          "3.500",
+          "0.086",
+          "1.500",
+          "0.9212",
+          "0.5372",
+          "2",
+          "5.500",
+          "0.024",
+          "5.500",
+          "0.361",
+          "0.8612",
+          "0.4796",
+          "1",
+          "0.4612",
+          "0.0403",
+          "2",
+          "0.4299",
+          "0.0611",
+          "4"
+        ],
+        "hallucinated": [],
+        "score": 1.0,
+        "total_numeric_claims": 21
+      },
+      "model": "phi4:14b",
+      "prompt_tokens": 2395,
+      "response_tokens": 548,
+      "scope_overclaim": {
+        "clean": true,
+        "violations": []
+      },
+      "sections": {
+        "missing": [],
+        "present": [
+          "shape-driven prediction",
+          "decision-tree evidence",
+          "ablation caveats",
+          "scope caveats",
+          "rubric self-check"
+        ]
+      }
+    }
+  },
+  {
+    "depth": 4,
+    "exploitability": {
+      "num_leaves": 13,
+      "r2_in_sample": 0.8612,
+      "r2_loo": 0.4796,
+      "target_key": "exploitability",
+      "top_features": [
+        [
+          "shape_max_edge_betweenness",
+          0.4299
+        ],
+        [
+          "shape_shortest_hops",
+          0.281
+        ],
+        [
+          "shape_mean_cut_edge_betweenness",
+          0.1349
+        ],
+        [
+          "shape_bridge_count",
+          0.0917
+        ],
+        [
+          "shape_edge_count",
+          0.0611
+        ]
+      ]
+    },
+    "model": "llama3.1:8b",
+    "prompt_path": "runs/histogram_corpus_full105_backend/500k/llm_digest_tsallis_rv_eta1_vs_tsallis_rv_eta1/prompts/depth4.txt",
+    "response_path": "runs/histogram_corpus_full105_backend/500k/llm_digest_tsallis_rv_eta1_vs_tsallis_rv_eta1/responses/depth4.llama3.1_8b.txt",
+    "retention": {
+      "num_leaves": 12,
+      "r2_in_sample": 0.9212,
+      "r2_loo": 0.5372,
+      "target_key": "histogram_final_retention",
+      "top_features": [
+        [
+          "shape_max_cut_edge_betweenness",
+          0.4612
+        ],
+        [
+          "shape_edge_cut_size",
+          0.3218
+        ],
+        [
+          "shape_shortest_hops",
+          0.1331
+        ],
+        [
+          "shape_edge_count",
+          0.0431
+        ],
+        [
+          "shape_node_count",
+          0.0403
+        ]
+      ]
+    },
+    "score": {
+      "depth": 4,
+      "dominant_feature_exploitability": {
+        "feature": "shape_max_edge_betweenness",
+        "matched_synonym": null,
+        "named": false
+      },
+      "dominant_feature_retention": {
+        "feature": "shape_max_cut_edge_betweenness",
+        "matched_synonym": null,
+        "named": false
+      },
+      "duration_ms": 83633.528651,
+      "faithfulness": {
+        "grounded": [
+          "18.000",
+          "31.500",
+          "2.000",
+          "5.500",
+          "4.000",
+          "0.024",
+          "1",
+          "2",
+          "0.9212",
+          "2",
+          "0.5372",
+          "2",
+          "2",
+          "0.8612",
+          "2",
+          "0.4796",
+          "1",
+          "2",
+          "4"
+        ],
+        "hallucinated": [
+          "46.12",
+          "32.18",
+          "13.31",
+          "4.31",
+          "4.03",
+          "42.99",
+          "28.11",
+          "13.49",
+          "9.17",
+          "6.11"
+        ],
+        "score": 0.6551724137931034,
+        "total_numeric_claims": 29
+      },
+      "model": "llama3.1:8b",
+      "prompt_tokens": 2395,
+      "response_tokens": 438,
+      "scope_overclaim": {
+        "clean": true,
+        "violations": []
+      },
+      "sections": {
+        "missing": [],
+        "present": [
+          "shape-driven prediction",
+          "decision-tree evidence",
+          "ablation caveats",
+          "scope caveats",
+          "rubric self-check"
+        ]
+      }
+    }
+  },
+  {
+    "depth": 6,
+    "exploitability": {
+      "num_leaves": 22,
+      "r2_in_sample": 0.8964,
+      "r2_loo": 0.4067,
+      "target_key": "exploitability",
+      "top_features": [
+        [
+          "shape_max_edge_betweenness",
+          0.4097
+        ],
+        [
+          "shape_shortest_hops",
+          0.2699
+        ],
+        [
+          "shape_mean_cut_edge_betweenness",
+          0.1499
+        ],
+        [
+          "shape_bridge_count",
+          0.1069
+        ],
+        [
+          "shape_edge_count",
+          0.051
+        ]
+      ]
+    },
+    "model": "phi4:14b",
+    "prompt_path": "runs/histogram_corpus_full105_backend/500k/llm_digest_tsallis_rv_eta1_vs_tsallis_rv_eta1/prompts/depth6.txt",
+    "response_path": "runs/histogram_corpus_full105_backend/500k/llm_digest_tsallis_rv_eta1_vs_tsallis_rv_eta1/responses/depth6.phi4_14b.txt",
+    "retention": {
+      "num_leaves": 25,
+      "r2_in_sample": 0.9535,
+      "r2_loo": 0.5329,
+      "target_key": "histogram_final_retention",
+      "top_features": [
+        [
+          "shape_max_cut_edge_betweenness",
+          0.4587
+        ],
+        [
+          "shape_alice_core_number",
+          0.2912
+        ],
+        [
+          "shape_shortest_hops",
+          0.1285
+        ],
+        [
+          "shape_edge_count",
+          0.0417
+        ],
+        [
+          "shape_node_count",
+          0.039
+        ],
+        [
+          "shape_edge_cut_size",
+          0.0197
+        ]
+      ]
+    },
+    "score": {
+      "depth": 6,
+      "dominant_feature_exploitability": {
+        "feature": "shape_max_edge_betweenness",
+        "matched_synonym": null,
+        "named": false
+      },
+      "dominant_feature_retention": {
+        "feature": "shape_max_cut_edge_betweenness",
+        "matched_synonym": null,
+        "named": false
+      },
+      "duration_ms": 130054.06706,
+      "faithfulness": {
+        "grounded": [
+          "18",
+          "4",
+          "1",
+          "0.9535",
+          "0.5329",
+          "0.086",
+          "18",
+          "0.509",
+          "0.086",
+          "1.5",
+          "1.5",
+          "0.193",
+          "0.546",
+          "2",
+          "0.8964",
+          "0.4067",
+          "5.5",
+          "0.024",
+          "0.010",
+          "0.043",
+          "5.5",
+          "0.361",
+          "0.002",
+          "0.036",
+          "1",
+          "2",
+          "6"
+        ],
+        "hallucinated": [],
+        "score": 1.0,
+        "total_numeric_claims": 27
+      },
+      "model": "phi4:14b",
+      "prompt_tokens": 4430,
+      "response_tokens": 631,
+      "scope_overclaim": {
+        "clean": true,
+        "violations": []
+      },
+      "sections": {
+        "missing": [],
+        "present": [
+          "shape-driven prediction",
+          "decision-tree evidence",
+          "ablation caveats",
+          "scope caveats",
+          "rubric self-check"
+        ]
+      }
+    }
+  },
+  {
+    "depth": 6,
+    "exploitability": {
+      "num_leaves": 22,
+      "r2_in_sample": 0.8964,
+      "r2_loo": 0.4067,
+      "target_key": "exploitability",
+      "top_features": [
+        [
+          "shape_max_edge_betweenness",
+          0.4097
+        ],
+        [
+          "shape_shortest_hops",
+          0.2699
+        ],
+        [
+          "shape_mean_cut_edge_betweenness",
+          0.1499
+        ],
+        [
+          "shape_bridge_count",
+          0.1069
+        ],
+        [
+          "shape_edge_count",
+          0.051
+        ]
+      ]
+    },
+    "model": "llama3.1:8b",
+    "prompt_path": "runs/histogram_corpus_full105_backend/500k/llm_digest_tsallis_rv_eta1_vs_tsallis_rv_eta1/prompts/depth6.txt",
+    "response_path": "runs/histogram_corpus_full105_backend/500k/llm_digest_tsallis_rv_eta1_vs_tsallis_rv_eta1/responses/depth6.llama3.1_8b.txt",
+    "retention": {
+      "num_leaves": 25,
+      "r2_in_sample": 0.9535,
+      "r2_loo": 0.5329,
+      "target_key": "histogram_final_retention",
+      "top_features": [
+        [
+          "shape_max_cut_edge_betweenness",
+          0.4587
+        ],
+        [
+          "shape_alice_core_number",
+          0.2912
+        ],
+        [
+          "shape_shortest_hops",
+          0.1285
+        ],
+        [
+          "shape_edge_count",
+          0.0417
+        ],
+        [
+          "shape_node_count",
+          0.039
+        ],
+        [
+          "shape_edge_cut_size",
+          0.0197
+        ]
+      ]
+    },
+    "score": {
+      "depth": 6,
+      "dominant_feature_exploitability": {
+        "feature": "shape_max_edge_betweenness",
+        "matched_synonym": null,
+        "named": false
+      },
+      "dominant_feature_retention": {
+        "feature": "shape_max_cut_edge_betweenness",
+        "matched_synonym": null,
+        "named": false
+      },
+      "duration_ms": 99741.426141,
+      "faithfulness": {
+        "grounded": [
+          "18.000",
+          "1.500",
+          "2.000",
+          "18.000",
+          "1.500",
+          "2.000",
+          "5.500",
+          "1",
+          "2",
+          "0.9535",
+          "2",
+          "0.5329",
+          "0.4587",
+          "0.2912",
+          "2",
+          "2",
+          "0.8964",
+          "2",
+          "0.4067",
+          "0.4097",
+          "0.2699",
+          "1",
+          "6"
+        ],
+        "hallucinated": [],
+        "score": 1.0,
+        "total_numeric_claims": 23
+      },
+      "model": "llama3.1:8b",
+      "prompt_tokens": 4430,
+      "response_tokens": 449,
+      "scope_overclaim": {
+        "clean": true,
+        "violations": []
+      },
+      "sections": {
+        "missing": [
+          "rubric self-check"
+        ],
+        "present": [
+          "shape-driven prediction",
+          "decision-tree evidence",
+          "ablation caveats",
+          "scope caveats"
+        ]
+      }
+    }
+  },
+  {
+    "depth": 8,
+    "exploitability": {
+      "num_leaves": 33,
+      "r2_in_sample": 0.9296,
+      "r2_loo": 0.3778,
+      "target_key": "exploitability",
+      "top_features": [
+        [
+          "shape_max_edge_betweenness",
+          0.395
+        ],
+        [
+          "shape_shortest_hops",
+          0.2609
+        ],
+        [
+          "shape_mean_cut_edge_betweenness",
+          0.1562
+        ],
+        [
+          "shape_bridge_count",
+          0.1034
+        ],
+        [
+          "shape_edge_count",
+          0.051
+        ],
+        [
+          "shape_articulation_point_count",
+          0.0121
+        ]
+      ]
+    },
+    "model": "phi4:14b",
+    "prompt_path": "runs/histogram_corpus_full105_backend/500k/llm_digest_tsallis_rv_eta1_vs_tsallis_rv_eta1/prompts/depth8.txt",
+    "response_path": "runs/histogram_corpus_full105_backend/500k/llm_digest_tsallis_rv_eta1_vs_tsallis_rv_eta1/responses/depth8.phi4_14b.txt",
+    "retention": {
+      "num_leaves": 38,
+      "r2_in_sample": 0.9754,
+      "r2_loo": 0.5424,
+      "target_key": "histogram_final_retention",
+      "top_features": [
+        [
+          "shape_max_cut_edge_betweenness",
+          0.4513
+        ],
+        [
+          "shape_bridges_on_shortest_path",
+          0.2847
+        ],
+        [
+          "shape_shortest_hops",
+          0.1257
+        ],
+        [
+          "shape_edge_count",
+          0.0412
+        ],
+        [
+          "shape_node_count",
+          0.0381
+        ],
+        [
+          "shape_max_edge_betweenness",
+          0.0213
+        ],
+        [
+          "shape_edge_cut_size",
+          0.0192
+        ]
+      ]
+    },
+    "score": {
+      "depth": 8,
+      "dominant_feature_exploitability": {
+        "feature": "shape_max_edge_betweenness",
+        "matched_synonym": null,
+        "named": false
+      },
+      "dominant_feature_retention": {
+        "feature": "shape_max_cut_edge_betweenness",
+        "matched_synonym": null,
+        "named": false
+      },
+      "duration_ms": 119613.534007,
+      "faithfulness": {
+        "grounded": [
+          "0.9754",
+          "0.5424",
+          "0.086",
+          "18.000",
+          "31.500",
+          "0.9296",
+          "0.3778",
+          "5.500",
+          "0.024",
+          "8"
+        ],
+        "hallucinated": [],
+        "score": 1.0,
+        "total_numeric_claims": 10
+      },
+      "model": "phi4:14b",
+      "prompt_tokens": 7152,
+      "response_tokens": 505,
+      "scope_overclaim": {
+        "clean": true,
+        "violations": []
+      },
+      "sections": {
+        "missing": [],
+        "present": [
+          "shape-driven prediction",
+          "decision-tree evidence",
+          "ablation caveats",
+          "scope caveats",
+          "rubric self-check"
+        ]
+      }
+    }
+  },
+  {
+    "depth": 8,
+    "exploitability": {
+      "num_leaves": 33,
+      "r2_in_sample": 0.9296,
+      "r2_loo": 0.3778,
+      "target_key": "exploitability",
+      "top_features": [
+        [
+          "shape_max_edge_betweenness",
+          0.395
+        ],
+        [
+          "shape_shortest_hops",
+          0.2609
+        ],
+        [
+          "shape_mean_cut_edge_betweenness",
+          0.1562
+        ],
+        [
+          "shape_bridge_count",
+          0.1034
+        ],
+        [
+          "shape_edge_count",
+          0.051
+        ],
+        [
+          "shape_articulation_point_count",
+          0.0121
+        ]
+      ]
+    },
+    "model": "llama3.1:8b",
+    "prompt_path": "runs/histogram_corpus_full105_backend/500k/llm_digest_tsallis_rv_eta1_vs_tsallis_rv_eta1/prompts/depth8.txt",
+    "response_path": "runs/histogram_corpus_full105_backend/500k/llm_digest_tsallis_rv_eta1_vs_tsallis_rv_eta1/responses/depth8.llama3.1_8b.txt",
+    "retention": {
+      "num_leaves": 38,
+      "r2_in_sample": 0.9754,
+      "r2_loo": 0.5424,
+      "target_key": "histogram_final_retention",
+      "top_features": [
+        [
+          "shape_max_cut_edge_betweenness",
+          0.4513
+        ],
+        [
+          "shape_bridges_on_shortest_path",
+          0.2847
+        ],
+        [
+          "shape_shortest_hops",
+          0.1257
+        ],
+        [
+          "shape_edge_count",
+          0.0412
+        ],
+        [
+          "shape_node_count",
+          0.0381
+        ],
+        [
+          "shape_max_edge_betweenness",
+          0.0213
+        ],
+        [
+          "shape_edge_cut_size",
+          0.0192
+        ]
+      ]
+    },
+    "score": {
+      "depth": 8,
+      "dominant_feature_exploitability": {
+        "feature": "shape_max_edge_betweenness",
+        "matched_synonym": null,
+        "named": false
+      },
+      "dominant_feature_retention": {
+        "feature": "shape_max_cut_edge_betweenness",
+        "matched_synonym": null,
+        "named": false
+      },
+      "duration_ms": 131966.165045,
+      "faithfulness": {
+        "grounded": [
+          "18.000",
+          "31.500",
+          "2.000",
+          "0.183",
+          "18.000",
+          "31.500",
+          "2.000",
+          "0.183",
+          "5.500",
+          "4.000",
+          "0.024",
+          "1",
+          "2",
+          "0.9754",
+          "2",
+          "105",
+          "0.5424",
+          "2",
+          "2",
+          "0.9296",
+          "2",
+          "105",
+          "0.3778",
+          "1",
+          "0.4513",
+          "0.2847",
+          "0.1257",
+          "2",
+          "0.395",
+          "0.2609",
+          "0.1562",
+          "8"
+        ],
+        "hallucinated": [],
+        "score": 1.0,
+        "total_numeric_claims": 32
+      },
+      "model": "llama3.1:8b",
+      "prompt_tokens": 7152,
+      "response_tokens": 570,
+      "scope_overclaim": {
+        "clean": true,
+        "violations": []
+      },
+      "sections": {
+        "missing": [],
+        "present": [
+          "shape-driven prediction",
+          "decision-tree evidence",
+          "ablation caveats",
+          "scope caveats",
+          "rubric self-check"
+        ]
+      }
+    }
+  }
+]

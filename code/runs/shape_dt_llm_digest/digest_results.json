@@ -1,0 +1,1547 @@
+[
+  {
+    "depth": 1,
+    "exploitability": {
+      "num_leaves": 2,
+      "r2_in_sample": 0.376,
+      "r2_loo": 0.3656,
+      "top_features": [
+        [
+          "shape_shortest_hops",
+          1.0
+        ]
+      ]
+    },
+    "model": "phi4:14b",
+    "prompt_path": "runs/shape_dt_llm_digest/prompts/depth1.txt",
+    "response_path": "runs/shape_dt_llm_digest/responses/depth1.phi4_14b.txt",
+    "retention": {
+      "num_leaves": 2,
+      "r2_in_sample": 0.388,
+      "r2_loo": 0.3767,
+      "top_features": [
+        [
+          "shape_shortest_hops",
+          1.0
+        ]
+      ]
+    },
+    "score": {
+      "depth": 1,
+      "dominant_feature_exploitability": {
+        "feature": "shape_shortest_hops",
+        "matched_synonym": "shortest_hops",
+        "named": true
+      },
+      "dominant_feature_retention": {
+        "feature": "shape_shortest_hops",
+        "matched_synonym": "shortest_hops",
+        "named": true
+      },
+      "duration_ms": 116799.721969,
+      "faithfulness": {
+        "grounded": [
+          "2.5",
+          "2.5",
+          "1",
+          "2.500",
+          "0.599",
+          "131",
+          "2.500",
+          "0.307",
+          "103",
+          "0.388",
+          "0.3767",
+          "2",
+          "2.500",
+          "0.091",
+          "131",
+          "2.500",
+          "0.055",
+          "103",
+          "0.376",
+          "0.3656",
+          "1.0",
+          "1"
+        ],
+        "hallucinated": [],
+        "score": 1.0,
+        "total_numeric_claims": 22
+      },
+      "model": "phi4:14b",
+      "prompt_tokens": 971,
+      "response_tokens": 420,
+      "scope_overclaim": {
+        "clean": true,
+        "violations": []
+      },
+      "sections": {
+        "missing": [],
+        "present": [
+          "shape-driven prediction",
+          "decision-tree evidence",
+          "ablation caveats",
+          "scope caveats",
+          "rubric self-check"
+        ]
+      }
+    }
+  },
+  {
+    "depth": 1,
+    "exploitability": {
+      "num_leaves": 2,
+      "r2_in_sample": 0.376,
+      "r2_loo": 0.3656,
+      "top_features": [
+        [
+          "shape_shortest_hops",
+          1.0
+        ]
+      ]
+    },
+    "model": "llama3.1:8b",
+    "prompt_path": "runs/shape_dt_llm_digest/prompts/depth1.txt",
+    "response_path": "runs/shape_dt_llm_digest/responses/depth1.llama3.1_8b.txt",
+    "retention": {
+      "num_leaves": 2,
+      "r2_in_sample": 0.388,
+      "r2_loo": 0.3767,
+      "top_features": [
+        [
+          "shape_shortest_hops",
+          1.0
+        ]
+      ]
+    },
+    "score": {
+      "depth": 1,
+      "dominant_feature_exploitability": {
+        "feature": "shape_shortest_hops",
+        "matched_synonym": "shortest_hops",
+        "named": true
+      },
+      "dominant_feature_retention": {
+        "feature": "shape_shortest_hops",
+        "matched_synonym": "shortest_hops",
+        "named": true
+      },
+      "duration_ms": 118818.667664,
+      "faithfulness": {
+        "grounded": [
+          "2.500",
+          "2.500",
+          "1",
+          "2.500",
+          "0.599",
+          "131",
+          "2.500",
+          "0.307",
+          "103",
+          "2",
+          "0.388",
+          "2",
+          "0.3767",
+          "2",
+          "2.500",
+          "0.091",
+          "131",
+          "2.500",
+          "0.055",
+          "103",
+          "2",
+          "0.376",
+          "2",
+          "0.3656",
+          "1"
+        ],
+        "hallucinated": [],
+        "score": 1.0,
+        "total_numeric_claims": 25
+      },
+      "model": "llama3.1:8b",
+      "prompt_tokens": 971,
+      "response_tokens": 373,
+      "scope_overclaim": {
+        "clean": true,
+        "violations": []
+      },
+      "sections": {
+        "missing": [],
+        "present": [
+          "shape-driven prediction",
+          "decision-tree evidence",
+          "ablation caveats",
+          "scope caveats",
+          "rubric self-check"
+        ]
+      }
+    }
+  },
+  {
+    "depth": 2,
+    "exploitability": {
+      "num_leaves": 4,
+      "r2_in_sample": 0.4565,
+      "r2_loo": 0.4292,
+      "top_features": [
+        [
+          "shape_shortest_hops",
+          0.8877
+        ],
+        [
+          "shape_edge_count",
+          0.1123
+        ]
+      ]
+    },
+    "model": "phi4:14b",
+    "prompt_path": "runs/shape_dt_llm_digest/prompts/depth2.txt",
+    "response_path": "runs/shape_dt_llm_digest/responses/depth2.phi4_14b.txt",
+    "retention": {
+      "num_leaves": 4,
+      "r2_in_sample": 0.5269,
+      "r2_loo": 0.4607,
+      "top_features": [
+        [
+          "shape_shortest_hops",
+          0.8775
+        ],
+        [
+          "shape_node_cut_size",
+          0.1225
+        ]
+      ]
+    },
+    "score": {
+      "depth": 2,
+      "dominant_feature_exploitability": {
+        "feature": "shape_shortest_hops",
+        "matched_synonym": "shortest_hops",
+        "named": true
+      },
+      "dominant_feature_retention": {
+        "feature": "shape_shortest_hops",
+        "matched_synonym": "shortest_hops",
+        "named": true
+      },
+      "duration_ms": 277275.627669,
+      "faithfulness": {
+        "grounded": [
+          "2.5",
+          "2.5",
+          "4.5",
+          "2.5",
+          "5.5",
+          "2.5",
+          "2.5",
+          "0.484",
+          "2.5",
+          "2.5",
+          "0.654",
+          "2.5",
+          "4.5",
+          "0.355",
+          "4.5",
+          "0.117",
+          "0.5269",
+          "0.4607",
+          "2.5",
+          "48.5",
+          "0.080",
+          "2.5",
+          "48.5",
+          "0.098",
+          "2.5",
+          "5.5",
+          "0.057",
+          "5.5",
+          "0.025",
+          "0.4565",
+          "0.4292",
+          "0.8775",
+          "0.1225",
+          "0.8877",
+          "0.1123",
+          "2"
+        ],
+        "hallucinated": [],
+        "score": 1.0,
+        "total_numeric_claims": 36
+      },
+      "model": "phi4:14b",
+      "prompt_tokens": 1206,
+      "response_tokens": 685,
+      "scope_overclaim": {
+        "clean": true,
+        "violations": []
+      },
+      "sections": {
+        "missing": [],
+        "present": [
+          "shape-driven prediction",
+          "decision-tree evidence",
+          "ablation caveats",
+          "scope caveats",
+          "rubric self-check"
+        ]
+      }
+    }
+  },
+  {
+    "depth": 2,
+    "exploitability": {
+      "num_leaves": 4,
+      "r2_in_sample": 0.4565,
+      "r2_loo": 0.4292,
+      "top_features": [
+        [
+          "shape_shortest_hops",
+          0.8877
+        ],
+        [
+          "shape_edge_count",
+          0.1123
+        ]
+      ]
+    },
+    "model": "llama3.1:8b",
+    "prompt_path": "runs/shape_dt_llm_digest/prompts/depth2.txt",
+    "response_path": "runs/shape_dt_llm_digest/responses/depth2.llama3.1_8b.txt",
+    "retention": {
+      "num_leaves": 4,
+      "r2_in_sample": 0.5269,
+      "r2_loo": 0.4607,
+      "top_features": [
+        [
+          "shape_shortest_hops",
+          0.8775
+        ],
+        [
+          "shape_node_cut_size",
+          0.1225
+        ]
+      ]
+    },
+    "score": {
+      "depth": 2,
+      "dominant_feature_exploitability": {
+        "feature": "shape_shortest_hops",
+        "matched_synonym": "shortest_hops",
+        "named": true
+      },
+      "dominant_feature_retention": {
+        "feature": "shape_shortest_hops",
+        "matched_synonym": "shortest_hops",
+        "named": true
+      },
+      "duration_ms": 95500.871564,
+      "faithfulness": {
+        "grounded": [
+          "2.500",
+          "2.500",
+          "4.500",
+          "48.500",
+          "1",
+          "2.500",
+          "2.500",
+          "0.484",
+          "42",
+          "2",
+          "0.4607",
+          "2",
+          "2.500",
+          "48.500",
+          "0.080",
+          "48",
+          "2",
+          "0.4292",
+          "2"
+        ],
+        "hallucinated": [],
+        "score": 1.0,
+        "total_numeric_claims": 19
+      },
+      "model": "llama3.1:8b",
+      "prompt_tokens": 1206,
+      "response_tokens": 333,
+      "scope_overclaim": {
+        "clean": true,
+        "violations": []
+      },
+      "sections": {
+        "missing": [],
+        "present": [
+          "shape-driven prediction",
+          "decision-tree evidence",
+          "ablation caveats",
+          "scope caveats",
+          "rubric self-check"
+        ]
+      }
+    }
+  },
+  {
+    "depth": 3,
+    "exploitability": {
+      "num_leaves": 8,
+      "r2_in_sample": 0.5243,
+      "r2_loo": 0.3768,
+      "top_features": [
+        [
+          "shape_shortest_hops",
+          0.7853
+        ],
+        [
+          "shape_edge_count",
+          0.0978
+        ],
+        [
+          "shape_mean_cut_edge_betweenness",
+          0.0937
+        ],
+        [
+          "shape_node_count",
+          0.0232
+        ]
+      ]
+    },
+    "model": "phi4:14b",
+    "prompt_path": "runs/shape_dt_llm_digest/prompts/depth3.txt",
+    "response_path": "runs/shape_dt_llm_digest/responses/depth3.phi4_14b.txt",
+    "retention": {
+      "num_leaves": 8,
+      "r2_in_sample": 0.6273,
+      "r2_loo": 0.3949,
+      "top_features": [
+        [
+          "shape_shortest_hops",
+          0.7371
+        ],
+        [
+          "shape_node_cut_size",
+          0.1029
+        ],
+        [
+          "shape_mean_cut_edge_betweenness",
+          0.0981
+        ],
+        [
+          "shape_node_count",
+          0.0236
+        ],
+        [
+          "shape_articulation_point_count",
+          0.02
+        ],
+        [
+          "shape_diameter",
+          0.0183
+        ]
+      ]
+    },
+    "score": {
+      "depth": 3,
+      "dominant_feature_exploitability": {
+        "feature": "shape_shortest_hops",
+        "matched_synonym": "shortest_hops",
+        "named": true
+      },
+      "dominant_feature_retention": {
+        "feature": "shape_shortest_hops",
+        "matched_synonym": "shortest_hops",
+        "named": true
+      },
+      "duration_ms": 142948.080542,
+      "faithfulness": {
+        "grounded": [
+          "2.5",
+          "2.5",
+          "4.5",
+          "0.5",
+          "2.5",
+          "5.5",
+          "2.5",
+          "2.5",
+          "88",
+          "0.494",
+          "4.5",
+          "0.5",
+          "0.082",
+          "0.6273",
+          "0.3949",
+          "2.5",
+          "48.5",
+          "0.170",
+          "0.070",
+          "5.5",
+          "6.5",
+          "0.004",
+          "0.5243",
+          "0.3768",
+          "0.7371",
+          "0.7853",
+          "3"
+        ],
+        "hallucinated": [],
+        "score": 1.0,
+        "total_numeric_claims": 27
+      },
+      "model": "phi4:14b",
+      "prompt_tokens": 1782,
+      "response_tokens": 563,
+      "scope_overclaim": {
+        "clean": true,
+        "violations": []
+      },
+      "sections": {
+        "missing": [],
+        "present": [
+          "shape-driven prediction",
+          "decision-tree evidence",
+          "ablation caveats",
+          "scope caveats",
+          "rubric self-check"
+        ]
+      }
+    }
+  },
+  {
+    "depth": 3,
+    "exploitability": {
+      "num_leaves": 8,
+      "r2_in_sample": 0.5243,
+      "r2_loo": 0.3768,
+      "top_features": [
+        [
+          "shape_shortest_hops",
+          0.7853
+        ],
+        [
+          "shape_edge_count",
+          0.0978
+        ],
+        [
+          "shape_mean_cut_edge_betweenness",
+          0.0937
+        ],
+        [
+          "shape_node_count",
+          0.0232
+        ]
+      ]
+    },
+    "model": "llama3.1:8b",
+    "prompt_path": "runs/shape_dt_llm_digest/prompts/depth3.txt",
+    "response_path": "runs/shape_dt_llm_digest/responses/depth3.llama3.1_8b.txt",
+    "retention": {
+      "num_leaves": 8,
+      "r2_in_sample": 0.6273,
+      "r2_loo": 0.3949,
+      "top_features": [
+        [
+          "shape_shortest_hops",
+          0.7371
+        ],
+        [
+          "shape_node_cut_size",
+          0.1029
+        ],
+        [
+          "shape_mean_cut_edge_betweenness",
+          0.0981
+        ],
+        [
+          "shape_node_count",
+          0.0236
+        ],
+        [
+          "shape_articulation_point_count",
+          0.02
+        ],
+        [
+          "shape_diameter",
+          0.0183
+        ]
+      ]
+    },
+    "score": {
+      "depth": 3,
+      "dominant_feature_exploitability": {
+        "feature": "shape_shortest_hops",
+        "matched_synonym": "shortest_hops",
+        "named": true
+      },
+      "dominant_feature_retention": {
+        "feature": "shape_shortest_hops",
+        "matched_synonym": "shortest_hops",
+        "named": true
+      },
+      "duration_ms": 100533.318239,
+      "faithfulness": {
+        "grounded": [
+          "2.500",
+          "2.500",
+          "1",
+          "2",
+          "0.6273",
+          "2",
+          "0.3949",
+          "2.500",
+          "2.500",
+          "88.000",
+          "0.494",
+          "41",
+          "2",
+          "2",
+          "0.5243",
+          "2",
+          "0.3768",
+          "2.500",
+          "48.500",
+          "0.029",
+          "0.011",
+          "1",
+          "1",
+          "0.7371",
+          "0.1029",
+          "2",
+          "0.7853",
+          "0.0978",
+          "3"
+        ],
+        "hallucinated": [],
+        "score": 1.0,
+        "total_numeric_claims": 29
+      },
+      "model": "llama3.1:8b",
+      "prompt_tokens": 1782,
+      "response_tokens": 422,
+      "scope_overclaim": {
+        "clean": true,
+        "violations": []
+      },
+      "sections": {
+        "missing": [],
+        "present": [
+          "shape-driven prediction",
+          "decision-tree evidence",
+          "ablation caveats",
+          "scope caveats",
+          "rubric self-check"
+        ]
+      }
+    }
+  },
+  {
+    "depth": 4,
+    "exploitability": {
+      "num_leaves": 15,
+      "r2_in_sample": 0.5817,
+      "r2_loo": 0.2668,
+      "top_features": [
+        [
+          "shape_shortest_hops",
+          0.6965
+        ],
+        [
+          "shape_edge_count",
+          0.0958
+        ],
+        [
+          "shape_mean_cut_edge_betweenness",
+          0.0844
+        ],
+        [
+          "shape_articulation_points_on_shortest_path",
+          0.0544
+        ],
+        [
+          "shape_node_count",
+          0.0209
+        ],
+        [
+          "shape_max_cut_edge_betweenness",
+          0.019
+        ],
+        [
+          "shape_articulation_point_count",
+          0.0157
+        ],
+        [
+          "shape_node_cut_size",
+          0.0113
+        ]
+      ]
+    },
+    "model": "phi4:14b",
+    "prompt_path": "runs/shape_dt_llm_digest/prompts/depth4.txt",
+    "response_path": "runs/shape_dt_llm_digest/responses/depth4.phi4_14b.txt",
+    "retention": {
+      "num_leaves": 15,
+      "r2_in_sample": 0.7038,
+      "r2_loo": 0.2871,
+      "top_features": [
+        [
+          "shape_shortest_hops",
+          0.6569
+        ],
+        [
+          "shape_mean_cut_edge_betweenness",
+          0.1139
+        ],
+        [
+          "shape_node_cut_size",
+          0.095
+        ],
+        [
+          "shape_diameter",
+          0.0465
+        ],
+        [
+          "shape_edge_cut_size",
+          0.0249
+        ],
+        [
+          "shape_node_count",
+          0.021
+        ],
+        [
+          "shape_articulation_point_count",
+          0.0178
+        ],
+        [
+          "shape_max_edge_betweenness",
+          0.0142
+        ]
+      ]
+    },
+    "score": {
+      "depth": 4,
+      "dominant_feature_exploitability": {
+        "feature": "shape_shortest_hops",
+        "matched_synonym": "shortest_hops",
+        "named": true
+      },
+      "dominant_feature_retention": {
+        "feature": "shape_shortest_hops",
+        "matched_synonym": "shortest_hops",
+        "named": true
+      },
+      "duration_ms": 132479.306401,
+      "faithfulness": {
+        "grounded": [
+          "0.7038",
+          "0.2871",
+          "2.500",
+          "2.500",
+          "0.505",
+          "2.500",
+          "0.500",
+          "0.032",
+          "0.5817",
+          "0.2668",
+          "2.500",
+          "48.500",
+          "0.011",
+          "2.500",
+          "1.500",
+          "0.004",
+          "0.6569",
+          "0.0178",
+          "0.0142",
+          "0.6965",
+          "0.0113",
+          "0.019",
+          "4"
+        ],
+        "hallucinated": [],
+        "score": 1.0,
+        "total_numeric_claims": 23
+      },
+      "model": "phi4:14b",
+      "prompt_tokens": 2911,
+      "response_tokens": 574,
+      "scope_overclaim": {
+        "clean": true,
+        "violations": []
+      },
+      "sections": {
+        "missing": [],
+        "present": [
+          "shape-driven prediction",
+          "decision-tree evidence",
+          "ablation caveats",
+          "scope caveats",
+          "rubric self-check"
+        ]
+      }
+    }
+  },
+  {
+    "depth": 4,
+    "exploitability": {
+      "num_leaves": 15,
+      "r2_in_sample": 0.5817,
+      "r2_loo": 0.2668,
+      "top_features": [
+        [
+          "shape_shortest_hops",
+          0.6965
+        ],
+        [
+          "shape_edge_count",
+          0.0958
+        ],
+        [
+          "shape_mean_cut_edge_betweenness",
+          0.0844
+        ],
+        [
+          "shape_articulation_points_on_shortest_path",
+          0.0544
+        ],
+        [
+          "shape_node_count",
+          0.0209
+        ],
+        [
+          "shape_max_cut_edge_betweenness",
+          0.019
+        ],
+        [
+          "shape_articulation_point_count",
+          0.0157
+        ],
+        [
+          "shape_node_cut_size",
+          0.0113
+        ]
+      ]
+    },
+    "model": "llama3.1:8b",
+    "prompt_path": "runs/shape_dt_llm_digest/prompts/depth4.txt",
+    "response_path": "runs/shape_dt_llm_digest/responses/depth4.llama3.1_8b.txt",
+    "retention": {
+      "num_leaves": 15,
+      "r2_in_sample": 0.7038,
+      "r2_loo": 0.2871,
+      "top_features": [
+        [
+          "shape_shortest_hops",
+          0.6569
+        ],
+        [
+          "shape_mean_cut_edge_betweenness",
+          0.1139
+        ],
+        [
+          "shape_node_cut_size",
+          0.095
+        ],
+        [
+          "shape_diameter",
+          0.0465
+        ],
+        [
+          "shape_edge_cut_size",
+          0.0249
+        ],
+        [
+          "shape_node_count",
+          0.021
+        ],
+        [
+          "shape_articulation_point_count",
+          0.0178
+        ],
+        [
+          "shape_max_edge_betweenness",
+          0.0142
+        ]
+      ]
+    },
+    "score": {
+      "depth": 4,
+      "dominant_feature_exploitability": {
+        "feature": "shape_shortest_hops",
+        "matched_synonym": "shortest_hops",
+        "named": true
+      },
+      "dominant_feature_retention": {
+        "feature": "shape_shortest_hops",
+        "matched_synonym": "shortest_hops",
+        "named": true
+      },
+      "duration_ms": 79064.052182,
+      "faithfulness": {
+        "grounded": [
+          "2.5",
+          "2.5",
+          "1",
+          "2",
+          "0.7038",
+          "2",
+          "0.2871",
+          "2.500",
+          "2.500",
+          "2",
+          "2",
+          "0.5817",
+          "2",
+          "0.2668",
+          "2.500",
+          "48.500",
+          "4"
+        ],
+        "hallucinated": [],
+        "score": 1.0,
+        "total_numeric_claims": 17
+      },
+      "model": "llama3.1:8b",
+      "prompt_tokens": 2911,
+      "response_tokens": 325,
+      "scope_overclaim": {
+        "clean": true,
+        "violations": []
+      },
+      "sections": {
+        "missing": [],
+        "present": [
+          "shape-driven prediction",
+          "decision-tree evidence",
+          "ablation caveats",
+          "scope caveats",
+          "rubric self-check"
+        ]
+      }
+    }
+  },
+  {
+    "depth": 6,
+    "exploitability": {
+      "num_leaves": 40,
+      "r2_in_sample": 0.7661,
+      "r2_loo": 0.0748,
+      "top_features": [
+        [
+          "shape_shortest_hops",
+          0.5307
+        ],
+        [
+          "shape_mean_cut_edge_betweenness",
+          0.1242
+        ],
+        [
+          "shape_edge_count",
+          0.0963
+        ],
+        [
+          "shape_node_count",
+          0.0727
+        ],
+        [
+          "shape_algebraic_connectivity",
+          0.055
+        ],
+        [
+          "shape_max_cut_edge_betweenness",
+          0.0412
+        ],
+        [
+          "shape_articulation_points_on_shortest_path",
+          0.0322
+        ],
+        [
+          "shape_max_edge_betweenness",
+          0.0237
+        ],
+        [
+          "shape_articulation_point_count",
+          0.0119
+        ]
+      ]
+    },
+    "model": "phi4:14b",
+    "prompt_path": "runs/shape_dt_llm_digest/prompts/depth6.txt",
+    "response_path": "runs/shape_dt_llm_digest/responses/depth6.phi4_14b.txt",
+    "retention": {
+      "num_leaves": 45,
+      "r2_in_sample": 0.8066,
+      "r2_loo": 0.3031,
+      "top_features": [
+        [
+          "shape_shortest_hops",
+          0.5732
+        ],
+        [
+          "shape_mean_cut_edge_betweenness",
+          0.1161
+        ],
+        [
+          "shape_node_cut_size",
+          0.094
+        ],
+        [
+          "shape_max_edge_betweenness",
+          0.0502
+        ],
+        [
+          "shape_node_count",
+          0.0438
+        ],
+        [
+          "shape_diameter",
+          0.041
+        ],
+        [
+          "shape_max_cut_edge_betweenness",
+          0.0283
+        ],
+        [
+          "shape_edge_cut_size",
+          0.0221
+        ],
+        [
+          "shape_articulation_point_count",
+          0.0156
+        ]
+      ]
+    },
+    "score": {
+      "depth": 6,
+      "dominant_feature_exploitability": {
+        "feature": "shape_shortest_hops",
+        "matched_synonym": "shortest_hops",
+        "named": true
+      },
+      "dominant_feature_retention": {
+        "feature": "shape_shortest_hops",
+        "matched_synonym": "shortest_hops",
+        "named": true
+      },
+      "duration_ms": 151784.406621,
+      "faithfulness": {
+        "grounded": [
+          "2.500",
+          "3.500",
+          "2.500",
+          "48.500",
+          "0.8066",
+          "0.3031",
+          "2.500",
+          "3.500",
+          "0.798",
+          "0.7661",
+          "0.0748",
+          "2.500",
+          "48.500",
+          "0.011",
+          "6"
+        ],
+        "hallucinated": [],
+        "score": 1.0,
+        "total_numeric_claims": 15
+      },
+      "model": "phi4:14b",
+      "prompt_tokens": 7987,
+      "response_tokens": 483,
+      "scope_overclaim": {
+        "clean": true,
+        "violations": []
+      },
+      "sections": {
+        "missing": [],
+        "present": [
+          "shape-driven prediction",
+          "decision-tree evidence",
+          "ablation caveats",
+          "scope caveats",
+          "rubric self-check"
+        ]
+      }
+    }
+  },
+  {
+    "depth": 6,
+    "exploitability": {
+      "num_leaves": 40,
+      "r2_in_sample": 0.7661,
+      "r2_loo": 0.0748,
+      "top_features": [
+        [
+          "shape_shortest_hops",
+          0.5307
+        ],
+        [
+          "shape_mean_cut_edge_betweenness",
+          0.1242
+        ],
+        [
+          "shape_edge_count",
+          0.0963
+        ],
+        [
+          "shape_node_count",
+          0.0727
+        ],
+        [
+          "shape_algebraic_connectivity",
+          0.055
+        ],
+        [
+          "shape_max_cut_edge_betweenness",
+          0.0412
+        ],
+        [
+          "shape_articulation_points_on_shortest_path",
+          0.0322
+        ],
+        [
+          "shape_max_edge_betweenness",
+          0.0237
+        ],
+        [
+          "shape_articulation_point_count",
+          0.0119
+        ]
+      ]
+    },
+    "model": "llama3.1:8b",
+    "prompt_path": "runs/shape_dt_llm_digest/prompts/depth6.txt",
+    "response_path": "runs/shape_dt_llm_digest/responses/depth6.llama3.1_8b.txt",
+    "retention": {
+      "num_leaves": 45,
+      "r2_in_sample": 0.8066,
+      "r2_loo": 0.3031,
+      "top_features": [
+        [
+          "shape_shortest_hops",
+          0.5732
+        ],
+        [
+          "shape_mean_cut_edge_betweenness",
+          0.1161
+        ],
+        [
+          "shape_node_cut_size",
+          0.094
+        ],
+        [
+          "shape_max_edge_betweenness",
+          0.0502
+        ],
+        [
+          "shape_node_count",
+          0.0438
+        ],
+        [
+          "shape_diameter",
+          0.041
+        ],
+        [
+          "shape_max_cut_edge_betweenness",
+          0.0283
+        ],
+        [
+          "shape_edge_cut_size",
+          0.0221
+        ],
+        [
+          "shape_articulation_point_count",
+          0.0156
+        ]
+      ]
+    },
+    "score": {
+      "depth": 6,
+      "dominant_feature_exploitability": {
+        "feature": "shape_shortest_hops",
+        "matched_synonym": "shortest_hops",
+        "named": true
+      },
+      "dominant_feature_retention": {
+        "feature": "shape_shortest_hops",
+        "matched_synonym": "shortest_hops",
+        "named": true
+      },
+      "duration_ms": 149396.766802,
+      "faithfulness": {
+        "grounded": [
+          "2.5",
+          "2.5",
+          "0.343",
+          "113.5",
+          "14",
+          "2.5",
+          "48.5",
+          "0.029",
+          "0.114",
+          "1",
+          "2",
+          "0.8066",
+          "2",
+          "0.3031",
+          "2",
+          "2",
+          "0.7661",
+          "2",
+          "0.0748",
+          "1",
+          "0.5732",
+          "0.1161",
+          "0.094",
+          "2",
+          "0.5307",
+          "0.1242",
+          "0.0963"
+        ],
+        "hallucinated": [],
+        "score": 1.0,
+        "total_numeric_claims": 27
+      },
+      "model": "llama3.1:8b",
+      "prompt_tokens": 7987,
+      "response_tokens": 447,
+      "scope_overclaim": {
+        "clean": true,
+        "violations": []
+      },
+      "sections": {
+        "missing": [],
+        "present": [
+          "shape-driven prediction",
+          "decision-tree evidence",
+          "ablation caveats",
+          "scope caveats",
+          "rubric self-check"
+        ]
+      }
+    }
+  },
+  {
+    "depth": 8,
+    "exploitability": {
+      "num_leaves": 82,
+      "r2_in_sample": 0.9014,
+      "r2_loo": 0.0017,
+      "top_features": [
+        [
+          "shape_shortest_hops",
+          0.4527
+        ],
+        [
+          "shape_mean_cut_edge_betweenness",
+          0.1039
+        ],
+        [
+          "shape_edge_count",
+          0.1004
+        ],
+        [
+          "shape_algebraic_connectivity",
+          0.083
+        ],
+        [
+          "shape_node_count",
+          0.0763
+        ],
+        [
+          "shape_max_cut_edge_betweenness",
+          0.0643
+        ],
+        [
+          "shape_articulation_points_on_shortest_path",
+          0.0414
+        ],
+        [
+          "shape_max_edge_betweenness",
+          0.0352
+        ],
+        [
+          "shape_articulation_point_count",
+          0.0315
+        ]
+      ]
+    },
+    "model": "phi4:14b",
+    "prompt_path": "runs/shape_dt_llm_digest/prompts/depth8.txt",
+    "response_path": "runs/shape_dt_llm_digest/responses/depth8.phi4_14b.txt",
+    "retention": {
+      "num_leaves": 89,
+      "r2_in_sample": 0.9261,
+      "r2_loo": 0.2004,
+      "top_features": [
+        [
+          "shape_shortest_hops",
+          0.4993
+        ],
+        [
+          "shape_mean_cut_edge_betweenness",
+          0.1238
+        ],
+        [
+          "shape_node_cut_size",
+          0.0831
+        ],
+        [
+          "shape_articulation_point_count",
+          0.0543
+        ],
+        [
+          "shape_edge_count",
+          0.0409
+        ],
+        [
+          "shape_diameter",
+          0.0357
+        ],
+        [
+          "shape_max_cut_edge_betweenness",
+          0.0349
+        ],
+        [
+          "shape_max_edge_betweenness",
+          0.0343
+        ],
+        [
+          "shape_algebraic_connectivity",
+          0.0325
+        ],
+        [
+          "shape_articulation_points_on_shortest_path",
+          0.0236
+        ],
+        [
+          "shape_edge_cut_size",
+          0.0193
+        ],
+        [
+          "shape_node_count",
+          0.0181
+        ]
+      ]
+    },
+    "score": {
+      "depth": 8,
+      "dominant_feature_exploitability": {
+        "feature": "shape_shortest_hops",
+        "matched_synonym": null,
+        "named": false
+      },
+      "dominant_feature_retention": {
+        "feature": "shape_shortest_hops",
+        "matched_synonym": null,
+        "named": false
+      },
+      "duration_ms": 44679.72747,
+      "faithfulness": {
+        "grounded": [],
+        "hallucinated": [],
+        "score": 1.0,
+        "total_numeric_claims": 0
+      },
+      "model": "phi4:14b",
+      "prompt_tokens": 16383,
+      "response_tokens": 1,
+      "scope_overclaim": {
+        "clean": true,
+        "violations": []
+      },
+      "sections": {
+        "missing": [
+          "shape-driven prediction",
+          "decision-tree evidence",
+          "ablation caveats",
+          "scope caveats",
+          "rubric self-check"
+        ],
+        "present": []
+      }
+    }
+  },
+  {
+    "depth": 8,
+    "exploitability": {
+      "num_leaves": 82,
+      "r2_in_sample": 0.9014,
+      "r2_loo": 0.0017,
+      "top_features": [
+        [
+          "shape_shortest_hops",
+          0.4527
+        ],
+        [
+          "shape_mean_cut_edge_betweenness",
+          0.1039
+        ],
+        [
+          "shape_edge_count",
+          0.1004
+        ],
+        [
+          "shape_algebraic_connectivity",
+          0.083
+        ],
+        [
+          "shape_node_count",
+          0.0763
+        ],
+        [
+          "shape_max_cut_edge_betweenness",
+          0.0643
+        ],
+        [
+          "shape_articulation_points_on_shortest_path",
+          0.0414
+        ],
+        [
+          "shape_max_edge_betweenness",
+          0.0352
+        ],
+        [
+          "shape_articulation_point_count",
+          0.0315
+        ]
+      ]
+    },
+    "model": "llama3.1:8b",
+    "prompt_path": "runs/shape_dt_llm_digest/prompts/depth8.txt",
+    "response_path": "runs/shape_dt_llm_digest/responses/depth8.llama3.1_8b.txt",
+    "retention": {
+      "num_leaves": 89,
+      "r2_in_sample": 0.9261,
+      "r2_loo": 0.2004,
+      "top_features": [
+        [
+          "shape_shortest_hops",
+          0.4993
+        ],
+        [
+          "shape_mean_cut_edge_betweenness",
+          0.1238
+        ],
+        [
+          "shape_node_cut_size",
+          0.0831
+        ],
+        [
+          "shape_articulation_point_count",
+          0.0543
+        ],
+        [
+          "shape_edge_count",
+          0.0409
+        ],
+        [
+          "shape_diameter",
+          0.0357
+        ],
+        [
+          "shape_max_cut_edge_betweenness",
+          0.0349
+        ],
+        [
+          "shape_max_edge_betweenness",
+          0.0343
+        ],
+        [
+          "shape_algebraic_connectivity",
+          0.0325
+        ],
+        [
+          "shape_articulation_points_on_shortest_path",
+          0.0236
+        ],
+        [
+          "shape_edge_cut_size",
+          0.0193
+        ],
+        [
+          "shape_node_count",
+          0.0181
+        ]
+      ]
+    },
+    "score": {
+      "depth": 8,
+      "dominant_feature_exploitability": {
+        "feature": "shape_shortest_hops",
+        "matched_synonym": "shortest_hops",
+        "named": true
+      },
+      "dominant_feature_retention": {
+        "feature": "shape_shortest_hops",
+        "matched_synonym": "shortest_hops",
+        "named": true
+      },
+      "duration_ms": 358678.248789,
+      "faithfulness": {
+        "grounded": [
+          "2.5",
+          "2.5",
+          "0.563",
+          "2.5",
+          "2.5",
+          "0.563",
+          "2.5",
+          "48.5",
+          "0.029",
+          "2.5",
+          "48.5",
+          "0.029",
+          "1",
+          "2",
+          "0.9261",
+          "2",
+          "234",
+          "0.2004",
+          "2",
+          "2",
+          "0.9014",
+          "2",
+          "234",
+          "0.0017",
+          "1",
+          "0.4993",
+          "0.1238",
+          "0.0831",
+          "0.0543",
+          "0.0409",
+          "0.0357",
+          "0.0349",
+          "0.0343",
+          "0.0325",
+          "2",
+          "0.4527",
+          "0.1039",
+          "0.1004",
+          "0.083",
+          "0.0763",
+          "0.0643",
+          "8"
+        ],
+        "hallucinated": [],
+        "score": 1.0,
+        "total_numeric_claims": 42
+      },
+      "model": "llama3.1:8b",
+      "prompt_tokens": 17911,
+      "response_tokens": 633,
+      "scope_overclaim": {
+        "clean": true,
+        "violations": []
+      },
+      "sections": {
+        "missing": [],
+        "present": [
+          "shape-driven prediction",
+          "decision-tree evidence",
+          "ablation caveats",
+          "scope caveats",
+          "rubric self-check"
+        ]
+      }
+    }
+  }
+]

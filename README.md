@@ -76,6 +76,11 @@ code/runs/graph_corpus_sqlite_v1_topology_bench_real_rank10km_normalized/
                                Normalized 105-graph SQLite corpus (graph_corpus.sqlite, 25 MB),
                                DEFAULT_CORPUS_DB_PATH in
                                sequence_game/experiments/histogram_colearning/config.py
+code/runs/histogram_corpus_full105_backend/   Intermediate LLM-digest/cluster/border-collie
+                               JSON + generator for the real-corpus digestion figures (see below)
+code/runs/rule_clusters/, code/runs/shape_dt_llm_digest/, code/runs/exp3_topology_bench/,
+code/runs/exp3_small_synth_234_production/   Intermediate data for the Syn-small pilot figures
+                               (see "Real-corpus digestion and Syn-small pilot figures" below)
 cached_intermediate_results/docs_artifacts/   Rendered PDF/PNG figures plus the CSV/JSON numeric
                                tables they were plotted from, for every histogram-corpus,
                                Stackelberg, prime-probe, and calibration experiment family
@@ -84,7 +89,7 @@ figures_as_used_in_paper/     All 18 real content figures + the EU logo, exactly
                                appear in the paper
 ```
 
-Bundle size: ~59 MB (`du -sh --apparent-size`).
+Bundle size: ~80 MB (`du -sh --apparent-size`).
 
 A few JSON/CSV files under `code/docs/topology_bench_step6_census/` and
 `cached_intermediate_results/` use the placeholder `<repo-root>` in place
@@ -101,10 +106,11 @@ directly here.
   topologies as `.xlsx` workbooks (`Nodes_*`/`Edges_*` sheets with
   geospatial link lengths).
 - `raw/small_synthetic.zip` (1.6 MB) — the companion synthetic-topology
-  archive from the same Zenodo release. This is the raw source material
-  behind the paper's historical "Syn-small" pilot study, but it has not
-  been extracted or ingested by any script in this bundle (see "Figures
-  with no generator found," Syn-small pilot row, below).
+  archive from the same Zenodo release, the raw source material behind the
+  paper's historical "Syn-small" pilot study. The pilot figures below are
+  reproducible from an already-computed intermediate result (see "Real-corpus
+  digestion and Syn-small pilot figures" below) rather than from this raw
+  archive directly; nothing in this bundle re-ingests it from scratch.
 - `extracted/TOP_<n>_<NAME>.xlsx` (105 files, 3.7 MB total) — the
   real-topology workbooks unzipped, used directly by
   `scripts/generate_graph_corpus.py` / `scripts/build_graph_corpus_sqlite.py`.
@@ -221,35 +227,54 @@ The already-normalized output of this step is bundled directly at
 (25 MB), so this step does not need to be re-run to inspect the 105-topology
 structure the paper analyzes.
 
-## Figures with no generator found
+## Real-corpus digestion and Syn-small pilot figures
 
-These figures appear in the paper as final rendered files (bundled under
-`figures_as_used_in_paper/` for reference), but no generator script and no
-cached intermediate output for them exists in this bundle or was found
-elsewhere.
+Unlike the table above, the five scripts below don't read a raw simulation
+run — they read a smaller, already-computed intermediate result (LLM
+digest scores, fitted cluster frequencies, a lagged-correlation detection
+pass), which is bundled directly. Running the script against the bundled
+intermediate data regenerates the figure itself byte-for-byte-equivalent
+(verified by actually running all five). What is *not* bundled, in every
+case, is the raw run that the intermediate result was itself computed from
+— so these are reproducible one step later than `histogram_anatomy.pdf`,
+not from the rawest possible simulation log.
 
-- **`real_digest_border_collie.pdf`, `real_digest_generalization_by_depth.pdf`,
-  `real_digest_root_clusters.pdf`, `real_digest_checks_by_depth.pdf`**
-  (real-corpus decision-tree digestion figures) and
-  **`real_corpus_dt_generalization_by_depth_clean.png`**
-  (current-corpus decision-tree prediction figure): the underlying adapter
-  export behind these figures' targets (`histogram_final_retention`,
-  `exploitability`) was never archived. Its source was not found under any
-  name (`adapter`, `digest`, `real_corpus`, or the two target variable
-  names above) anywhere searched.
-- **`pilot_single_tree_digest_by_depth_clean.png`,
-  `pilot_cluster_root_split_frequencies.png`,
-  `strategy_weight_reversal_distribution.png`,
-  `strategy_weight_reversal_example.png`** (Syn-small historical-pilot
-  figures): the machine-readable sidecars behind these figures (the
-  234-graph Syn-small manifest, feature/fold tables, fitted rules,
-  subsampling seeds, verifier records, or the exact LLM prompts/responses)
-  do not exist in this bundle or were found elsewhere. Only the raw,
-  un-extracted `data/topology_bench/raw/small_synthetic.zip` exists as a
-  data dependency; nothing ingests it here.
+| Figure | Generator script | Intermediate data (bundled) |
+|---|---|---|
+| `real_digest_generalization_by_depth.pdf`, `real_digest_checks_by_depth.pdf`, `real_digest_root_clusters.pdf`, `real_digest_border_collie.pdf` | `runs/histogram_corpus_full105_backend/pqqs2026_section/generate_figures.py` | `runs/histogram_corpus_full105_backend/{100k,500k}/llm_digest_*/digest_results.json`, `rule_clusters_*.json`, `border_collie_*.json` |
+| `real_corpus_dt_generalization_by_depth_clean.png` | `scripts/plot_real_corpus_dt.py` | `runs/real_corpus_dt_results.json` |
+| `strategy_weight_reversal_distribution.png`, `strategy_weight_reversal_example.png` | `scripts/plot_border_collie.py` | `runs/rule_clusters/border_collie_results.json` (all 234 graphs' scores) + `runs/exp3_small_synth_234_production/{payoff_matrices,online_runs/exp3_vs_exp3}/` for graph `0625` only (the single highest-scoring graph the bundled results select as the "clearest example" — deterministic given the bundled scores) + the bundled `runs/exp3_topology_bench/corpus_small_synthetic_hop7.sqlite` |
+| `pilot_cluster_root_split_frequencies.png` | `scripts/plot_rule_clusters.py` | `runs/rule_clusters/level2_clusters.json` |
+| `pilot_single_tree_digest_by_depth_clean.png` | `scripts/plot_shape_dt_llm_digest.py` | `runs/shape_dt_llm_digest/digest_results.json` |
 
-Treat these nine files as an open provenance question, not as evidence a
-generator never existed — only that a thorough search did not find one.
+```bash
+cd code
+python runs/histogram_corpus_full105_backend/pqqs2026_section/generate_figures.py
+python scripts/plot_real_corpus_dt.py
+python scripts/plot_border_collie.py runs/rule_clusters/border_collie_results.json \
+  --production-dir runs/exp3_small_synth_234_production \
+  --corpus-db-path runs/exp3_topology_bench/corpus_small_synthetic_hop7.sqlite \
+  --out-dir runs/rule_clusters/figures
+python scripts/plot_rule_clusters.py runs/rule_clusters/level2_clusters.json \
+  --out-dir runs/rule_clusters/figures
+python scripts/plot_shape_dt_llm_digest.py runs/shape_dt_llm_digest/digest_results.json \
+  --out-dir runs/shape_dt_llm_digest/figures
+```
+
+**What is not closed, honestly:** the raw run behind the four
+`real_digest_*`/`real_corpus_dt_*` figures' intermediate JSON is the same
+missing `runs/histogram_corpus_500k/` directory documented in the main
+table above — so independently re-deriving `digest_results.json` /
+`rule_clusters_*.json` / `border_collie_*.json` / `real_corpus_dt_results.json`
+from scratch needs the same missing raw run. For the two
+`strategy_weight_reversal_*` figures, `scripts/detect_border_collie.py`
+(bundled) is the real generator of `border_collie_results.json`, but it
+needs all 234 graphs' raw per-turn trajectories to score them — a ~3.2 GB
+production run this bundle does not include (only graph `0625`'s ~10 MB
+slice is bundled, since that's the one the figure actually plots). Bundling
+the already-computed `border_collie_results.json` directly means the
+*figure* is still genuinely reproducible; only an independent from-scratch
+re-detection across all 234 graphs is not.
 
 ## Integrity note
 

@@ -1,0 +1,2093 @@
+{
+  "alice_route_strategy": {
+    "clusters": [
+      {
+        "count": 65,
+        "example_graph_ids": [
+          "0004_topology_bench_usa100_seed_na",
+          "0005_topology_bench_via_seed_na",
+          "0008_topology_bench_canarie_seed_na"
+        ],
+        "fraction": 0.7738,
+        "root_direction": "negative",
+        "root_feature": "mean_overlap_with_other_routes"
+      },
+      {
+        "count": 10,
+        "example_graph_ids": [
+          "0001_topology_bench_tatanid_seed_na",
+          "0007_topology_bench_canarie_seed_na",
+          "0013_topology_bench_conus30_seed_na"
+        ],
+        "fraction": 0.119,
+        "root_direction": "negative",
+        "root_feature": "internal_node_count"
+      },
+      {
+        "count": 8,
+        "example_graph_ids": [
+          "0010_topology_bench_cesnet_seed_na",
+          "0048_topology_bench_ibm_seed_na",
+          "0050_topology_bench_integra_seed_na"
+        ],
+        "fraction": 0.0952,
+        "root_direction": "negative",
+        "root_feature": "length_m"
+      },
+      {
+        "count": 1,
+        "example_graph_ids": [
+          "0006_topology_bench_bren_seed_na"
+        ],
+        "fraction": 0.0119,
+        "root_direction": "positive",
+        "root_feature": "hop_count"
+      }
+    ],
+    "feature_names": [
+      "hop_count",
+      "length_m",
+      "length_over_shortest",
+      "internal_node_count",
+      "contains_bottleneck",
+      "node_disjoint_paths",
+      "mean_overlap_with_other_routes"
+    ],
+    "num_graphs_fit": 84,
+    "num_graphs_total": 105,
+    "num_no_split": 0,
+    "per_graph_results": {
+      "0001_topology_bench_tatanid_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0001_topology_bench_tatanid_seed_na",
+        "has_split": true,
+        "num_rows": 6,
+        "r2_in_sample": 0.8699,
+        "root_direction": "negative",
+        "root_feature": "internal_node_count",
+        "root_threshold": 9.5
+      },
+      "0004_topology_bench_usa100_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0004_topology_bench_usa100_seed_na",
+        "has_split": true,
+        "num_rows": 18,
+        "r2_in_sample": 1.0,
+        "root_direction": "negative",
+        "root_feature": "mean_overlap_with_other_routes",
+        "root_threshold": 2.3235
+      },
+      "0005_topology_bench_via_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0005_topology_bench_via_seed_na",
+        "has_split": true,
+        "num_rows": 7,
+        "r2_in_sample": 0.9664,
+        "root_direction": "negative",
+        "root_feature": "mean_overlap_with_other_routes",
+        "root_threshold": 1.8333
+      },
+      "0006_topology_bench_bren_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0006_topology_bench_bren_seed_na",
+        "has_split": true,
+        "num_rows": 3,
+        "r2_in_sample": 1.0,
+        "root_direction": "positive",
+        "root_feature": "hop_count",
+        "root_threshold": 3.0
+      },
+      "0007_topology_bench_canarie_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0007_topology_bench_canarie_seed_na",
+        "has_split": true,
+        "num_rows": 4,
+        "r2_in_sample": 1.0,
+        "root_direction": "negative",
+        "root_feature": "internal_node_count",
+        "root_threshold": 2.5
+      },
+      "0008_topology_bench_canarie_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0008_topology_bench_canarie_seed_na",
+        "has_split": true,
+        "num_rows": 19,
+        "r2_in_sample": 0.9982,
+        "root_direction": "negative",
+        "root_feature": "mean_overlap_with_other_routes",
+        "root_threshold": 2.0278
+      },
+      "0009_topology_bench_cernet_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0009_topology_bench_cernet_seed_na",
+        "has_split": true,
+        "num_rows": 35,
+        "r2_in_sample": 0.9792,
+        "root_direction": "negative",
+        "root_feature": "mean_overlap_with_other_routes",
+        "root_threshold": 1.0
+      },
+      "0010_topology_bench_cesnet_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0010_topology_bench_cesnet_seed_na",
+        "has_split": true,
+        "num_rows": 53,
+        "r2_in_sample": 0.7231,
+        "root_direction": "negative",
+        "root_feature": "length_m",
+        "root_threshold": 26650.8193
+      },
+      "0011_topology_bench_claranet_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0011_topology_bench_claranet_seed_na",
+        "has_split": true,
+        "num_rows": 7,
+        "r2_in_sample": 0.9673,
+        "root_direction": "negative",
+        "root_feature": "mean_overlap_with_other_routes",
+        "root_threshold": 1.8333
+      },
+      "0012_topology_bench_conus100_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0012_topology_bench_conus100_seed_na",
+        "has_split": true,
+        "num_rows": 5,
+        "r2_in_sample": 0.9998,
+        "root_direction": "negative",
+        "root_feature": "mean_overlap_with_other_routes",
+        "root_threshold": 4.625
+      },
+      "0013_topology_bench_conus30_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0013_topology_bench_conus30_seed_na",
+        "has_split": true,
+        "num_rows": 6,
+        "r2_in_sample": 0.9996,
+        "root_direction": "negative",
+        "root_feature": "internal_node_count",
+        "root_threshold": 7.0
+      },
+      "0014_topology_bench_conus6077_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0014_topology_bench_conus6077_seed_na",
+        "has_split": true,
+        "num_rows": 5,
+        "r2_in_sample": 1.0,
+        "root_direction": "negative",
+        "root_feature": "mean_overlap_with_other_routes",
+        "root_threshold": 3.75
+      },
+      "0015_topology_bench_conus6079_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0015_topology_bench_conus6079_seed_na",
+        "has_split": true,
+        "num_rows": 5,
+        "r2_in_sample": 1.0,
+        "root_direction": "negative",
+        "root_feature": "mean_overlap_with_other_routes",
+        "root_threshold": 4.0
+      },
+      "0016_topology_bench_abilene_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0016_topology_bench_abilene_seed_na",
+        "has_split": true,
+        "num_rows": 16,
+        "r2_in_sample": 0.6429,
+        "root_direction": "negative",
+        "root_feature": "mean_overlap_with_other_routes",
+        "root_threshold": 2.8
+      },
+      "0017_topology_bench_conus75_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0017_topology_bench_conus75_seed_na",
+        "has_split": true,
+        "num_rows": 5,
+        "r2_in_sample": 1.0,
+        "root_direction": "negative",
+        "root_feature": "mean_overlap_with_other_routes",
+        "root_threshold": 4.625
+      },
+      "0018_topology_bench_coronet_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0018_topology_bench_coronet_seed_na",
+        "has_split": true,
+        "num_rows": 5,
+        "r2_in_sample": 1.0,
+        "root_direction": "negative",
+        "root_feature": "mean_overlap_with_other_routes",
+        "root_threshold": 4.0
+      },
+      "0019_topology_bench_cost_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0019_topology_bench_cost_seed_na",
+        "has_split": true,
+        "num_rows": 13,
+        "r2_in_sample": 1.0,
+        "root_direction": "negative",
+        "root_feature": "mean_overlap_with_other_routes",
+        "root_threshold": 1.75
+      },
+      "0020_topology_bench_crlnetworkservices_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0020_topology_bench_crlnetworkservices_seed_na",
+        "has_split": true,
+        "num_rows": 5,
+        "r2_in_sample": 1.0,
+        "root_direction": "negative",
+        "root_feature": "internal_node_count",
+        "root_threshold": 5.0
+      },
+      "0021_topology_bench_cwix_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0021_topology_bench_cwix_seed_na",
+        "has_split": true,
+        "num_rows": 14,
+        "r2_in_sample": 0.7155,
+        "root_direction": "negative",
+        "root_feature": "mean_overlap_with_other_routes",
+        "root_threshold": 1.2308
+      },
+      "0022_topology_bench_darkstrand_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0022_topology_bench_darkstrand_seed_na",
+        "has_split": true,
+        "num_rows": 5,
+        "r2_in_sample": 0.9989,
+        "root_direction": "negative",
+        "root_feature": "internal_node_count",
+        "root_threshold": 9.5
+      },
+      "0023_topology_bench_digex_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0023_topology_bench_digex_seed_na",
+        "has_split": true,
+        "num_rows": 8,
+        "r2_in_sample": 0.7544,
+        "root_direction": "negative",
+        "root_feature": "mean_overlap_with_other_routes",
+        "root_threshold": 3.7857
+      },
+      "0024_topology_bench_dt17_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0024_topology_bench_dt17_seed_na",
+        "has_split": true,
+        "num_rows": 58,
+        "r2_in_sample": 0.7003,
+        "root_direction": "negative",
+        "root_feature": "mean_overlap_with_other_routes",
+        "root_threshold": 1.5263
+      },
+      "0025_topology_bench_elibackbone_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0025_topology_bench_elibackbone_seed_na",
+        "has_split": true,
+        "num_rows": 11,
+        "r2_in_sample": 0.9999,
+        "root_direction": "negative",
+        "root_feature": "mean_overlap_with_other_routes",
+        "root_threshold": 3.0
+      },
+      "0026_topology_bench_eon_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0026_topology_bench_eon_seed_na",
+        "has_split": true,
+        "num_rows": 501,
+        "r2_in_sample": 0.9999,
+        "root_direction": "negative",
+        "root_feature": "mean_overlap_with_other_routes",
+        "root_threshold": 1.496
+      },
+      "0027_topology_bench_ans_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0027_topology_bench_ans_seed_na",
+        "has_split": true,
+        "num_rows": 56,
+        "r2_in_sample": 0.5465,
+        "root_direction": "negative",
+        "root_feature": "mean_overlap_with_other_routes",
+        "root_threshold": 3.1727
+      },
+      "0028_topology_bench_epoch_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0028_topology_bench_epoch_seed_na",
+        "has_split": true,
+        "num_rows": 4,
+        "r2_in_sample": 1.0,
+        "root_direction": "negative",
+        "root_feature": "mean_overlap_with_other_routes",
+        "root_threshold": 1.1667
+      },
+      "0029_topology_bench_ernet_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0029_topology_bench_ernet_seed_na",
+        "has_split": true,
+        "num_rows": 5,
+        "r2_in_sample": 0.9999,
+        "root_direction": "negative",
+        "root_feature": "mean_overlap_with_other_routes",
+        "root_threshold": 0.875
+      },
+      "0030_topology_bench_funet_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0030_topology_bench_funet_seed_na",
+        "has_split": true,
+        "num_rows": 9,
+        "r2_in_sample": 0.9996,
+        "root_direction": "negative",
+        "root_feature": "mean_overlap_with_other_routes",
+        "root_threshold": 3.1875
+      },
+      "0033_topology_bench_geant_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0033_topology_bench_geant_seed_na",
+        "has_split": true,
+        "num_rows": 88,
+        "r2_in_sample": 0.9999,
+        "root_direction": "negative",
+        "root_feature": "mean_overlap_with_other_routes",
+        "root_threshold": 3.4023
+      },
+      "0035_topology_bench_germany50_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0035_topology_bench_germany50_seed_na",
+        "has_split": true,
+        "num_rows": 282,
+        "r2_in_sample": 0.9973,
+        "root_direction": "negative",
+        "root_feature": "mean_overlap_with_other_routes",
+        "root_threshold": 3.7829
+      },
+      "0036_topology_bench_getnet_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0036_topology_bench_getnet_seed_na",
+        "has_split": true,
+        "num_rows": 4,
+        "r2_in_sample": 1.0,
+        "root_direction": "negative",
+        "root_feature": "mean_overlap_with_other_routes",
+        "root_threshold": 1.1667
+      },
+      "0037_topology_bench_grnet_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0037_topology_bench_grnet_seed_na",
+        "has_split": true,
+        "num_rows": 26,
+        "r2_in_sample": 0.9987,
+        "root_direction": "negative",
+        "root_feature": "mean_overlap_with_other_routes",
+        "root_threshold": 2.34
+      },
+      "0038_topology_bench_arnes_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0038_topology_bench_arnes_seed_na",
+        "has_split": true,
+        "num_rows": 5,
+        "r2_in_sample": 1.0,
+        "root_direction": "negative",
+        "root_feature": "mean_overlap_with_other_routes",
+        "root_threshold": 1.0
+      },
+      "0040_topology_bench_gtspoland_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0040_topology_bench_gtspoland_seed_na",
+        "has_split": true,
+        "num_rows": 4,
+        "r2_in_sample": 1.0,
+        "root_direction": "negative",
+        "root_feature": "mean_overlap_with_other_routes",
+        "root_threshold": 2.1667
+      },
+      "0044_topology_bench_hibernianireland_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0044_topology_bench_hibernianireland_seed_na",
+        "has_split": true,
+        "num_rows": 4,
+        "r2_in_sample": 1.0,
+        "root_direction": "negative",
+        "root_feature": "mean_overlap_with_other_routes",
+        "root_threshold": 1.8333
+      },
+      "0046_topology_bench_hiberniaus_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0046_topology_bench_hiberniaus_seed_na",
+        "has_split": true,
+        "num_rows": 64,
+        "r2_in_sample": 0.5187,
+        "root_direction": "negative",
+        "root_feature": "mean_overlap_with_other_routes",
+        "root_threshold": 1.873
+      },
+      "0047_topology_bench_hostwayinternational_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0047_topology_bench_hostwayinternational_seed_na",
+        "has_split": true,
+        "num_rows": 6,
+        "r2_in_sample": 1.0,
+        "root_direction": "negative",
+        "root_feature": "mean_overlap_with_other_routes",
+        "root_threshold": 1.5
+      },
+      "0048_topology_bench_ibm_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0048_topology_bench_ibm_seed_na",
+        "has_split": true,
+        "num_rows": 25,
+        "r2_in_sample": 0.8481,
+        "root_direction": "negative",
+        "root_feature": "length_m",
+        "root_threshold": 82068.207
+      },
+      "0049_topology_bench_arpanet_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0049_topology_bench_arpanet_seed_na",
+        "has_split": true,
+        "num_rows": 119,
+        "r2_in_sample": 1.0,
+        "root_direction": "negative",
+        "root_feature": "mean_overlap_with_other_routes",
+        "root_threshold": 1.072
+      },
+      "0050_topology_bench_integra_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0050_topology_bench_integra_seed_na",
+        "has_split": true,
+        "num_rows": 35,
+        "r2_in_sample": 0.97,
+        "root_direction": "negative",
+        "root_feature": "length_m",
+        "root_threshold": 70565.2422
+      },
+      "0051_topology_bench_iris_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0051_topology_bench_iris_seed_na",
+        "has_split": true,
+        "num_rows": 20,
+        "r2_in_sample": 0.9578,
+        "root_direction": "negative",
+        "root_feature": "internal_node_count",
+        "root_threshold": 4.5
+      },
+      "0053_topology_bench_italy_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0053_topology_bench_italy_seed_na",
+        "has_split": true,
+        "num_rows": 14,
+        "r2_in_sample": 1.0,
+        "root_direction": "negative",
+        "root_feature": "mean_overlap_with_other_routes",
+        "root_threshold": 1.7692
+      },
+      "0054_topology_bench_janosus_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0054_topology_bench_janosus_seed_na",
+        "has_split": true,
+        "num_rows": 44,
+        "r2_in_sample": 1.0,
+        "root_direction": "negative",
+        "root_feature": "mean_overlap_with_other_routes",
+        "root_threshold": 1.6395
+      },
+      "0056_topology_bench_jpn12_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0056_topology_bench_jpn12_seed_na",
+        "has_split": true,
+        "num_rows": 13,
+        "r2_in_sample": 1.0,
+        "root_direction": "negative",
+        "root_feature": "mean_overlap_with_other_routes",
+        "root_threshold": 1.5
+      },
+      "0057_topology_bench_jpn25_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0057_topology_bench_jpn25_seed_na",
+        "has_split": true,
+        "num_rows": 8,
+        "r2_in_sample": 1.0,
+        "root_direction": "negative",
+        "root_feature": "mean_overlap_with_other_routes",
+        "root_threshold": 1.2143
+      },
+      "0058_topology_bench_jpn48_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0058_topology_bench_jpn48_seed_na",
+        "has_split": true,
+        "num_rows": 15,
+        "r2_in_sample": 0.8354,
+        "root_direction": "negative",
+        "root_feature": "length_m",
+        "root_threshold": 64604.7168
+      },
+      "0060_topology_bench_atmnet_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0060_topology_bench_atmnet_seed_na",
+        "has_split": true,
+        "num_rows": 4,
+        "r2_in_sample": 1.0,
+        "root_direction": "negative",
+        "root_feature": "length_m",
+        "root_threshold": 133155.4023
+      },
+      "0061_topology_bench_lambdarail_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0061_topology_bench_lambdarail_seed_na",
+        "has_split": true,
+        "num_rows": 6,
+        "r2_in_sample": 1.0,
+        "root_direction": "negative",
+        "root_feature": "mean_overlap_with_other_routes",
+        "root_threshold": 0.8
+      },
+      "0062_topology_bench_layer42_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0062_topology_bench_layer42_seed_na",
+        "has_split": true,
+        "num_rows": 4,
+        "r2_in_sample": 1.0,
+        "root_direction": "negative",
+        "root_feature": "mean_overlap_with_other_routes",
+        "root_threshold": 1.0
+      },
+      "0063_topology_bench_loni_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0063_topology_bench_loni_seed_na",
+        "has_split": true,
+        "num_rows": 3,
+        "r2_in_sample": 1.0,
+        "root_direction": "negative",
+        "root_feature": "length_m",
+        "root_threshold": 20428.4121
+      },
+      "0065_topology_bench_memorex_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0065_topology_bench_memorex_seed_na",
+        "has_split": true,
+        "num_rows": 8,
+        "r2_in_sample": 0.842,
+        "root_direction": "negative",
+        "root_feature": "internal_node_count",
+        "root_threshold": 2.5
+      },
+      "0066_topology_bench_metrona_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0066_topology_bench_metrona_seed_na",
+        "has_split": true,
+        "num_rows": 6,
+        "r2_in_sample": 1.0,
+        "root_direction": "negative",
+        "root_feature": "mean_overlap_with_other_routes",
+        "root_threshold": 4.5
+      },
+      "0067_topology_bench_mzima_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0067_topology_bench_mzima_seed_na",
+        "has_split": true,
+        "num_rows": 6,
+        "r2_in_sample": 1.0,
+        "root_direction": "negative",
+        "root_feature": "internal_node_count",
+        "root_threshold": 1.5
+      },
+      "0068_topology_bench_netrail_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0068_topology_bench_netrail_seed_na",
+        "has_split": true,
+        "num_rows": 7,
+        "r2_in_sample": 1.0,
+        "root_direction": "negative",
+        "root_feature": "mean_overlap_with_other_routes",
+        "root_threshold": 0.9167
+      },
+      "0069_topology_bench_networkusa_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0069_topology_bench_networkusa_seed_na",
+        "has_split": true,
+        "num_rows": 4,
+        "r2_in_sample": 1.0,
+        "root_direction": "negative",
+        "root_feature": "mean_overlap_with_other_routes",
+        "root_threshold": 1.8333
+      },
+      "0070_topology_bench_newnet_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0070_topology_bench_newnet_seed_na",
+        "has_split": true,
+        "num_rows": 8,
+        "r2_in_sample": 0.9063,
+        "root_direction": "negative",
+        "root_feature": "mean_overlap_with_other_routes",
+        "root_threshold": 5.7143
+      },
+      "0071_topology_bench_bbnplanet_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0071_topology_bench_bbnplanet_seed_na",
+        "has_split": true,
+        "num_rows": 4,
+        "r2_in_sample": 0.9982,
+        "root_direction": "negative",
+        "root_feature": "mean_overlap_with_other_routes",
+        "root_threshold": 2.6667
+      },
+      "0073_topology_bench_nobeleu_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0073_topology_bench_nobeleu_seed_na",
+        "has_split": true,
+        "num_rows": 26,
+        "r2_in_sample": 1.0,
+        "root_direction": "negative",
+        "root_feature": "mean_overlap_with_other_routes",
+        "root_threshold": 2.6
+      },
+      "0074_topology_bench_nobelgermany_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0074_topology_bench_nobelgermany_seed_na",
+        "has_split": true,
+        "num_rows": 66,
+        "r2_in_sample": 0.7386,
+        "root_direction": "negative",
+        "root_feature": "mean_overlap_with_other_routes",
+        "root_threshold": 1.0462
+      },
+      "0075_topology_bench_nobelus_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0075_topology_bench_nobelus_seed_na",
+        "has_split": true,
+        "num_rows": 46,
+        "r2_in_sample": 0.9645,
+        "root_direction": "negative",
+        "root_feature": "mean_overlap_with_other_routes",
+        "root_threshold": 1.7333
+      },
+      "0076_topology_bench_noel_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0076_topology_bench_noel_seed_na",
+        "has_split": true,
+        "num_rows": 15,
+        "r2_in_sample": 0.7864,
+        "root_direction": "negative",
+        "root_feature": "length_m",
+        "root_threshold": 27484.0146
+      },
+      "0077_topology_bench_nsfnet13_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0077_topology_bench_nsfnet13_seed_na",
+        "has_split": true,
+        "num_rows": 5,
+        "r2_in_sample": 0.7633,
+        "root_direction": "negative",
+        "root_feature": "mean_overlap_with_other_routes",
+        "root_threshold": 1.75
+      },
+      "0078_topology_bench_optunetsweden_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0078_topology_bench_optunetsweden_seed_na",
+        "has_split": true,
+        "num_rows": 6,
+        "r2_in_sample": 1.0,
+        "root_direction": "negative",
+        "root_feature": "mean_overlap_with_other_routes",
+        "root_threshold": 0.8
+      },
+      "0079_topology_bench_oxford_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0079_topology_bench_oxford_seed_na",
+        "has_split": true,
+        "num_rows": 7,
+        "r2_in_sample": 0.662,
+        "root_direction": "negative",
+        "root_feature": "mean_overlap_with_other_routes",
+        "root_threshold": 1.75
+      },
+      "0080_topology_bench_packetexchange_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0080_topology_bench_packetexchange_seed_na",
+        "has_split": true,
+        "num_rows": 8,
+        "r2_in_sample": 0.997,
+        "root_direction": "negative",
+        "root_feature": "mean_overlap_with_other_routes",
+        "root_threshold": 2.2857
+      },
+      "0081_topology_bench_palmetto_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0081_topology_bench_palmetto_seed_na",
+        "has_split": true,
+        "num_rows": 16,
+        "r2_in_sample": 1.0,
+        "root_direction": "negative",
+        "root_feature": "mean_overlap_with_other_routes",
+        "root_threshold": 3.9333
+      },
+      "0082_topology_bench_beyondthenetwork_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0082_topology_bench_beyondthenetwork_seed_na",
+        "has_split": true,
+        "num_rows": 15,
+        "r2_in_sample": 1.0,
+        "root_direction": "negative",
+        "root_feature": "mean_overlap_with_other_routes",
+        "root_threshold": 2.4643
+      },
+      "0083_topology_bench_pionier_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0083_topology_bench_pionier_seed_na",
+        "has_split": true,
+        "num_rows": 5,
+        "r2_in_sample": 0.9976,
+        "root_direction": "negative",
+        "root_feature": "mean_overlap_with_other_routes",
+        "root_threshold": 2.0
+      },
+      "0084_topology_bench_pionierl3_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0084_topology_bench_pionierl3_seed_na",
+        "has_split": true,
+        "num_rows": 5,
+        "r2_in_sample": 0.9941,
+        "root_direction": "negative",
+        "root_feature": "mean_overlap_with_other_routes",
+        "root_threshold": 2.625
+      },
+      "0085_topology_bench_polska_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0085_topology_bench_polska_seed_na",
+        "has_split": true,
+        "num_rows": 45,
+        "r2_in_sample": 0.989,
+        "root_direction": "negative",
+        "root_feature": "mean_overlap_with_other_routes",
+        "root_threshold": 1.5455
+      },
+      "0086_topology_bench_portugal_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0086_topology_bench_portugal_seed_na",
+        "has_split": true,
+        "num_rows": 27,
+        "r2_in_sample": 0.8784,
+        "root_direction": "negative",
+        "root_feature": "internal_node_count",
+        "root_threshold": 7.0
+      },
+      "0087_topology_bench_psinet_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0087_topology_bench_psinet_seed_na",
+        "has_split": true,
+        "num_rows": 4,
+        "r2_in_sample": 1.0,
+        "root_direction": "negative",
+        "root_feature": "mean_overlap_with_other_routes",
+        "root_threshold": 2.8333
+      },
+      "0089_topology_bench_redclara_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0089_topology_bench_redclara_seed_na",
+        "has_split": true,
+        "num_rows": 7,
+        "r2_in_sample": 0.9983,
+        "root_direction": "negative",
+        "root_feature": "mean_overlap_with_other_routes",
+        "root_threshold": 1.5
+      },
+      "0090_topology_bench_rediris_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0090_topology_bench_rediris_seed_na",
+        "has_split": true,
+        "num_rows": 55,
+        "r2_in_sample": 0.9992,
+        "root_direction": "negative",
+        "root_feature": "mean_overlap_with_other_routes",
+        "root_threshold": 2.4352
+      },
+      "0091_topology_bench_renater_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0091_topology_bench_renater_seed_na",
+        "has_split": true,
+        "num_rows": 16,
+        "r2_in_sample": 0.9992,
+        "root_direction": "negative",
+        "root_feature": "mean_overlap_with_other_routes",
+        "root_threshold": 1.1667
+      },
+      "0093_topology_bench_bics_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0093_topology_bench_bics_seed_na",
+        "has_split": true,
+        "num_rows": 9,
+        "r2_in_sample": 0.9999,
+        "root_direction": "negative",
+        "root_feature": "mean_overlap_with_other_routes",
+        "root_threshold": 3.9375
+      },
+      "0094_topology_bench_renater2001_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0094_topology_bench_renater2001_seed_na",
+        "has_split": true,
+        "num_rows": 12,
+        "r2_in_sample": 1.0,
+        "root_direction": "negative",
+        "root_feature": "mean_overlap_with_other_routes",
+        "root_threshold": 2.1818
+      },
+      "0095_topology_bench_renater2004_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0095_topology_bench_renater2004_seed_na",
+        "has_split": true,
+        "num_rows": 20,
+        "r2_in_sample": 0.7564,
+        "root_direction": "negative",
+        "root_feature": "length_m",
+        "root_threshold": 49643.3125
+      },
+      "0096_topology_bench_renater2006_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0096_topology_bench_renater2006_seed_na",
+        "has_split": true,
+        "num_rows": 14,
+        "r2_in_sample": 0.9993,
+        "root_direction": "negative",
+        "root_feature": "mean_overlap_with_other_routes",
+        "root_threshold": 0.7308
+      },
+      "0097_topology_bench_renater2008_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0097_topology_bench_renater2008_seed_na",
+        "has_split": true,
+        "num_rows": 14,
+        "r2_in_sample": 0.9994,
+        "root_direction": "negative",
+        "root_feature": "mean_overlap_with_other_routes",
+        "root_threshold": 0.7308
+      },
+      "0099_topology_bench_rnpbrazil_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0099_topology_bench_rnpbrazil_seed_na",
+        "has_split": true,
+        "num_rows": 8,
+        "r2_in_sample": 1.0,
+        "root_direction": "negative",
+        "root_feature": "mean_overlap_with_other_routes",
+        "root_threshold": 2.6429
+      },
+      "0101_topology_bench_sanet_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0101_topology_bench_sanet_seed_na",
+        "has_split": true,
+        "num_rows": 10,
+        "r2_in_sample": 0.7903,
+        "root_direction": "negative",
+        "root_feature": "internal_node_count",
+        "root_threshold": 7.5
+      },
+      "0103_topology_bench_savvis_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0103_topology_bench_savvis_seed_na",
+        "has_split": true,
+        "num_rows": 4,
+        "r2_in_sample": 0.9999,
+        "root_direction": "negative",
+        "root_feature": "mean_overlap_with_other_routes",
+        "root_threshold": 2.8333
+      },
+      "0104_topology_bench_biznet_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0104_topology_bench_biznet_seed_na",
+        "has_split": true,
+        "num_rows": 5,
+        "r2_in_sample": 1.0,
+        "root_direction": "negative",
+        "root_feature": "mean_overlap_with_other_routes",
+        "root_threshold": 3.25
+      }
+    },
+    "rows_key": "route_rows",
+    "target_key": "histogram_alice_empirical_prob"
+  },
+  "eve_action_strategy": {
+    "clusters": [
+      {
+        "count": 38,
+        "example_graph_ids": [
+          "0001_topology_bench_tatanid_seed_na",
+          "0004_topology_bench_usa100_seed_na",
+          "0008_topology_bench_canarie_seed_na"
+        ],
+        "fraction": 0.3619,
+        "root_direction": "negative",
+        "root_feature": "target_route_coverage"
+      },
+      {
+        "count": 37,
+        "example_graph_ids": [
+          "0000_topology_bench_spiralight_seed_na",
+          "0005_topology_bench_via_seed_na",
+          "0009_topology_bench_cernet_seed_na"
+        ],
+        "fraction": 0.3524,
+        "root_direction": "positive",
+        "root_feature": "target_route_coverage"
+      },
+      {
+        "count": 10,
+        "example_graph_ids": [
+          "0002_topology_bench_telecomserbia_seed_na",
+          "0007_topology_bench_canarie_seed_na",
+          "0012_topology_bench_conus100_seed_na"
+        ],
+        "fraction": 0.0952,
+        "root_direction": "positive",
+        "root_feature": "is_edge_information_probe"
+      },
+      {
+        "count": 4,
+        "example_graph_ids": [
+          "0003_topology_bench_unic_seed_na",
+          "0040_topology_bench_gtspoland_seed_na",
+          "0059_topology_bench_karen_seed_na"
+        ],
+        "fraction": 0.0381,
+        "root_direction": "positive",
+        "root_feature": "is_swap_denial"
+      },
+      {
+        "count": 4,
+        "example_graph_ids": [
+          "0017_topology_bench_conus75_seed_na",
+          "0028_topology_bench_epoch_seed_na",
+          "0063_topology_bench_loni_seed_na"
+        ],
+        "fraction": 0.0381,
+        "root_direction": "positive",
+        "root_feature": "is_edge_dos"
+      },
+      {
+        "count": 3,
+        "example_graph_ids": [
+          "0021_topology_bench_cwix_seed_na",
+          "0064_topology_bench_marwan_seed_na",
+          "0079_topology_bench_oxford_seed_na"
+        ],
+        "fraction": 0.0286,
+        "root_direction": "positive",
+        "root_feature": "is_repeater_memory_measure_x"
+      },
+      {
+        "count": 3,
+        "example_graph_ids": [
+          "0041_topology_bench_hiberniacanada_seed_na",
+          "0062_topology_bench_layer42_seed_na",
+          "0100_topology_bench_sago_seed_na"
+        ],
+        "fraction": 0.0286,
+        "root_direction": "positive",
+        "root_feature": "is_repeater_memory_measure_z"
+      },
+      {
+        "count": 3,
+        "example_graph_ids": [
+          "0044_topology_bench_hibernianireland_seed_na",
+          "0060_topology_bench_atmnet_seed_na",
+          "0083_topology_bench_pionier_seed_na"
+        ],
+        "fraction": 0.0286,
+        "root_direction": "positive",
+        "root_feature": "is_memory_degradation"
+      },
+      {
+        "count": 1,
+        "example_graph_ids": [
+          "0006_topology_bench_bren_seed_na"
+        ],
+        "fraction": 0.0095,
+        "root_direction": "negative",
+        "root_feature": "is_repeater_memory_measure_x"
+      },
+      {
+        "count": 1,
+        "example_graph_ids": [
+          "0055_topology_bench_jgn2plus_seed_na"
+        ],
+        "fraction": 0.0095,
+        "root_direction": "negative",
+        "root_feature": "is_swap_denial"
+      },
+      {
+        "count": 1,
+        "example_graph_ids": [
+          "0070_topology_bench_newnet_seed_na"
+        ],
+        "fraction": 0.0095,
+        "root_direction": "positive",
+        "root_feature": "target_is_bottleneck"
+      }
+    ],
+    "feature_names": [
+      "is_no_attack",
+      "is_edge_dos",
+      "is_edge_information_probe",
+      "is_swap_denial",
+      "is_memory_degradation",
+      "is_repeater_memory_measure_z",
+      "is_repeater_memory_measure_x",
+      "target_route_coverage",
+      "target_is_bottleneck",
+      "num_routes",
+      "node_disjoint_paths"
+    ],
+    "num_graphs_fit": 105,
+    "num_graphs_total": 105,
+    "num_no_split": 0,
+    "per_graph_results": {
+      "0000_topology_bench_spiralight_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0000_topology_bench_spiralight_seed_na",
+        "has_split": true,
+        "num_rows": 53,
+        "r2_in_sample": 0.0496,
+        "root_direction": "positive",
+        "root_feature": "target_route_coverage",
+        "root_threshold": 0.25
+      },
+      "0001_topology_bench_tatanid_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0001_topology_bench_tatanid_seed_na",
+        "has_split": true,
+        "num_rows": 89,
+        "r2_in_sample": 0.2334,
+        "root_direction": "negative",
+        "root_feature": "target_route_coverage",
+        "root_threshold": 0.25
+      },
+      "0002_topology_bench_telecomserbia_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0002_topology_bench_telecomserbia_seed_na",
+        "has_split": true,
+        "num_rows": 29,
+        "r2_in_sample": 0.1504,
+        "root_direction": "positive",
+        "root_feature": "is_edge_information_probe",
+        "root_threshold": 0.5
+      },
+      "0003_topology_bench_unic_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0003_topology_bench_unic_seed_na",
+        "has_split": true,
+        "num_rows": 29,
+        "r2_in_sample": 0.4375,
+        "root_direction": "positive",
+        "root_feature": "is_swap_denial",
+        "root_threshold": 0.5
+      },
+      "0004_topology_bench_usa100_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0004_topology_bench_usa100_seed_na",
+        "has_split": true,
+        "num_rows": 115,
+        "r2_in_sample": 0.0837,
+        "root_direction": "negative",
+        "root_feature": "target_route_coverage",
+        "root_threshold": 0.0833
+      },
+      "0005_topology_bench_via_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0005_topology_bench_via_seed_na",
+        "has_split": true,
+        "num_rows": 39,
+        "r2_in_sample": 0.4822,
+        "root_direction": "positive",
+        "root_feature": "target_route_coverage",
+        "root_threshold": 0.5
+      },
+      "0006_topology_bench_bren_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0006_topology_bench_bren_seed_na",
+        "has_split": true,
+        "num_rows": 55,
+        "r2_in_sample": 0.0212,
+        "root_direction": "negative",
+        "root_feature": "is_repeater_memory_measure_x",
+        "root_threshold": 0.5
+      },
+      "0007_topology_bench_canarie_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0007_topology_bench_canarie_seed_na",
+        "has_split": true,
+        "num_rows": 45,
+        "r2_in_sample": 0.0493,
+        "root_direction": "positive",
+        "root_feature": "is_edge_information_probe",
+        "root_threshold": 0.5
+      },
+      "0008_topology_bench_canarie_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0008_topology_bench_canarie_seed_na",
+        "has_split": true,
+        "num_rows": 81,
+        "r2_in_sample": 0.764,
+        "root_direction": "negative",
+        "root_feature": "target_route_coverage",
+        "root_threshold": 0.1842
+      },
+      "0009_topology_bench_cernet_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0009_topology_bench_cernet_seed_na",
+        "has_split": true,
+        "num_rows": 113,
+        "r2_in_sample": 0.5244,
+        "root_direction": "positive",
+        "root_feature": "target_route_coverage",
+        "root_threshold": 0.8143
+      },
+      "0010_topology_bench_cesnet_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0010_topology_bench_cesnet_seed_na",
+        "has_split": true,
+        "num_rows": 79,
+        "r2_in_sample": 0.5012,
+        "root_direction": "positive",
+        "root_feature": "target_route_coverage",
+        "root_threshold": 0.5094
+      },
+      "0011_topology_bench_claranet_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0011_topology_bench_claranet_seed_na",
+        "has_split": true,
+        "num_rows": 39,
+        "r2_in_sample": 0.2346,
+        "root_direction": "positive",
+        "root_feature": "target_route_coverage",
+        "root_threshold": 0.5
+      },
+      "0012_topology_bench_conus100_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0012_topology_bench_conus100_seed_na",
+        "has_split": true,
+        "num_rows": 95,
+        "r2_in_sample": 0.0793,
+        "root_direction": "positive",
+        "root_feature": "is_edge_information_probe",
+        "root_threshold": 0.5
+      },
+      "0013_topology_bench_conus30_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0013_topology_bench_conus30_seed_na",
+        "has_split": true,
+        "num_rows": 151,
+        "r2_in_sample": 0.036,
+        "root_direction": "negative",
+        "root_feature": "target_route_coverage",
+        "root_threshold": 0.25
+      },
+      "0014_topology_bench_conus6077_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0014_topology_bench_conus6077_seed_na",
+        "has_split": true,
+        "num_rows": 93,
+        "r2_in_sample": 0.9306,
+        "root_direction": "negative",
+        "root_feature": "target_route_coverage",
+        "root_threshold": 0.3
+      },
+      "0015_topology_bench_conus6079_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0015_topology_bench_conus6079_seed_na",
+        "has_split": true,
+        "num_rows": 75,
+        "r2_in_sample": 0.9961,
+        "root_direction": "negative",
+        "root_feature": "target_route_coverage",
+        "root_threshold": 0.3
+      },
+      "0016_topology_bench_abilene_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0016_topology_bench_abilene_seed_na",
+        "has_split": true,
+        "num_rows": 65,
+        "r2_in_sample": 0.2193,
+        "root_direction": "positive",
+        "root_feature": "target_route_coverage",
+        "root_threshold": 0.625
+      },
+      "0017_topology_bench_conus75_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0017_topology_bench_conus75_seed_na",
+        "has_split": true,
+        "num_rows": 95,
+        "r2_in_sample": 0.0844,
+        "root_direction": "positive",
+        "root_feature": "is_edge_dos",
+        "root_threshold": 0.5
+      },
+      "0018_topology_bench_coronet_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0018_topology_bench_coronet_seed_na",
+        "has_split": true,
+        "num_rows": 75,
+        "r2_in_sample": 0.9004,
+        "root_direction": "negative",
+        "root_feature": "target_route_coverage",
+        "root_threshold": 0.3
+      },
+      "0019_topology_bench_cost_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0019_topology_bench_cost_seed_na",
+        "has_split": true,
+        "num_rows": 121,
+        "r2_in_sample": 0.1992,
+        "root_direction": "negative",
+        "root_feature": "target_route_coverage",
+        "root_threshold": 0.1154
+      },
+      "0020_topology_bench_crlnetworkservices_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0020_topology_bench_crlnetworkservices_seed_na",
+        "has_split": true,
+        "num_rows": 149,
+        "r2_in_sample": 0.7192,
+        "root_direction": "positive",
+        "root_feature": "target_route_coverage",
+        "root_threshold": 0.5
+      },
+      "0021_topology_bench_cwix_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0021_topology_bench_cwix_seed_na",
+        "has_split": true,
+        "num_rows": 73,
+        "r2_in_sample": 0.1638,
+        "root_direction": "positive",
+        "root_feature": "is_repeater_memory_measure_x",
+        "root_threshold": 0.5
+      },
+      "0022_topology_bench_darkstrand_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0022_topology_bench_darkstrand_seed_na",
+        "has_split": true,
+        "num_rows": 167,
+        "r2_in_sample": 0.0379,
+        "root_direction": "negative",
+        "root_feature": "target_route_coverage",
+        "root_threshold": 0.3
+      },
+      "0023_topology_bench_digex_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0023_topology_bench_digex_seed_na",
+        "has_split": true,
+        "num_rows": 143,
+        "r2_in_sample": 0.3825,
+        "root_direction": "positive",
+        "root_feature": "target_route_coverage",
+        "root_threshold": 0.625
+      },
+      "0024_topology_bench_dt17_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0024_topology_bench_dt17_seed_na",
+        "has_split": true,
+        "num_rows": 93,
+        "r2_in_sample": 0.5668,
+        "root_direction": "positive",
+        "root_feature": "target_route_coverage",
+        "root_threshold": 0.819
+      },
+      "0025_topology_bench_elibackbone_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0025_topology_bench_elibackbone_seed_na",
+        "has_split": true,
+        "num_rows": 109,
+        "r2_in_sample": 0.1306,
+        "root_direction": "negative",
+        "root_feature": "target_route_coverage",
+        "root_threshold": 0.1364
+      },
+      "0026_topology_bench_eon_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0026_topology_bench_eon_seed_na",
+        "has_split": true,
+        "num_rows": 143,
+        "r2_in_sample": 0.3257,
+        "root_direction": "negative",
+        "root_feature": "target_route_coverage",
+        "root_threshold": 0.0439
+      },
+      "0027_topology_bench_ans_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0027_topology_bench_ans_seed_na",
+        "has_split": true,
+        "num_rows": 109,
+        "r2_in_sample": 0.1936,
+        "root_direction": "positive",
+        "root_feature": "target_route_coverage",
+        "root_threshold": 0.6786
+      },
+      "0028_topology_bench_epoch_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0028_topology_bench_epoch_seed_na",
+        "has_split": true,
+        "num_rows": 31,
+        "r2_in_sample": 0.1228,
+        "root_direction": "positive",
+        "root_feature": "is_edge_dos",
+        "root_threshold": 0.5
+      },
+      "0029_topology_bench_ernet_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0029_topology_bench_ernet_seed_na",
+        "has_split": true,
+        "num_rows": 39,
+        "r2_in_sample": 0.722,
+        "root_direction": "positive",
+        "root_feature": "target_route_coverage",
+        "root_threshold": 0.6
+      },
+      "0030_topology_bench_funet_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0030_topology_bench_funet_seed_na",
+        "has_split": true,
+        "num_rows": 131,
+        "r2_in_sample": 0.5002,
+        "root_direction": "positive",
+        "root_feature": "target_route_coverage",
+        "root_threshold": 0.7778
+      },
+      "0031_topology_bench_gambia_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0031_topology_bench_gambia_seed_na",
+        "has_split": true,
+        "num_rows": 29,
+        "r2_in_sample": 0.1093,
+        "root_direction": "positive",
+        "root_feature": "is_edge_information_probe",
+        "root_threshold": 0.5
+      },
+      "0032_topology_bench_gblnet_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0032_topology_bench_gblnet_seed_na",
+        "has_split": true,
+        "num_rows": 9,
+        "r2_in_sample": 0.5701,
+        "root_direction": "positive",
+        "root_feature": "target_route_coverage",
+        "root_threshold": 0.5
+      },
+      "0033_topology_bench_geant_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0033_topology_bench_geant_seed_na",
+        "has_split": true,
+        "num_rows": 153,
+        "r2_in_sample": 0.4891,
+        "root_direction": "negative",
+        "root_feature": "target_route_coverage",
+        "root_threshold": 0.0227
+      },
+      "0034_topology_bench_geant2_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0034_topology_bench_geant2_seed_na",
+        "has_split": true,
+        "num_rows": 11,
+        "r2_in_sample": 0.2532,
+        "root_direction": "positive",
+        "root_feature": "is_edge_information_probe",
+        "root_threshold": 0.5
+      },
+      "0035_topology_bench_germany50_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0035_topology_bench_germany50_seed_na",
+        "has_split": true,
+        "num_rows": 247,
+        "r2_in_sample": 0.9831,
+        "root_direction": "negative",
+        "root_feature": "target_route_coverage",
+        "root_threshold": 0.0053
+      },
+      "0036_topology_bench_getnet_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0036_topology_bench_getnet_seed_na",
+        "has_split": true,
+        "num_rows": 25,
+        "r2_in_sample": 0.2277,
+        "root_direction": "positive",
+        "root_feature": "is_edge_information_probe",
+        "root_threshold": 0.5
+      },
+      "0037_topology_bench_grnet_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0037_topology_bench_grnet_seed_na",
+        "has_split": true,
+        "num_rows": 75,
+        "r2_in_sample": 0.4193,
+        "root_direction": "positive",
+        "root_feature": "target_route_coverage",
+        "root_threshold": 0.6923
+      },
+      "0038_topology_bench_arnes_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0038_topology_bench_arnes_seed_na",
+        "has_split": true,
+        "num_rows": 63,
+        "r2_in_sample": 0.78,
+        "root_direction": "positive",
+        "root_feature": "target_route_coverage",
+        "root_threshold": 0.6
+      },
+      "0039_topology_bench_gtsczechrepublic_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0039_topology_bench_gtsczechrepublic_seed_na",
+        "has_split": true,
+        "num_rows": 15,
+        "r2_in_sample": 0.157,
+        "root_direction": "positive",
+        "root_feature": "target_route_coverage",
+        "root_threshold": 0.5
+      },
+      "0040_topology_bench_gtspoland_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0040_topology_bench_gtspoland_seed_na",
+        "has_split": true,
+        "num_rows": 67,
+        "r2_in_sample": 0.1437,
+        "root_direction": "positive",
+        "root_feature": "is_swap_denial",
+        "root_threshold": 0.5
+      },
+      "0041_topology_bench_hiberniacanada_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0041_topology_bench_hiberniacanada_seed_na",
+        "has_split": true,
+        "num_rows": 17,
+        "r2_in_sample": 0.2111,
+        "root_direction": "positive",
+        "root_feature": "is_repeater_memory_measure_z",
+        "root_threshold": 0.5
+      },
+      "0042_topology_bench_hiberniaglobal_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0042_topology_bench_hiberniaglobal_seed_na",
+        "has_split": true,
+        "num_rows": 41,
+        "r2_in_sample": 0.0753,
+        "root_direction": "positive",
+        "root_feature": "is_edge_information_probe",
+        "root_threshold": 0.5
+      },
+      "0043_topology_bench_hiberniaireland_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0043_topology_bench_hiberniaireland_seed_na",
+        "has_split": true,
+        "num_rows": 23,
+        "r2_in_sample": 0.07,
+        "root_direction": "positive",
+        "root_feature": "target_route_coverage",
+        "root_threshold": 0.25
+      },
+      "0044_topology_bench_hibernianireland_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0044_topology_bench_hibernianireland_seed_na",
+        "has_split": true,
+        "num_rows": 49,
+        "r2_in_sample": 0.0721,
+        "root_direction": "positive",
+        "root_feature": "is_memory_degradation",
+        "root_threshold": 0.5
+      },
+      "0045_topology_bench_hiberniauk_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0045_topology_bench_hiberniauk_seed_na",
+        "has_split": true,
+        "num_rows": 71,
+        "r2_in_sample": 0.0846,
+        "root_direction": "positive",
+        "root_feature": "is_edge_information_probe",
+        "root_threshold": 0.5
+      },
+      "0046_topology_bench_hiberniaus_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0046_topology_bench_hiberniaus_seed_na",
+        "has_split": true,
+        "num_rows": 97,
+        "r2_in_sample": 0.15,
+        "root_direction": "negative",
+        "root_feature": "target_route_coverage",
+        "root_threshold": 0.3438
+      },
+      "0047_topology_bench_hostwayinternational_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0047_topology_bench_hostwayinternational_seed_na",
+        "has_split": true,
+        "num_rows": 73,
+        "r2_in_sample": 0.2212,
+        "root_direction": "negative",
+        "root_feature": "target_route_coverage",
+        "root_threshold": 0.25
+      },
+      "0048_topology_bench_ibm_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0048_topology_bench_ibm_seed_na",
+        "has_split": true,
+        "num_rows": 107,
+        "r2_in_sample": 0.1067,
+        "root_direction": "positive",
+        "root_feature": "target_route_coverage",
+        "root_threshold": 0.54
+      },
+      "0049_topology_bench_arpanet_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0049_topology_bench_arpanet_seed_na",
+        "has_split": true,
+        "num_rows": 137,
+        "r2_in_sample": 0.9943,
+        "root_direction": "negative",
+        "root_feature": "target_route_coverage",
+        "root_threshold": 0.0336
+      },
+      "0050_topology_bench_integra_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0050_topology_bench_integra_seed_na",
+        "has_split": true,
+        "num_rows": 135,
+        "r2_in_sample": 0.3163,
+        "root_direction": "positive",
+        "root_feature": "target_route_coverage",
+        "root_threshold": 0.7429
+      },
+      "0051_topology_bench_iris_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0051_topology_bench_iris_seed_na",
+        "has_split": true,
+        "num_rows": 159,
+        "r2_in_sample": 0.0985,
+        "root_direction": "negative",
+        "root_feature": "target_route_coverage",
+        "root_threshold": 0.1
+      },
+      "0052_topology_bench_istar_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0052_topology_bench_istar_seed_na",
+        "has_split": true,
+        "num_rows": 23,
+        "r2_in_sample": 0.5566,
+        "root_direction": "positive",
+        "root_feature": "target_route_coverage",
+        "root_threshold": 0.75
+      },
+      "0053_topology_bench_italy_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0053_topology_bench_italy_seed_na",
+        "has_split": true,
+        "num_rows": 101,
+        "r2_in_sample": 0.1928,
+        "root_direction": "negative",
+        "root_feature": "target_route_coverage",
+        "root_threshold": 0.1071
+      },
+      "0054_topology_bench_janosus_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0054_topology_bench_janosus_seed_na",
+        "has_split": true,
+        "num_rows": 137,
+        "r2_in_sample": 0.5077,
+        "root_direction": "negative",
+        "root_feature": "target_route_coverage",
+        "root_threshold": 0.0341
+      },
+      "0055_topology_bench_jgn2plus_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0055_topology_bench_jgn2plus_seed_na",
+        "has_split": true,
+        "num_rows": 39,
+        "r2_in_sample": 0.0707,
+        "root_direction": "negative",
+        "root_feature": "is_swap_denial",
+        "root_threshold": 0.5
+      },
+      "0056_topology_bench_jpn12_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0056_topology_bench_jpn12_seed_na",
+        "has_split": true,
+        "num_rows": 75,
+        "r2_in_sample": 0.3905,
+        "root_direction": "negative",
+        "root_feature": "target_route_coverage",
+        "root_threshold": 0.1538
+      },
+      "0057_topology_bench_jpn25_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0057_topology_bench_jpn25_seed_na",
+        "has_split": true,
+        "num_rows": 77,
+        "r2_in_sample": 0.0516,
+        "root_direction": "positive",
+        "root_feature": "target_route_coverage",
+        "root_threshold": 0.8125
+      },
+      "0058_topology_bench_jpn48_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0058_topology_bench_jpn48_seed_na",
+        "has_split": true,
+        "num_rows": 101,
+        "r2_in_sample": 0.9167,
+        "root_direction": "negative",
+        "root_feature": "target_route_coverage",
+        "root_threshold": 0.1
+      },
+      "0059_topology_bench_karen_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0059_topology_bench_karen_seed_na",
+        "has_split": true,
+        "num_rows": 23,
+        "r2_in_sample": 0.1848,
+        "root_direction": "positive",
+        "root_feature": "is_swap_denial",
+        "root_threshold": 0.5
+      },
+      "0060_topology_bench_atmnet_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0060_topology_bench_atmnet_seed_na",
+        "has_split": true,
+        "num_rows": 109,
+        "r2_in_sample": 0.0647,
+        "root_direction": "positive",
+        "root_feature": "is_memory_degradation",
+        "root_threshold": 0.5
+      },
+      "0061_topology_bench_lambdarail_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0061_topology_bench_lambdarail_seed_na",
+        "has_split": true,
+        "num_rows": 95,
+        "r2_in_sample": 0.066,
+        "root_direction": "negative",
+        "root_feature": "target_route_coverage",
+        "root_threshold": 0.4167
+      },
+      "0062_topology_bench_layer42_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0062_topology_bench_layer42_seed_na",
+        "has_split": true,
+        "num_rows": 19,
+        "r2_in_sample": 0.1357,
+        "root_direction": "positive",
+        "root_feature": "is_repeater_memory_measure_z",
+        "root_threshold": 0.5
+      },
+      "0063_topology_bench_loni_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0063_topology_bench_loni_seed_na",
+        "has_split": true,
+        "num_rows": 61,
+        "r2_in_sample": 0.1028,
+        "root_direction": "positive",
+        "root_feature": "is_edge_dos",
+        "root_threshold": 0.5
+      },
+      "0064_topology_bench_marwan_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0064_topology_bench_marwan_seed_na",
+        "has_split": true,
+        "num_rows": 29,
+        "r2_in_sample": 0.1396,
+        "root_direction": "positive",
+        "root_feature": "is_repeater_memory_measure_x",
+        "root_threshold": 0.5
+      },
+      "0065_topology_bench_memorex_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0065_topology_bench_memorex_seed_na",
+        "has_split": true,
+        "num_rows": 91,
+        "r2_in_sample": 0.1404,
+        "root_direction": "negative",
+        "root_feature": "target_route_coverage",
+        "root_threshold": 0.3125
+      },
+      "0066_topology_bench_metrona_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0066_topology_bench_metrona_seed_na",
+        "has_split": true,
+        "num_rows": 127,
+        "r2_in_sample": 0.1777,
+        "root_direction": "negative",
+        "root_feature": "target_route_coverage",
+        "root_threshold": 0.25
+      },
+      "0067_topology_bench_mzima_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0067_topology_bench_mzima_seed_na",
+        "has_split": true,
+        "num_rows": 85,
+        "r2_in_sample": 0.0468,
+        "root_direction": "negative",
+        "root_feature": "target_route_coverage",
+        "root_threshold": 0.4167
+      },
+      "0068_topology_bench_netrail_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0068_topology_bench_netrail_seed_na",
+        "has_split": true,
+        "num_rows": 41,
+        "r2_in_sample": 0.584,
+        "root_direction": "positive",
+        "root_feature": "target_route_coverage",
+        "root_threshold": 0.6429
+      },
+      "0069_topology_bench_networkusa_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0069_topology_bench_networkusa_seed_na",
+        "has_split": true,
+        "num_rows": 99,
+        "r2_in_sample": 0.4593,
+        "root_direction": "positive",
+        "root_feature": "target_route_coverage",
+        "root_threshold": 0.625
+      },
+      "0070_topology_bench_newnet_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0070_topology_bench_newnet_seed_na",
+        "has_split": true,
+        "num_rows": 145,
+        "r2_in_sample": 0.7874,
+        "root_direction": "positive",
+        "root_feature": "target_is_bottleneck",
+        "root_threshold": 0.5
+      },
+      "0071_topology_bench_bbnplanet_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0071_topology_bench_bbnplanet_seed_na",
+        "has_split": true,
+        "num_rows": 55,
+        "r2_in_sample": 0.3004,
+        "root_direction": "positive",
+        "root_feature": "target_route_coverage",
+        "root_threshold": 0.625
+      },
+      "0072_topology_bench_nextgen_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0072_topology_bench_nextgen_seed_na",
+        "has_split": true,
+        "num_rows": 17,
+        "r2_in_sample": 0.0947,
+        "root_direction": "positive",
+        "root_feature": "target_route_coverage",
+        "root_threshold": 0.25
+      },
+      "0073_topology_bench_nobeleu_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0073_topology_bench_nobeleu_seed_na",
+        "has_split": true,
+        "num_rows": 123,
+        "r2_in_sample": 0.4646,
+        "root_direction": "negative",
+        "root_feature": "target_route_coverage",
+        "root_threshold": 0.0577
+      },
+      "0074_topology_bench_nobelgermany_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0074_topology_bench_nobelgermany_seed_na",
+        "has_split": true,
+        "num_rows": 113,
+        "r2_in_sample": 0.2729,
+        "root_direction": "positive",
+        "root_feature": "target_route_coverage",
+        "root_threshold": 0.803
+      },
+      "0075_topology_bench_nobelus_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0075_topology_bench_nobelus_seed_na",
+        "has_split": true,
+        "num_rows": 91,
+        "r2_in_sample": 0.5374,
+        "root_direction": "negative",
+        "root_feature": "target_route_coverage",
+        "root_threshold": 0.25
+      },
+      "0076_topology_bench_noel_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0076_topology_bench_noel_seed_na",
+        "has_split": true,
+        "num_rows": 75,
+        "r2_in_sample": 0.3102,
+        "root_direction": "positive",
+        "root_feature": "target_route_coverage",
+        "root_threshold": 0.5333
+      },
+      "0077_topology_bench_nsfnet13_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0077_topology_bench_nsfnet13_seed_na",
+        "has_split": true,
+        "num_rows": 57,
+        "r2_in_sample": 0.5696,
+        "root_direction": "negative",
+        "root_feature": "target_route_coverage",
+        "root_threshold": 0.3
+      },
+      "0078_topology_bench_optunetsweden_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0078_topology_bench_optunetsweden_seed_na",
+        "has_split": true,
+        "num_rows": 95,
+        "r2_in_sample": 0.0695,
+        "root_direction": "negative",
+        "root_feature": "target_route_coverage",
+        "root_threshold": 0.4167
+      },
+      "0079_topology_bench_oxford_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0079_topology_bench_oxford_seed_na",
+        "has_split": true,
+        "num_rows": 53,
+        "r2_in_sample": 0.1006,
+        "root_direction": "positive",
+        "root_feature": "is_repeater_memory_measure_x",
+        "root_threshold": 0.5
+      },
+      "0080_topology_bench_packetexchange_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0080_topology_bench_packetexchange_seed_na",
+        "has_split": true,
+        "num_rows": 85,
+        "r2_in_sample": 0.338,
+        "root_direction": "positive",
+        "root_feature": "target_route_coverage",
+        "root_threshold": 0.625
+      },
+      "0081_topology_bench_palmetto_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0081_topology_bench_palmetto_seed_na",
+        "has_split": true,
+        "num_rows": 107,
+        "r2_in_sample": 0.4902,
+        "root_direction": "negative",
+        "root_feature": "target_route_coverage",
+        "root_threshold": 0.0938
+      },
+      "0082_topology_bench_beyondthenetwork_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0082_topology_bench_beyondthenetwork_seed_na",
+        "has_split": true,
+        "num_rows": 141,
+        "r2_in_sample": 0.0729,
+        "root_direction": "negative",
+        "root_feature": "target_route_coverage",
+        "root_threshold": 0.1
+      },
+      "0083_topology_bench_pionier_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0083_topology_bench_pionier_seed_na",
+        "has_split": true,
+        "num_rows": 107,
+        "r2_in_sample": 0.14,
+        "root_direction": "positive",
+        "root_feature": "is_memory_degradation",
+        "root_threshold": 0.5
+      },
+      "0084_topology_bench_pionierl3_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0084_topology_bench_pionierl3_seed_na",
+        "has_split": true,
+        "num_rows": 83,
+        "r2_in_sample": 0.1793,
+        "root_direction": "negative",
+        "root_feature": "target_route_coverage",
+        "root_threshold": 0.3
+      },
+      "0085_topology_bench_polska_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0085_topology_bench_polska_seed_na",
+        "has_split": true,
+        "num_rows": 77,
+        "r2_in_sample": 0.7377,
+        "root_direction": "positive",
+        "root_feature": "target_route_coverage",
+        "root_threshold": 0.7778
+      },
+      "0086_topology_bench_portugal_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0086_topology_bench_portugal_seed_na",
+        "has_split": true,
+        "num_rows": 161,
+        "r2_in_sample": 0.1458,
+        "root_direction": "negative",
+        "root_feature": "target_route_coverage",
+        "root_threshold": 0.0556
+      },
+      "0087_topology_bench_psinet_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0087_topology_bench_psinet_seed_na",
+        "has_split": true,
+        "num_rows": 85,
+        "r2_in_sample": 0.0437,
+        "root_direction": "negative",
+        "root_feature": "target_route_coverage",
+        "root_threshold": 0.625
+      },
+      "0088_topology_bench_railtelindia_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0088_topology_bench_railtelindia_seed_na",
+        "has_split": true,
+        "num_rows": 11,
+        "r2_in_sample": 0.2329,
+        "root_direction": "positive",
+        "root_feature": "is_edge_information_probe",
+        "root_threshold": 0.5
+      },
+      "0089_topology_bench_redclara_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0089_topology_bench_redclara_seed_na",
+        "has_split": true,
+        "num_rows": 47,
+        "r2_in_sample": 0.1745,
+        "root_direction": "negative",
+        "root_feature": "target_route_coverage",
+        "root_threshold": 0.2143
+      },
+      "0090_topology_bench_rediris_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0090_topology_bench_rediris_seed_na",
+        "has_split": true,
+        "num_rows": 125,
+        "r2_in_sample": 0.4863,
+        "root_direction": "negative",
+        "root_feature": "target_route_coverage",
+        "root_threshold": 0.0364
+      },
+      "0091_topology_bench_renater_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0091_topology_bench_renater_seed_na",
+        "has_split": true,
+        "num_rows": 157,
+        "r2_in_sample": 0.4541,
+        "root_direction": "positive",
+        "root_feature": "target_route_coverage",
+        "root_threshold": 0.7812
+      },
+      "0092_topology_bench_renater1999_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0092_topology_bench_renater1999_seed_na",
+        "has_split": true,
+        "num_rows": 27,
+        "r2_in_sample": 0.148,
+        "root_direction": "positive",
+        "root_feature": "is_swap_denial",
+        "root_threshold": 0.5
+      },
+      "0093_topology_bench_bics_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0093_topology_bench_bics_seed_na",
+        "has_split": true,
+        "num_rows": 87,
+        "r2_in_sample": 0.1961,
+        "root_direction": "negative",
+        "root_feature": "target_route_coverage",
+        "root_threshold": 0.1667
+      },
+      "0094_topology_bench_renater2001_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0094_topology_bench_renater2001_seed_na",
+        "has_split": true,
+        "num_rows": 71,
+        "r2_in_sample": 0.2086,
+        "root_direction": "positive",
+        "root_feature": "target_route_coverage",
+        "root_threshold": 0.4167
+      },
+      "0095_topology_bench_renater2004_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0095_topology_bench_renater2004_seed_na",
+        "has_split": true,
+        "num_rows": 111,
+        "r2_in_sample": 0.7255,
+        "root_direction": "positive",
+        "root_feature": "target_route_coverage",
+        "root_threshold": 0.8
+      },
+      "0096_topology_bench_renater2006_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0096_topology_bench_renater2006_seed_na",
+        "has_split": true,
+        "num_rows": 139,
+        "r2_in_sample": 0.5538,
+        "root_direction": "positive",
+        "root_feature": "target_route_coverage",
+        "root_threshold": 0.5357
+      },
+      "0097_topology_bench_renater2008_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0097_topology_bench_renater2008_seed_na",
+        "has_split": true,
+        "num_rows": 139,
+        "r2_in_sample": 0.7214,
+        "root_direction": "positive",
+        "root_feature": "target_route_coverage",
+        "root_threshold": 0.5357
+      },
+      "0098_topology_bench_renater2010_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0098_topology_bench_renater2010_seed_na",
+        "has_split": true,
+        "num_rows": 41,
+        "r2_in_sample": 0.0887,
+        "root_direction": "positive",
+        "root_feature": "is_edge_dos",
+        "root_threshold": 0.5
+      },
+      "0099_topology_bench_rnpbrazil_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0099_topology_bench_rnpbrazil_seed_na",
+        "has_split": true,
+        "num_rows": 57,
+        "r2_in_sample": 0.2099,
+        "root_direction": "positive",
+        "root_feature": "target_route_coverage",
+        "root_threshold": 0.625
+      },
+      "0100_topology_bench_sago_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0100_topology_bench_sago_seed_na",
+        "has_split": true,
+        "num_rows": 39,
+        "r2_in_sample": 0.0815,
+        "root_direction": "positive",
+        "root_feature": "is_repeater_memory_measure_z",
+        "root_threshold": 0.5
+      },
+      "0101_topology_bench_sanet_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0101_topology_bench_sanet_seed_na",
+        "has_split": true,
+        "num_rows": 129,
+        "r2_in_sample": 0.5714,
+        "root_direction": "negative",
+        "root_feature": "target_route_coverage",
+        "root_threshold": 0.15
+      },
+      "0102_topology_bench_sanren_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0102_topology_bench_sanren_seed_na",
+        "has_split": true,
+        "num_rows": 35,
+        "r2_in_sample": 0.1257,
+        "root_direction": "positive",
+        "root_feature": "is_edge_information_probe",
+        "root_threshold": 0.5
+      },
+      "0103_topology_bench_savvis_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0103_topology_bench_savvis_seed_na",
+        "has_split": true,
+        "num_rows": 97,
+        "r2_in_sample": 0.2026,
+        "root_direction": "positive",
+        "root_feature": "target_route_coverage",
+        "root_threshold": 0.625
+      },
+      "0104_topology_bench_biznet_seed_na": {
+        "fine_signature": null,
+        "graph_id": "0104_topology_bench_biznet_seed_na",
+        "has_split": true,
+        "num_rows": 111,
+        "r2_in_sample": 0.4114,
+        "root_direction": "positive",
+        "root_feature": "target_route_coverage",
+        "root_threshold": 0.7
+      }
+    },
+    "rows_key": "action_rows",
+    "target_key": "histogram_eve_empirical_prob"
+  }
+}
