@@ -1,7 +1,4 @@
-# Dependency pins copied verbatim from the source project's own root
-# requirements.txt, minus the `-e ./sequence-toolbox-SeQUeNCe`
-# editable-install line, since that submodule is not bundled in this
-# artifact (see README.md, "What was deliberately left out").
+# Pinned dependencies needed to run the code in this bundle.
 
 # Core simulation / math
 matplotlib>=3.10.7

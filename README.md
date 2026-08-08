@@ -14,11 +14,11 @@ Requires Python 3.12–3.14 (matches the SeQUeNCe dependency's own
 # 1. Install this bundle's own pinned dependencies.
 pip install -r code/requirements.txt
 
-# 2. Install SeQUeNCe. It is not bundled here (see "What was deliberately
-#    left out" below), but sequence_game's package __init__ chain imports
-#    it eagerly, so it is required just to import sequence_game at all --
-#    including for the one figure below that is genuinely reproducible
-#    from what IS bundled.
+# 2. Install SeQUeNCe. It is a separate third-party simulator, not bundled
+#    here, but sequence_game's package __init__ chain imports it eagerly,
+#    so it is required just to import sequence_game at all -- including
+#    for the one figure below that is genuinely reproducible from what
+#    IS bundled.
 pip install "sequence @ git+https://github.com/sequence-toolbox/SeQUeNCe.git@v1.0.0"
 
 # 3. Regenerate the one figure this bundle can fully reproduce end to end.
