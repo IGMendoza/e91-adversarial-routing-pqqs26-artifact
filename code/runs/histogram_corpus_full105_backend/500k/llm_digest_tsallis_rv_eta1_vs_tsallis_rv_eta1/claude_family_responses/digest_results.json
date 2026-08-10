@@ -7,7 +7,7 @@
       "target_key": "exploitability"
     },
     "model": "haiku",
-    "response_path": "/tank-hdd/Dropbox/Inti/Career/Thesis/xAI/paper submissions/2026/QCE26/qce2026-genai-qkd-game/runs/histogram_corpus_full105_backend/500k/llm_digest_tsallis_rv_eta1_vs_tsallis_rv_eta1/claude_family_responses/depth1.haiku.txt",
+    "response_path": "<repo-root>/runs/histogram_corpus_full105_backend/500k/llm_digest_tsallis_rv_eta1_vs_tsallis_rv_eta1/claude_family_responses/depth1.haiku.txt",
     "retention": {
       "r2_in_sample": 0.4249,
       "r2_loo": 0.1898,
@@ -102,7 +102,7 @@
       "target_key": "exploitability"
     },
     "model": "sonnet",
-    "response_path": "/tank-hdd/Dropbox/Inti/Career/Thesis/xAI/paper submissions/2026/QCE26/qce2026-genai-qkd-game/runs/histogram_corpus_full105_backend/500k/llm_digest_tsallis_rv_eta1_vs_tsallis_rv_eta1/claude_family_responses/depth1.sonnet.txt",
+    "response_path": "<repo-root>/runs/histogram_corpus_full105_backend/500k/llm_digest_tsallis_rv_eta1_vs_tsallis_rv_eta1/claude_family_responses/depth1.sonnet.txt",
     "retention": {
       "r2_in_sample": 0.4249,
       "r2_loo": 0.1898,
@@ -205,7 +205,7 @@
       "target_key": "exploitability"
     },
     "model": "fable",
-    "response_path": "/tank-hdd/Dropbox/Inti/Career/Thesis/xAI/paper submissions/2026/QCE26/qce2026-genai-qkd-game/runs/histogram_corpus_full105_backend/500k/llm_digest_tsallis_rv_eta1_vs_tsallis_rv_eta1/claude_family_responses/depth1.fable.txt",
+    "response_path": "<repo-root>/runs/histogram_corpus_full105_backend/500k/llm_digest_tsallis_rv_eta1_vs_tsallis_rv_eta1/claude_family_responses/depth1.fable.txt",
     "retention": {
       "r2_in_sample": 0.4249,
       "r2_loo": 0.1898,
@@ -310,7 +310,7 @@
       "target_key": "exploitability"
     },
     "model": "opus",
-    "response_path": "/tank-hdd/Dropbox/Inti/Career/Thesis/xAI/paper submissions/2026/QCE26/qce2026-genai-qkd-game/runs/histogram_corpus_full105_backend/500k/llm_digest_tsallis_rv_eta1_vs_tsallis_rv_eta1/claude_family_responses/depth1.opus.txt",
+    "response_path": "<repo-root>/runs/histogram_corpus_full105_backend/500k/llm_digest_tsallis_rv_eta1_vs_tsallis_rv_eta1/claude_family_responses/depth1.opus.txt",
     "retention": {
       "r2_in_sample": 0.4249,
       "r2_loo": 0.1898,
@@ -405,7 +405,7 @@
       "target_key": "exploitability"
     },
     "model": "haiku",
-    "response_path": "/tank-hdd/Dropbox/Inti/Career/Thesis/xAI/paper submissions/2026/QCE26/qce2026-genai-qkd-game/runs/histogram_corpus_full105_backend/500k/llm_digest_tsallis_rv_eta1_vs_tsallis_rv_eta1/claude_family_responses/depth2.haiku.txt",
+    "response_path": "<repo-root>/runs/histogram_corpus_full105_backend/500k/llm_digest_tsallis_rv_eta1_vs_tsallis_rv_eta1/claude_family_responses/depth2.haiku.txt",
     "retention": {
       "r2_in_sample": 0.7397,
       "r2_loo": 0.5203,
@@ -510,7 +510,7 @@
       "target_key": "exploitability"
     },
     "model": "sonnet",
-    "response_path": "/tank-hdd/Dropbox/Inti/Career/Thesis/xAI/paper submissions/2026/QCE26/qce2026-genai-qkd-game/runs/histogram_corpus_full105_backend/500k/llm_digest_tsallis_rv_eta1_vs_tsallis_rv_eta1/claude_family_responses/depth2.sonnet.txt",
+    "response_path": "<repo-root>/runs/histogram_corpus_full105_backend/500k/llm_digest_tsallis_rv_eta1_vs_tsallis_rv_eta1/claude_family_responses/depth2.sonnet.txt",
     "retention": {
       "r2_in_sample": 0.7397,
       "r2_loo": 0.5203,
@@ -621,7 +621,7 @@
       "target_key": "exploitability"
     },
     "model": "fable",
-    "response_path": "/tank-hdd/Dropbox/Inti/Career/Thesis/xAI/paper submissions/2026/QCE26/qce2026-genai-qkd-game/runs/histogram_corpus_full105_backend/500k/llm_digest_tsallis_rv_eta1_vs_tsallis_rv_eta1/claude_family_responses/depth2.fable.txt",
+    "response_path": "<repo-root>/runs/histogram_corpus_full105_backend/500k/llm_digest_tsallis_rv_eta1_vs_tsallis_rv_eta1/claude_family_responses/depth2.fable.txt",
     "retention": {
       "r2_in_sample": 0.7397,
       "r2_loo": 0.5203,
@@ -743,7 +743,7 @@
       "target_key": "exploitability"
     },
     "model": "opus",
-    "response_path": "/tank-hdd/Dropbox/Inti/Career/Thesis/xAI/paper submissions/2026/QCE26/qce2026-genai-qkd-game/runs/histogram_corpus_full105_backend/500k/llm_digest_tsallis_rv_eta1_vs_tsallis_rv_eta1/claude_family_responses/depth2.opus.txt",
+    "response_path": "<repo-root>/runs/histogram_corpus_full105_backend/500k/llm_digest_tsallis_rv_eta1_vs_tsallis_rv_eta1/claude_family_responses/depth2.opus.txt",
     "retention": {
       "r2_in_sample": 0.7397,
       "r2_loo": 0.5203,
@@ -844,7 +844,7 @@
       "target_key": "exploitability"
     },
     "model": "haiku",
-    "response_path": "/tank-hdd/Dropbox/Inti/Career/Thesis/xAI/paper submissions/2026/QCE26/qce2026-genai-qkd-game/runs/histogram_corpus_full105_backend/500k/llm_digest_tsallis_rv_eta1_vs_tsallis_rv_eta1/claude_family_responses/depth4.haiku.txt",
+    "response_path": "<repo-root>/runs/histogram_corpus_full105_backend/500k/llm_digest_tsallis_rv_eta1_vs_tsallis_rv_eta1/claude_family_responses/depth4.haiku.txt",
     "retention": {
       "r2_in_sample": 0.9212,
       "r2_loo": 0.5372,
@@ -959,7 +959,7 @@
       "target_key": "exploitability"
     },
     "model": "sonnet",
-    "response_path": "/tank-hdd/Dropbox/Inti/Career/Thesis/xAI/paper submissions/2026/QCE26/qce2026-genai-qkd-game/runs/histogram_corpus_full105_backend/500k/llm_digest_tsallis_rv_eta1_vs_tsallis_rv_eta1/claude_family_responses/depth4.sonnet.txt",
+    "response_path": "<repo-root>/runs/histogram_corpus_full105_backend/500k/llm_digest_tsallis_rv_eta1_vs_tsallis_rv_eta1/claude_family_responses/depth4.sonnet.txt",
     "retention": {
       "r2_in_sample": 0.9212,
       "r2_loo": 0.5372,
@@ -1086,7 +1086,7 @@
       "target_key": "exploitability"
     },
     "model": "fable",
-    "response_path": "/tank-hdd/Dropbox/Inti/Career/Thesis/xAI/paper submissions/2026/QCE26/qce2026-genai-qkd-game/runs/histogram_corpus_full105_backend/500k/llm_digest_tsallis_rv_eta1_vs_tsallis_rv_eta1/claude_family_responses/depth4.fable.txt",
+    "response_path": "<repo-root>/runs/histogram_corpus_full105_backend/500k/llm_digest_tsallis_rv_eta1_vs_tsallis_rv_eta1/claude_family_responses/depth4.fable.txt",
     "retention": {
       "r2_in_sample": 0.9212,
       "r2_loo": 0.5372,
@@ -1194,7 +1194,7 @@
       "target_key": "exploitability"
     },
     "model": "opus",
-    "response_path": "/tank-hdd/Dropbox/Inti/Career/Thesis/xAI/paper submissions/2026/QCE26/qce2026-genai-qkd-game/runs/histogram_corpus_full105_backend/500k/llm_digest_tsallis_rv_eta1_vs_tsallis_rv_eta1/claude_family_responses/depth4.opus.txt",
+    "response_path": "<repo-root>/runs/histogram_corpus_full105_backend/500k/llm_digest_tsallis_rv_eta1_vs_tsallis_rv_eta1/claude_family_responses/depth4.opus.txt",
     "retention": {
       "r2_in_sample": 0.9212,
       "r2_loo": 0.5372,
@@ -1302,7 +1302,7 @@
       "target_key": "exploitability"
     },
     "model": "haiku",
-    "response_path": "/tank-hdd/Dropbox/Inti/Career/Thesis/xAI/paper submissions/2026/QCE26/qce2026-genai-qkd-game/runs/histogram_corpus_full105_backend/500k/llm_digest_tsallis_rv_eta1_vs_tsallis_rv_eta1/claude_family_responses/depth8.haiku.txt",
+    "response_path": "<repo-root>/runs/histogram_corpus_full105_backend/500k/llm_digest_tsallis_rv_eta1_vs_tsallis_rv_eta1/claude_family_responses/depth8.haiku.txt",
     "retention": {
       "r2_in_sample": 0.9754,
       "r2_loo": 0.5424,
@@ -1383,7 +1383,7 @@
       "target_key": "exploitability"
     },
     "model": "sonnet",
-    "response_path": "/tank-hdd/Dropbox/Inti/Career/Thesis/xAI/paper submissions/2026/QCE26/qce2026-genai-qkd-game/runs/histogram_corpus_full105_backend/500k/llm_digest_tsallis_rv_eta1_vs_tsallis_rv_eta1/claude_family_responses/depth8.sonnet.txt",
+    "response_path": "<repo-root>/runs/histogram_corpus_full105_backend/500k/llm_digest_tsallis_rv_eta1_vs_tsallis_rv_eta1/claude_family_responses/depth8.sonnet.txt",
     "retention": {
       "r2_in_sample": 0.9754,
       "r2_loo": 0.5424,
@@ -1479,7 +1479,7 @@
       "target_key": "exploitability"
     },
     "model": "fable",
-    "response_path": "/tank-hdd/Dropbox/Inti/Career/Thesis/xAI/paper submissions/2026/QCE26/qce2026-genai-qkd-game/runs/histogram_corpus_full105_backend/500k/llm_digest_tsallis_rv_eta1_vs_tsallis_rv_eta1/claude_family_responses/depth8.fable.txt",
+    "response_path": "<repo-root>/runs/histogram_corpus_full105_backend/500k/llm_digest_tsallis_rv_eta1_vs_tsallis_rv_eta1/claude_family_responses/depth8.fable.txt",
     "retention": {
       "r2_in_sample": 0.9754,
       "r2_loo": 0.5424,
@@ -1579,7 +1579,7 @@
       "target_key": "exploitability"
     },
     "model": "opus",
-    "response_path": "/tank-hdd/Dropbox/Inti/Career/Thesis/xAI/paper submissions/2026/QCE26/qce2026-genai-qkd-game/runs/histogram_corpus_full105_backend/500k/llm_digest_tsallis_rv_eta1_vs_tsallis_rv_eta1/claude_family_responses/depth8.opus.txt",
+    "response_path": "<repo-root>/runs/histogram_corpus_full105_backend/500k/llm_digest_tsallis_rv_eta1_vs_tsallis_rv_eta1/claude_family_responses/depth8.opus.txt",
     "retention": {
       "r2_in_sample": 0.9754,
       "r2_loo": 0.5424,
