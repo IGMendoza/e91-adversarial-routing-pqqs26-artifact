@@ -25,16 +25,6 @@ from .feedback import (
     eve_feedback_from_heralded_service,
     eve_feedback_from_public_utility,
 )
-from .sequence_attacks import (
-    ATTACK_KINDS,
-    SUPPORTED_GAME_KINDS,
-    EdgeAttackSpec,
-    SequenceAttackError,
-    build_attacked_hops,
-    edge_on_path,
-    make_station_factory,
-    spec_active_on_path,
-)
 from .repeater_attacks import (
     REPEATER_ATTACK_KINDS,
     SUPPORTED_REPEATER_GAME_KINDS,
@@ -129,3 +119,26 @@ __all__ = [
     "require_live_runtime_selectable",
     "spec_active_on_path",
 ]
+
+# .sequence_attacks transitively imports real `sequence.*` (SeQUeNCe) modules via
+# ..sequence_build.e91_builder / ..sequence_build.eve_stations. Import it lazily
+# so `import sequence_game` (and any code that only needs the SeQUeNCe-free parts
+# of sequence_game.eve, e.g. eve.information) works without SeQUeNCe installed.
+_SEQUENCE_ATTACKS_NAMES = {
+    "ATTACK_KINDS",
+    "SUPPORTED_GAME_KINDS",
+    "EdgeAttackSpec",
+    "SequenceAttackError",
+    "build_attacked_hops",
+    "edge_on_path",
+    "make_station_factory",
+    "spec_active_on_path",
+}
+
+
+def __getattr__(name):
+    if name in _SEQUENCE_ATTACKS_NAMES:
+        from . import sequence_attacks
+
+        return getattr(sequence_attacks, name)
+    raise AttributeError(f"module {__name__!r} has no attribute {name!r}")

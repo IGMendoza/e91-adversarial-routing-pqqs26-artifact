@@ -20,6 +20,7 @@ from __future__ import annotations
 
 import hashlib
 import math
+import sys
 import time
 from collections import Counter, defaultdict
 from functools import lru_cache
@@ -37,24 +38,94 @@ from ..claims import (
 )
 from ..eve.information import InfoGainResult, compute_information_gain
 from ..eve.repeater_attacks import RepeaterAttackSpec
-from ..eve.sequence_attacks import (
-    EdgeAttackSpec,
-    build_attacked_hops,
-    make_station_factory,
-    spec_active_on_path,
-)
 from ..physical import load_models_from_dir
 from ..protocol.postprocessing import SiftingConfig
-from ..protocol.repeater_trial import (
-    RepeaterE91RunConfig,
-    run_fixed_repeater_chsh_trial,
-    run_fixed_repeater_e91_trial,
-)
-from ..protocol.sequence_trial import E91RunConfig, run_e91_trial
 from ..rl.q_learning import QLearningConfig, QTable, epsilon_greedy
 from ..routing.route import route_id_for_path
-from ..sequence_build.repeater_e91_builder import FixedRepeaterPath
 from ..topology.ir import EdgeRecord, NodeRecord, TopologyIR, TopologyMetadata
+
+# NOTE(SeQUeNCe-lazy-import): ``..eve.sequence_attacks``, ``..protocol.repeater_trial``,
+# ``..protocol.sequence_trial``, and ``..sequence_build.repeater_e91_builder`` all
+# transitively import real `sequence.*` (SeQUeNCe) modules. This module's
+# ``_normalize_routes``/``_runtime_actions`` helpers (used by
+# ``sequence_game.experiments.histogram_colearning.corpus.load_topology_bench_case``)
+# are pure and must import without SeQUeNCe installed, so the SeQUeNCe-dependent
+# names below are resolved lazily via module ``__getattr__`` (PEP 562) instead of
+# at module import time. Functions that need them look them up through
+# ``sys.modules[__name__]`` (see ``_lazy()`` below) rather than as bare globals, so
+# that (a) nothing SeQUeNCe-touching runs until one of these runtime-trial
+# functions is actually called, and (b) existing tests that
+# ``monkeypatch.setattr(backend, "run_e91_trial", fake)`` etc. keep working
+# unchanged -- monkeypatch's setattr populates this module's ``__dict__``
+# directly, which normal attribute lookup finds before ever falling back to
+# ``__getattr__``. Type-only uses in signatures rely on
+# ``from __future__ import annotations`` (already in effect) so they never need
+# these imports just to define the functions.
+_LAZY_SEQUENCE_NAMES = frozenset({
+    "E91RunConfig",
+    "RepeaterE91RunConfig",
+    "run_e91_trial",
+    "run_fixed_repeater_chsh_trial",
+    "run_fixed_repeater_e91_trial",
+    "EdgeAttackSpec",
+    "build_attacked_hops",
+    "make_station_factory",
+    "spec_active_on_path",
+    "FixedRepeaterPath",
+})
+
+
+def __getattr__(name: str) -> Any:
+    if name in _LAZY_SEQUENCE_NAMES:
+        if name in ("E91RunConfig", "run_e91_trial"):
+            from ..protocol.sequence_trial import E91RunConfig, run_e91_trial
+
+            value = {"E91RunConfig": E91RunConfig, "run_e91_trial": run_e91_trial}[name]
+        elif name in ("RepeaterE91RunConfig", "run_fixed_repeater_chsh_trial", "run_fixed_repeater_e91_trial"):
+            from ..protocol.repeater_trial import (
+                RepeaterE91RunConfig,
+                run_fixed_repeater_chsh_trial,
+                run_fixed_repeater_e91_trial,
+            )
+
+            value = {
+                "RepeaterE91RunConfig": RepeaterE91RunConfig,
+                "run_fixed_repeater_chsh_trial": run_fixed_repeater_chsh_trial,
+                "run_fixed_repeater_e91_trial": run_fixed_repeater_e91_trial,
+            }[name]
+        elif name == "FixedRepeaterPath":
+            from ..sequence_build.repeater_e91_builder import FixedRepeaterPath
+
+            value = FixedRepeaterPath
+        else:
+            from ..eve.sequence_attacks import (
+                EdgeAttackSpec,
+                build_attacked_hops,
+                make_station_factory,
+                spec_active_on_path,
+            )
+
+            value = {
+                "EdgeAttackSpec": EdgeAttackSpec,
+                "build_attacked_hops": build_attacked_hops,
+                "make_station_factory": make_station_factory,
+                "spec_active_on_path": spec_active_on_path,
+            }[name]
+        globals()[name] = value  # cache: subsequent bare-global lookups skip __getattr__
+        return value
+    raise AttributeError(f"module {__name__!r} has no attribute {name!r}")
+
+
+def _lazy(name: str) -> Any:
+    """Fetch a SeQUeNCe-dependent name through normal attribute lookup.
+
+    Goes through ``getattr`` (not a bare global) so a prior
+    ``monkeypatch.setattr(module, name, fake)`` is honored, and so the real
+    import in ``__getattr__`` only happens the first time this name is
+    actually needed.
+    """
+
+    return getattr(sys.modules[__name__], name)
 
 DEFAULT_E91_PERIODS_PER_STEP = 1200
 DEFAULT_E91_QBER_THRESHOLD = 0.15
@@ -163,6 +234,9 @@ def run_e91_graph_runtime_game(
     ``"chsh"`` mode ``repeater_memory_pairs_per_step`` is raised to at least
     :data:`DEFAULT_REPEATER_CHSH_PAIRS_PER_STEP`.
     """
+
+    E91RunConfig = _lazy("E91RunConfig")
+    RepeaterE91RunConfig = _lazy("RepeaterE91RunConfig")
 
     if game_mode not in _ATTACK_SURFACE_MODES:
         raise ValueError(f"E91 runtime backend does not support {game_mode!r}")
@@ -475,6 +549,11 @@ def _run_selected_action(
     attack_cost: float,
     security_monitor: str = "qber",
 ) -> tuple[Any, InfoGainResult, bool, dict[str, Any]]:
+    build_attacked_hops = _lazy("build_attacked_hops")
+    make_station_factory = _lazy("make_station_factory")
+    spec_active_on_path = _lazy("spec_active_on_path")
+    run_e91_trial = _lazy("run_e91_trial")
+
     if action.get("kind") == "node":
         return _run_repeater_node_action(
             route=route,
@@ -536,6 +615,10 @@ def _run_repeater_node_action(
     attack_cost: float,
     security_monitor: str = "qber",
 ) -> tuple[Any, InfoGainResult, bool, dict[str, Any]]:
+    run_fixed_repeater_chsh_trial = _lazy("run_fixed_repeater_chsh_trial")
+    run_fixed_repeater_e91_trial = _lazy("run_fixed_repeater_e91_trial")
+    FixedRepeaterPath = _lazy("FixedRepeaterPath")
+
     configured_spec = _action_to_repeater_attack(action, attack_cost=attack_cost)
     path = tuple(str(node) for node in route["path"])
     active_route_attacked = (
@@ -744,6 +827,8 @@ def _edge_endpoints(ir: TopologyIR, target: str) -> tuple[str, str]:
 
 
 def _action_to_edge_attack(action: dict[str, Any], *, attack_cost: float) -> EdgeAttackSpec:
+    EdgeAttackSpec = _lazy("EdgeAttackSpec")
+
     attack_type = action.get("attack_type")
     if attack_type == "no_attack":
         return EdgeAttackSpec(kind="none", cost=0.0)

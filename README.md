@@ -7,21 +7,23 @@ only the code, data, and generator scripts behind its figures.
 
 ## Quickstart
 
-Requires Python 3.12–3.14 (matches the SeQUeNCe dependency's own
-`pyproject.toml` constraint, below).
+Requires Python 3.12–3.14.
 
 ```bash
-# 1. Install this bundle's own pinned dependencies.
+# 1. Install this bundle's own pinned dependencies. SeQUeNCe (the
+#    third-party quantum-network simulator sequence_game wraps) is NOT
+#    required for this step, or for regenerating histogram_anatomy.pdf
+#    below: sequence_game's SeQUeNCe-dependent submodules are imported
+#    lazily now, so the import chain build_figures.py actually exercises
+#    never touches sequence.* at all. (SeQUeNCe is still a real
+#    requirement for a handful of other scripts in code/scripts/ that
+#    invoke SeQUeNCe's live E91/CHSH simulation runtime directly -- see the
+#    per-figure table below -- but none of those can currently be run to
+#    completion in this bundle anyway, since their own raw run inputs are
+#    not included.)
 pip install -r code/requirements.txt
 
-# 2. Install SeQUeNCe. It is a separate third-party simulator, not bundled
-#    here, but sequence_game's package __init__ chain imports it eagerly,
-#    so it is required just to import sequence_game at all -- including
-#    for the one figure below that is genuinely reproducible from what
-#    IS bundled.
-pip install "sequence @ git+https://github.com/sequence-toolbox/SeQUeNCe.git@v1.0.0"
-
-# 3. Regenerate the one figure this bundle can fully reproduce end to end.
+# 2. Regenerate the one figure this bundle can fully reproduce end to end.
 cd code
 python docs/talk_histogram_backend_2026/build_figures.py
 # -> writes docs/talk_histogram_backend_2026/figures/histogram_anatomy.pdf,
@@ -153,7 +155,7 @@ regenerate that rendered output byte-for-byte does not currently exist.
 
 | Figure (as used in the paper) | Generator script (real path) | Raw run directory it reads | Raw run present? |
 |---|---|---|---|
-| `histogram_anatomy.pdf` | `docs/talk_histogram_backend_2026/build_figures.py`, function `build_histogram_anatomy()` | reads the bundled `graph_corpus.sqlite` directly, then evaluates live through `HistogramPhysicsPool` with fixed seed 142 — no separately cached run is read. Also needs the bundled `code/histograms/` package and `code/configs/physical/` literature-config JSON (both required by `HistogramPhysicsPool`), plus SeQUeNCe installed separately (not bundled, but imported transitively through `sequence_game`'s package `__init__` chain even though this figure's own logic never calls into SeQUeNCe's simulation runtime) — see "Quickstart" above. Actually re-run end to end for this release in a clean environment: reproduces `histogram_anatomy.pdf`/`histogram_anatomy_data.json` matching the checked-in copy to 10+ significant figures, the residual being ordinary floating-point noise from library-version differences, not a different computation. | **Yes — fully self-contained, genuinely reproducible from what's bundled (verified by actually running it)** |
+| `histogram_anatomy.pdf` | `docs/talk_histogram_backend_2026/build_figures.py`, function `build_histogram_anatomy()` | reads the bundled `graph_corpus.sqlite` directly, then evaluates live through `HistogramPhysicsPool` with fixed seed 142 — no separately cached run is read. Also needs the bundled `code/histograms/` package (including `code/scripts/generate_e91_game_turn_histograms.py`, which `sequence_game.corpus.compiled_histogram_backend` loads dynamically as the frozen-histogram-family generator) and `code/configs/physical/` literature-config JSON (both required by `HistogramPhysicsPool`). **SeQUeNCe is not required for this figure**: the three `sequence_game` modules that used to import it eagerly at package-import time (`protocol/__init__.py`, `eve/__init__.py`, `corpus/e91_runtime_game.py`) now defer those imports until something actually calls the SeQUeNCe-backed CHSH/E91 trial runners, which `build_histogram_anatomy()` never does. Verified two ways: (1) `import sequence_game` plus every module `build_figures.py` imports leaves zero `sequence.*` entries in `sys.modules`; (2) `build_histogram_anatomy()` was run to completion in a clean virtualenv with SeQUeNCe not installed at all (confirmed absent via `ModuleNotFoundError`), producing `histogram_anatomy.pdf`/`histogram_anatomy_data.json` numerically identical to a same-environment run with SeQUeNCe installed, both differing from the checked-in copy only at the ~1e-13 relative (floating-point/library-version) level — the same residual the checked-in copy already had before this change. | **Yes — fully self-contained, genuinely reproducible from what's bundled, and no longer requires SeQUeNCe to be installed at all (verified by actually running it both ways)** |
 | `corpus_500k_learning_dynamics.pdf`, `topology_nash_gap_heatmaps.pdf` | `scripts/render_histogram_corpus_500k.py` → `sequence_game/experiments/histogram_colearning/corpus_scale_artifacts.py` | `runs/histogram_corpus_500k/`, itself produced by `scripts/run_histogram_corpus_500k.py` (default `--db-path` = the bundled `graph_corpus.sqlite`; default `--census-path` = the bundled `code/docs/topology_bench_step6_census/census.json`) | No |
 | `stackelberg_target_route_mass.pdf` | Two real generators exist for this exact output filename. Current/preferred: `scripts/build_histogram_stackelberg_followup_105_artifacts.py` → `sequence_game/experiments/histogram_colearning/stackelberg_followup_artifacts.py`, which writes directly to the paper's figures directory by default. Older: `scripts/render_histogram_stackelberg_steering_500k.py` → `stackelberg_steering_artifacts.py`, which writes to `docs/artifacts/histogram_stackelberg_steering_500k/` for later manual copying. | Followup path needs `runs/histogram_stackelberg_followup_105_500k/`, produced by `scripts/run_histogram_stackelberg_followup_105_500k.py`, which itself reads `runs/histogram_corpus_500k/run_manifest.json` as its own input. Older path needs `runs/histogram_stackelberg_steering_500k/` (+ a zero-margin sibling run + `runs/histogram_corpus_500k/`). | No (neither path's raw run currently exists) |
 | `stackelberg_strict_vs_zero.pdf`, `stackelberg_strict_evaluation.pdf` | `scripts/render_histogram_stackelberg_steering_500k.py` → `stackelberg_steering_artifacts.py` | `runs/histogram_stackelberg_steering_500k/` + `runs/histogram_stackelberg_steering_zero_margin_500k/` | No |
@@ -169,12 +171,11 @@ regenerating `runs/histogram_corpus_500k/`.
 
 ```bash
 # histogram_anatomy.pdf — genuinely reproducible from what's bundled here.
-# Requires this bundle's own code/requirements.txt PLUS SeQUeNCe installed
-# separately (see "Quickstart" above; SeQUeNCe itself is not bundled, but
-# sequence_game cannot be imported at all without it). Run from inside
-# code/, keeping code/ as the resolved repo root (build_figures.py finds
-# it via Path(__file__).resolve().parents[2] — do not move the script out
-# of code/docs/talk_histogram_backend_2026/).
+# Requires only this bundle's own code/requirements.txt (SeQUeNCe is not
+# needed for this figure — see "Quickstart" above). Run from inside code/,
+# keeping code/ as the resolved repo root (build_figures.py finds it via
+# Path(__file__).resolve().parents[2] — do not move the script out of
+# code/docs/talk_histogram_backend_2026/).
 cd code
 python docs/talk_histogram_backend_2026/build_figures.py
 # This script's main() also calls build_corpus_versions() and

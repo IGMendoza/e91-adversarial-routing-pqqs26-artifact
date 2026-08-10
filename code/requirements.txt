@@ -7,15 +7,29 @@ scikit-learn
 scipy>=1.16.3
 scipy-stubs~=1.16.3
 
-# SeQUeNCe quantum-network simulator -- NOT bundled here, but required.
-# `sequence_game`'s own package __init__ chain imports it eagerly (e.g.
-# sequence_game/sequence_build/builder.py: `from sequence.components...`),
-# so even the fully-reproducible histogram_anatomy.pdf figure cannot be
-# imported without it, despite not using SeQUeNCe's simulation runtime
-# itself. Install separately:
+# Graph utilities used directly by sequence_game (e.g.
+# sequence_game/experiments/histogram_colearning/iris_outlier_artifacts.py).
+# Previously this rode along as a transitive dependency of the SeQUeNCe
+# install below; it is listed explicitly now that SeQUeNCe is no longer a
+# requirement for importing sequence_game or regenerating histogram_anatomy.pdf.
+networkx
+
+# SeQUeNCe quantum-network simulator -- NOT bundled here, and NOT required
+# for importing sequence_game or for regenerating histogram_anatomy.pdf (the
+# one figure this bundle can reproduce end to end): the sequence_game
+# submodules that import real `sequence.*` modules (sequence_build, and the
+# CHSH/E91 trial runners in protocol/eve/corpus that call into it) are now
+# imported lazily, only when something actually invokes a live SeQUeNCe
+# trial. It is still required to actually run the handful of other scripts
+# in code/scripts/ that invoke SeQUeNCe's live E91/CHSH simulation runtime
+# (e.g. detect_border_collie.py, and the run_*.py corpus/trial generators)
+# -- see the per-figure table in the top-level README for which scripts
+# those are. None of those can currently be run to completion in this
+# bundle regardless, since their own raw run inputs are not included.
+# Install separately if you need it:
 #   pip install "sequence @ git+https://github.com/sequence-toolbox/SeQUeNCe.git@v1.0.0"
 # or clone https://github.com/sequence-toolbox/SeQUeNCe.git, check out the
 # v1.0.0 tag, and `pip install -e .` from within it. This also transitively
-# installs SeQUeNCe's own dependencies (networkx, qutip, stim, ...). The
-# upstream package's own project name (see its pyproject.toml) is
-# "sequence", imported as `import sequence`.
+# installs SeQUeNCe's own dependencies (qutip, stim, ...). The upstream
+# package's own project name (see its pyproject.toml) is "sequence",
+# imported as `import sequence`.

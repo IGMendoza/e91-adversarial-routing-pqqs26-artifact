@@ -8,7 +8,6 @@ from .postprocessing import (
     extract_sifted_bits,
     sift_indices,
 )
-from .chsh_trial import CHSHResult, run_chsh_trial
 from .public_record import (
     PUBLIC_STEP_FIELDS,
     PublicStepRecord,
@@ -16,7 +15,6 @@ from .public_record import (
     eve_public_state_from_step,
     make_control_step_record,
 )
-from .sequence_trial import E91RunConfig, run_e91_trial
 from .toy_trial import DISRUPTED_REASON, ToyTrialConfig, route_is_disrupted, run_toy_trial
 from .transcript import PRIVATE_FIELDS, PublicTranscript, TrialTranscript
 
@@ -51,6 +49,12 @@ __all__ = [
 
 
 def __getattr__(name):
+    # CHSH/legacy-SeQUeNCe-trial and repeater-trial submodules are imported lazily
+    # here (rather than at package-import time) because they transitively import
+    # real `sequence.*` (SeQUeNCe) modules via ..sequence_build. Code that only
+    # needs the pure-Python parts of sequence_game.protocol (postprocessing,
+    # toy_trial, public_record, transcript) must be able to `import sequence_game`
+    # and its submodules without SeQUeNCe installed at all.
     if name in {"RepeaterE91RunConfig", "run_fixed_repeater_e91_trial"}:
         from .repeater_trial import RepeaterE91RunConfig, run_fixed_repeater_e91_trial
 
@@ -58,5 +62,15 @@ def __getattr__(name):
             "RepeaterE91RunConfig": RepeaterE91RunConfig,
             "run_fixed_repeater_e91_trial": run_fixed_repeater_e91_trial,
         }
+        return values[name]
+    if name in {"CHSHResult", "run_chsh_trial"}:
+        from .chsh_trial import CHSHResult, run_chsh_trial
+
+        values = {"CHSHResult": CHSHResult, "run_chsh_trial": run_chsh_trial}
+        return values[name]
+    if name in {"E91RunConfig", "run_e91_trial"}:
+        from .sequence_trial import E91RunConfig, run_e91_trial
+
+        values = {"E91RunConfig": E91RunConfig, "run_e91_trial": run_e91_trial}
         return values[name]
     raise AttributeError(name)
