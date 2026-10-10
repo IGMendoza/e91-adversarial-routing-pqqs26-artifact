@@ -1,0 +1,1118 @@
+{
+  "cases": [
+    {
+      "checks": {
+        "all_edge_availabilities": true,
+        "all_selected_age_means": true,
+        "route_absolute_tolerance": 0.01,
+        "route_availability": true
+      },
+      "edge_length_km": 50.0,
+      "event_reference": {
+        "claim_boundary": "independent event realization of the declared stationary rolling-pool availability/age process; not optical-state propagation, swap execution, or a continuous-demand service-queue validation",
+        "config": {
+          "batch_count": 20,
+          "burn_in_mean_cycles": 100.0,
+          "mean_sample_interval_s": 0.055005821297208726,
+          "num_samples": 100000,
+          "seed": 20260714
+        },
+        "edges": [
+          {
+            "availability": {
+              "absolute_error": 0.00045335559108683476,
+              "analytic": 0.8789833555910869,
+              "batch_count": 20,
+              "batch_standard_error": 0.0011388151737661383,
+              "confidence_interval_95_normal_batch_means": [
+                0.8762979222594184,
+                0.8807620777405817
+              ],
+              "estimate": 0.87853
+            },
+            "edge_index": 0,
+            "reserved_slots": 4,
+            "selected_residence_age_s": {
+              "absolute_mean_error": 1.2407428422969713e-05,
+              "analytic_mean": 0.03606607813438497,
+              "analytic_quantiles": {
+                "q10": 0.005029299013695131,
+                "q50": 0.030603571600804645,
+                "q90": 0.0771669232458013
+              },
+              "batch_standard_error_of_mean": 0.00010708494820088038,
+              "empirical_mean": 0.036053670705962,
+              "empirical_quantiles": {
+                "q10": 0.005142849009189377,
+                "q50": 0.030620510024739644,
+                "q90": 0.07696716454574926
+              },
+              "initial_memory_age_s": 0.00076,
+              "physical_age_mean_including_initial_s": 0.036813670705962,
+              "sample_count": 87853
+            }
+          },
+          {
+            "availability": {
+              "absolute_error": 0.0002433555910869023,
+              "analytic": 0.8789833555910869,
+              "batch_count": 20,
+              "batch_standard_error": 0.001629794949969891,
+              "confidence_interval_95_normal_batch_means": [
+                0.875545601898059,
+                0.881934398101941
+              ],
+              "estimate": 0.87874
+            },
+            "edge_index": 1,
+            "reserved_slots": 4,
+            "selected_residence_age_s": {
+              "absolute_mean_error": 2.715907844680343e-05,
+              "analytic_mean": 0.03606607813438497,
+              "analytic_quantiles": {
+                "q10": 0.005029299013695131,
+                "q50": 0.030603571600804645,
+                "q90": 0.0771669232458013
+              },
+              "batch_standard_error_of_mean": 9.857944536321794e-05,
+              "empirical_mean": 0.03609323721283177,
+              "empirical_quantiles": {
+                "q10": 0.005047019299138355,
+                "q50": 0.030482201836548484,
+                "q90": 0.07732507321945832
+              },
+              "initial_memory_age_s": 0.00076,
+              "physical_age_mean_including_initial_s": 0.03685323721283177,
+              "sample_count": 87874
+            }
+          },
+          {
+            "availability": {
+              "absolute_error": 0.0007333555910868927,
+              "analytic": 0.8789833555910869,
+              "batch_count": 20,
+              "batch_standard_error": 0.001376331890818566,
+              "confidence_interval_95_normal_batch_means": [
+                0.8755523894939956,
+                0.8809476105060043
+              ],
+              "estimate": 0.87825
+            },
+            "edge_index": 2,
+            "reserved_slots": 4,
+            "selected_residence_age_s": {
+              "absolute_mean_error": 0.000138268376344855,
+              "analytic_mean": 0.03606607813438497,
+              "analytic_quantiles": {
+                "q10": 0.005029299013695131,
+                "q50": 0.030603571600804645,
+                "q90": 0.0771669232458013
+              },
+              "batch_standard_error_of_mean": 0.00010326683731358032,
+              "empirical_mean": 0.036204346510729825,
+              "empirical_quantiles": {
+                "q10": 0.005084501191322488,
+                "q50": 0.030649206434645748,
+                "q90": 0.07751524054524456
+              },
+              "initial_memory_age_s": 0.00076,
+              "physical_age_mean_including_initial_s": 0.03696434651072982,
+              "sample_count": 87825
+            }
+          },
+          {
+            "availability": {
+              "absolute_error": 0.002566644408913077,
+              "analytic": 0.8789833555910869,
+              "batch_count": 20,
+              "batch_standard_error": 0.0015730543537970964,
+              "confidence_interval_95_normal_batch_means": [
+                0.8784668134665576,
+                0.8846331865334423
+              ],
+              "estimate": 0.88155
+            },
+            "edge_index": 3,
+            "reserved_slots": 4,
+            "selected_residence_age_s": {
+              "absolute_mean_error": 3.001069792673422e-05,
+              "analytic_mean": 0.03606607813438497,
+              "analytic_quantiles": {
+                "q10": 0.005029299013695131,
+                "q50": 0.030603571600804645,
+                "q90": 0.0771669232458013
+              },
+              "batch_standard_error_of_mean": 7.441924373780494e-05,
+              "empirical_mean": 0.036036067436458236,
+              "empirical_quantiles": {
+                "q10": 0.005055691531606499,
+                "q50": 0.03055394115170884,
+                "q90": 0.07709819395838623
+              },
+              "initial_memory_age_s": 0.00076,
+              "physical_age_mean_including_initial_s": 0.03679606743645823,
+              "sample_count": 88155
+            }
+          },
+          {
+            "availability": {
+              "absolute_error": 0.0018566444089130885,
+              "analytic": 0.8789833555910869,
+              "batch_count": 20,
+              "batch_standard_error": 0.00113903005828828,
+              "confidence_interval_95_normal_batch_means": [
+                0.8786075010857549,
+                0.883072498914245
+              ],
+              "estimate": 0.88084
+            },
+            "edge_index": 4,
+            "reserved_slots": 4,
+            "selected_residence_age_s": {
+              "absolute_mean_error": 0.00013302574222194552,
+              "analytic_mean": 0.03606607813438497,
+              "analytic_quantiles": {
+                "q10": 0.005029299013695131,
+                "q50": 0.030603571600804645,
+                "q90": 0.0771669232458013
+              },
+              "batch_standard_error_of_mean": 0.00011477498251296717,
+              "empirical_mean": 0.035933052392163024,
+              "empirical_quantiles": {
+                "q10": 0.00508463164527484,
+                "q50": 0.030523244122036886,
+                "q90": 0.07689483544127143
+              },
+              "initial_memory_age_s": 0.00076,
+              "physical_age_mean_including_initial_s": 0.03669305239216302,
+              "sample_count": 88084
+            }
+          },
+          {
+            "availability": {
+              "absolute_error": 0.0015433555910868701,
+              "analytic": 0.8789833555910869,
+              "batch_count": 20,
+              "batch_standard_error": 0.001486330699194638,
+              "confidence_interval_95_normal_batch_means": [
+                0.8745267918295785,
+                0.8803532081704215
+              ],
+              "estimate": 0.87744
+            },
+            "edge_index": 5,
+            "reserved_slots": 4,
+            "selected_residence_age_s": {
+              "absolute_mean_error": 6.410405632450988e-05,
+              "analytic_mean": 0.03606607813438497,
+              "analytic_quantiles": {
+                "q10": 0.005029299013695131,
+                "q50": 0.030603571600804645,
+                "q90": 0.0771669232458013
+              },
+              "batch_standard_error_of_mean": 7.740670198383678e-05,
+              "empirical_mean": 0.03613018219070948,
+              "empirical_quantiles": {
+                "q10": 0.005070658699673914,
+                "q50": 0.030702422482075775,
+                "q90": 0.07725597055207345
+              },
+              "initial_memory_age_s": 0.00076,
+              "physical_age_mean_including_initial_s": 0.036890182190709477,
+              "sample_count": 87744
+            }
+          },
+          {
+            "availability": {
+              "absolute_error": 0.0006466444089131551,
+              "analytic": 0.8789833555910869,
+              "batch_count": 20,
+              "batch_standard_error": 0.001537617774693251,
+              "confidence_interval_95_normal_batch_means": [
+                0.8766162691616013,
+                0.8826437308383988
+              ],
+              "estimate": 0.87963
+            },
+            "edge_index": 6,
+            "reserved_slots": 4,
+            "selected_residence_age_s": {
+              "absolute_mean_error": 7.327346289330572e-05,
+              "analytic_mean": 0.03606607813438497,
+              "analytic_quantiles": {
+                "q10": 0.005029299013695131,
+                "q50": 0.030603571600804645,
+                "q90": 0.0771669232458013
+              },
+              "batch_standard_error_of_mean": 0.00010315768429685609,
+              "empirical_mean": 0.036139351597278276,
+              "empirical_quantiles": {
+                "q10": 0.005049382036514772,
+                "q50": 0.030692972914039274,
+                "q90": 0.07720642218155263
+              },
+              "initial_memory_age_s": 0.00076,
+              "physical_age_mean_including_initial_s": 0.03689935159727827,
+              "sample_count": 87963
+            }
+          },
+          {
+            "availability": {
+              "absolute_error": 1.6644408913135678e-05,
+              "analytic": 0.8789833555910869,
+              "batch_count": 20,
+              "batch_standard_error": 0.001151657843924871,
+              "confidence_interval_95_normal_batch_means": [
+                0.8767427506259072,
+                0.8812572493740928
+              ],
+              "estimate": 0.879
+            },
+            "edge_index": 7,
+            "reserved_slots": 4,
+            "selected_residence_age_s": {
+              "absolute_mean_error": 4.219071639791072e-06,
+              "analytic_mean": 0.03606607813438497,
+              "analytic_quantiles": {
+                "q10": 0.005029299013695131,
+                "q50": 0.030603571600804645,
+                "q90": 0.0771669232458013
+              },
+              "batch_standard_error_of_mean": 7.344810801736536e-05,
+              "empirical_mean": 0.03607029720602476,
+              "empirical_quantiles": {
+                "q10": 0.0049850392918983745,
+                "q50": 0.030536783624484087,
+                "q90": 0.077419478646047
+              },
+              "initial_memory_age_s": 0.00076,
+              "physical_age_mean_including_initial_s": 0.03683029720602476,
+              "sample_count": 87900
+            }
+          },
+          {
+            "availability": {
+              "absolute_error": 0.0007366444089130786,
+              "analytic": 0.8789833555910869,
+              "batch_count": 20,
+              "batch_standard_error": 0.001230267407817031,
+              "confidence_interval_95_normal_batch_means": [
+                0.8773086758806785,
+                0.8821313241193214
+              ],
+              "estimate": 0.87972
+            },
+            "edge_index": 8,
+            "reserved_slots": 4,
+            "selected_residence_age_s": {
+              "absolute_mean_error": 1.8961822821871033e-05,
+              "analytic_mean": 0.03606607813438497,
+              "analytic_quantiles": {
+                "q10": 0.005029299013695131,
+                "q50": 0.030603571600804645,
+                "q90": 0.0771669232458013
+              },
+              "batch_standard_error_of_mean": 0.00011698117763183148,
+              "empirical_mean": 0.03608503995720684,
+              "empirical_quantiles": {
+                "q10": 0.005093100758813307,
+                "q50": 0.030602639979520063,
+                "q90": 0.07706493007760858
+              },
+              "initial_memory_age_s": 0.00076,
+              "physical_age_mean_including_initial_s": 0.03684503995720684,
+              "sample_count": 87972
+            }
+          },
+          {
+            "availability": {
+              "absolute_error": 0.0006866444089130841,
+              "analytic": 0.8789833555910869,
+              "batch_count": 20,
+              "batch_standard_error": 0.0011402931294420015,
+              "confidence_interval_95_normal_batch_means": [
+                0.8774350254662936,
+                0.8819049745337063
+              ],
+              "estimate": 0.87967
+            },
+            "edge_index": 9,
+            "reserved_slots": 4,
+            "selected_residence_age_s": {
+              "absolute_mean_error": 0.00011423567807981178,
+              "analytic_mean": 0.03606607813438497,
+              "analytic_quantiles": {
+                "q10": 0.005029299013695131,
+                "q50": 0.030603571600804645,
+                "q90": 0.0771669232458013
+              },
+              "batch_standard_error_of_mean": 7.416130862106964e-05,
+              "empirical_mean": 0.03618031381246478,
+              "empirical_quantiles": {
+                "q10": 0.00502234250325273,
+                "q50": 0.030676558504467266,
+                "q90": 0.0776521523288466
+              },
+              "initial_memory_age_s": 0.00076,
+              "physical_age_mean_including_initial_s": 0.03694031381246478,
+              "sample_count": 87967
+            }
+          },
+          {
+            "availability": {
+              "absolute_error": 0.0018133555910868626,
+              "analytic": 0.8789833555910869,
+              "batch_count": 20,
+              "batch_standard_error": 0.0014195829632232427,
+              "confidence_interval_95_normal_batch_means": [
+                0.8743876173920825,
+                0.8799523826079175
+              ],
+              "estimate": 0.87717
+            },
+            "edge_index": 10,
+            "reserved_slots": 4,
+            "selected_residence_age_s": {
+              "absolute_mean_error": 4.750847929816532e-05,
+              "analytic_mean": 0.03606607813438497,
+              "analytic_quantiles": {
+                "q10": 0.005029299013695131,
+                "q50": 0.030603571600804645,
+                "q90": 0.0771669232458013
+              },
+              "batch_standard_error_of_mean": 8.563209532313823e-05,
+              "empirical_mean": 0.036018569655086805,
+              "empirical_quantiles": {
+                "q10": 0.0050437443516329955,
+                "q50": 0.030797378108218254,
+                "q90": 0.07672881137846164
+              },
+              "initial_memory_age_s": 0.00076,
+              "physical_age_mean_including_initial_s": 0.0367785696550868,
+              "sample_count": 87717
+            }
+          },
+          {
+            "availability": {
+              "absolute_error": 0.0012033555910868632,
+              "analytic": 0.8789833555910869,
+              "batch_count": 20,
+              "batch_standard_error": 0.0016738798296802922,
+              "confidence_interval_95_normal_batch_means": [
+                0.8744991955338266,
+                0.8810608044661734
+              ],
+              "estimate": 0.87778
+            },
+            "edge_index": 11,
+            "reserved_slots": 4,
+            "selected_residence_age_s": {
+              "absolute_mean_error": 2.7633467536446188e-05,
+              "analytic_mean": 0.03606607813438497,
+              "analytic_quantiles": {
+                "q10": 0.005029299013695131,
+                "q50": 0.030603571600804645,
+                "q90": 0.0771669232458013
+              },
+              "batch_standard_error_of_mean": 7.610124464207699e-05,
+              "empirical_mean": 0.036038444666848524,
+              "empirical_quantiles": {
+                "q10": 0.005006578232905667,
+                "q50": 0.030512398613609548,
+                "q90": 0.07697754289258683
+              },
+              "initial_memory_age_s": 0.00076,
+              "physical_age_mean_including_initial_s": 0.03679844466684852,
+              "sample_count": 87778
+            }
+          }
+        ],
+        "events_processed": 2397290,
+        "final_event_heap_entries": 48,
+        "process": {
+          "controller": "independent fixed-slot alternating renewal pools",
+          "demand_queue": false,
+          "empty_time_distribution": "exponential",
+          "live_time_distribution": "min(deterministic_staleness_cutoff, exponential_detected_decay)",
+          "pair_consumption": false,
+          "selection_policy_per_edge": [
+            "youngest_live",
+            "youngest_live",
+            "youngest_live",
+            "youngest_live",
+            "youngest_live",
+            "youngest_live",
+            "youngest_live",
+            "youngest_live",
+            "youngest_live",
+            "youngest_live",
+            "youngest_live",
+            "youngest_live"
+          ],
+          "snapshot_arrivals": "independent Poisson observation process"
+        },
+        "resource_estimate": {
+          "burn_in_s": 22.00232851888349,
+          "cache_semantics": "no histogram or route-attack cache in this event reference",
+          "edge_count": 12,
+          "estimated_peak_bytes": 21824576,
+          "estimated_peak_mib": 20.81353759765625,
+          "event_heap_upper_bound_entries": 48,
+          "expected_processed_events": 2409600,
+          "mean_sample_interval_s": 0.055005821297208726,
+          "route_attack_cache_entries": 0,
+          "sample_horizon_s_mean": 5500.582129720872,
+          "total_slots": 48
+        },
+        "route_availability": {
+          "absolute_error": 0.0011701598729557117,
+          "analytic": 0.2127001598729557,
+          "batch_count": 20,
+          "batch_standard_error": 0.0019171401398409757,
+          "confidence_interval_95_normal_batch_means": [
+            0.20777240532591168,
+            0.2152875946740883
+          ],
+          "estimate": 0.21153
+        },
+        "schema": "rolling_controller_event_reference.v1"
+      },
+      "hop_count": 12,
+      "passed": true
+    },
+    {
+      "checks": {
+        "all_edge_availabilities": true,
+        "all_selected_age_means": true,
+        "route_absolute_tolerance": 0.01,
+        "route_availability": true
+      },
+      "edge_length_km": 50.0,
+      "event_reference": {
+        "claim_boundary": "independent event realization of the declared stationary rolling-pool availability/age process; not optical-state propagation, swap execution, or a continuous-demand service-queue validation",
+        "config": {
+          "batch_count": 20,
+          "burn_in_mean_cycles": 100.0,
+          "mean_sample_interval_s": 0.055005821297208726,
+          "num_samples": 100000,
+          "seed": 20260715
+        },
+        "edges": [
+          {
+            "availability": {
+              "absolute_error": 0.0010933555910869197,
+              "analytic": 0.8789833555910869,
+              "batch_count": 20,
+              "batch_standard_error": 0.0013956681101480446,
+              "confidence_interval_95_normal_batch_means": [
+                0.8751544905041098,
+                0.8806255094958901
+              ],
+              "estimate": 0.87789
+            },
+            "edge_index": 0,
+            "reserved_slots": 4,
+            "selected_residence_age_s": {
+              "absolute_mean_error": 5.2028613359025866e-05,
+              "analytic_mean": 0.03606607813438497,
+              "analytic_quantiles": {
+                "q10": 0.005029299013695131,
+                "q50": 0.030603571600804645,
+                "q90": 0.0771669232458013
+              },
+              "batch_standard_error_of_mean": 0.00010972717402797946,
+              "empirical_mean": 0.036014049521025944,
+              "empirical_quantiles": {
+                "q10": 0.005088802049817789,
+                "q50": 0.030479412162719655,
+                "q90": 0.07713200116609185
+              },
+              "initial_memory_age_s": 0.00076,
+              "physical_age_mean_including_initial_s": 0.03677404952102594,
+              "sample_count": 87789
+            }
+          },
+          {
+            "availability": {
+              "absolute_error": 0.00018664440891313916,
+              "analytic": 0.8789833555910869,
+              "batch_count": 20,
+              "batch_standard_error": 0.0011523225973749957,
+              "confidence_interval_95_normal_batch_means": [
+                0.876911447709145,
+                0.881428552290855
+              ],
+              "estimate": 0.87917
+            },
+            "edge_index": 1,
+            "reserved_slots": 4,
+            "selected_residence_age_s": {
+              "absolute_mean_error": 8.085133324861604e-05,
+              "analytic_mean": 0.03606607813438497,
+              "analytic_quantiles": {
+                "q10": 0.005029299013695131,
+                "q50": 0.030603571600804645,
+                "q90": 0.0771669232458013
+              },
+              "batch_standard_error_of_mean": 0.00010342437391930706,
+              "empirical_mean": 0.035985226801136354,
+              "empirical_quantiles": {
+                "q10": 0.004991621636816035,
+                "q50": 0.030536436097463593,
+                "q90": 0.07705198765836486
+              },
+              "initial_memory_age_s": 0.00076,
+              "physical_age_mean_including_initial_s": 0.03674522680113635,
+              "sample_count": 87917
+            }
+          },
+          {
+            "availability": {
+              "absolute_error": 0.0001333555910868478,
+              "analytic": 0.8789833555910869,
+              "batch_count": 20,
+              "batch_standard_error": 0.0013905602808712916,
+              "confidence_interval_95_normal_batch_means": [
+                0.8761245018494923,
+                0.8815754981505077
+              ],
+              "estimate": 0.87885
+            },
+            "edge_index": 2,
+            "reserved_slots": 4,
+            "selected_residence_age_s": {
+              "absolute_mean_error": 4.9759561829683385e-05,
+              "analytic_mean": 0.03606607813438497,
+              "analytic_quantiles": {
+                "q10": 0.005029299013695131,
+                "q50": 0.030603571600804645,
+                "q90": 0.0771669232458013
+              },
+              "batch_standard_error_of_mean": 7.619976565090552e-05,
+              "empirical_mean": 0.03611583769621465,
+              "empirical_quantiles": {
+                "q10": 0.0050775383067048095,
+                "q50": 0.030639762823739147,
+                "q90": 0.07722492197754037
+              },
+              "initial_memory_age_s": 0.00076,
+              "physical_age_mean_including_initial_s": 0.03687583769621465,
+              "sample_count": 87885
+            }
+          },
+          {
+            "availability": {
+              "absolute_error": 0.0018433555910868371,
+              "analytic": 0.8789833555910869,
+              "batch_count": 20,
+              "batch_standard_error": 0.0016564451473911814,
+              "confidence_interval_95_normal_batch_means": [
+                0.8738933675111134,
+                0.8803866324888867
+              ],
+              "estimate": 0.87714
+            },
+            "edge_index": 3,
+            "reserved_slots": 4,
+            "selected_residence_age_s": {
+              "absolute_mean_error": 8.471194094768209e-05,
+              "analytic_mean": 0.03606607813438497,
+              "analytic_quantiles": {
+                "q10": 0.005029299013695131,
+                "q50": 0.030603571600804645,
+                "q90": 0.0771669232458013
+              },
+              "batch_standard_error_of_mean": 9.760896915941965e-05,
+              "empirical_mean": 0.03615079007533265,
+              "empirical_quantiles": {
+                "q10": 0.005034072418857251,
+                "q50": 0.030598705995970477,
+                "q90": 0.07727008897372797
+              },
+              "initial_memory_age_s": 0.00076,
+              "physical_age_mean_including_initial_s": 0.03691079007533265,
+              "sample_count": 87714
+            }
+          },
+          {
+            "availability": {
+              "absolute_error": 0.001426644408913158,
+              "analytic": 0.8789833555910869,
+              "batch_count": 20,
+              "batch_standard_error": 0.001235567204076523,
+              "confidence_interval_95_normal_batch_means": [
+                0.8779882882800101,
+                0.88283171171999
+              ],
+              "estimate": 0.88041
+            },
+            "edge_index": 4,
+            "reserved_slots": 4,
+            "selected_residence_age_s": {
+              "absolute_mean_error": 0.00011057798683799386,
+              "analytic_mean": 0.03606607813438497,
+              "analytic_quantiles": {
+                "q10": 0.005029299013695131,
+                "q50": 0.030603571600804645,
+                "q90": 0.0771669232458013
+              },
+              "batch_standard_error_of_mean": 0.00012760960932208773,
+              "empirical_mean": 0.035955500147546976,
+              "empirical_quantiles": {
+                "q10": 0.0049918790500669274,
+                "q50": 0.030618296378179366,
+                "q90": 0.07692976370799443
+              },
+              "initial_memory_age_s": 0.00076,
+              "physical_age_mean_including_initial_s": 0.03671550014754697,
+              "sample_count": 88041
+            }
+          },
+          {
+            "availability": {
+              "absolute_error": 0.002943355591086827,
+              "analytic": 0.8789833555910869,
+              "batch_count": 20,
+              "batch_standard_error": 0.0014003458219499336,
+              "confidence_interval_95_normal_batch_means": [
+                0.8732953221889782,
+                0.8787846778110219
+              ],
+              "estimate": 0.87604
+            },
+            "edge_index": 5,
+            "reserved_slots": 4,
+            "selected_residence_age_s": {
+              "absolute_mean_error": 5.733472626069658e-05,
+              "analytic_mean": 0.03606607813438497,
+              "analytic_quantiles": {
+                "q10": 0.005029299013695131,
+                "q50": 0.030603571600804645,
+                "q90": 0.0771669232458013
+              },
+              "batch_standard_error_of_mean": 0.0001040430825811808,
+              "empirical_mean": 0.036123412860645666,
+              "empirical_quantiles": {
+                "q10": 0.00500976762702976,
+                "q50": 0.030756860474415504,
+                "q90": 0.07718069688189644
+              },
+              "initial_memory_age_s": 0.00076,
+              "physical_age_mean_including_initial_s": 0.03688341286064566,
+              "sample_count": 87604
+            }
+          },
+          {
+            "availability": {
+              "absolute_error": 0.0005366444089131006,
+              "analytic": 0.8789833555910869,
+              "batch_count": 20,
+              "batch_standard_error": 0.0015813651663906336,
+              "confidence_interval_95_normal_batch_means": [
+                0.8764205242738743,
+                0.8826194757261256
+              ],
+              "estimate": 0.87952
+            },
+            "edge_index": 6,
+            "reserved_slots": 4,
+            "selected_residence_age_s": {
+              "absolute_mean_error": 0.00013295873186947027,
+              "analytic_mean": 0.03606607813438497,
+              "analytic_quantiles": {
+                "q10": 0.005029299013695131,
+                "q50": 0.030603571600804645,
+                "q90": 0.0771669232458013
+              },
+              "batch_standard_error_of_mean": 9.97942697096656e-05,
+              "empirical_mean": 0.0359331194025155,
+              "empirical_quantiles": {
+                "q10": 0.004873258187603824,
+                "q50": 0.03027835544116897,
+                "q90": 0.07722402816186788
+              },
+              "initial_memory_age_s": 0.00076,
+              "physical_age_mean_including_initial_s": 0.036693119402515496,
+              "sample_count": 87952
+            }
+          },
+          {
+            "availability": {
+              "absolute_error": 0.0007666444089131641,
+              "analytic": 0.8789833555910869,
+              "batch_count": 20,
+              "batch_standard_error": 0.0012391741732214036,
+              "confidence_interval_95_normal_batch_means": [
+                0.8773212186204861,
+                0.882178781379514
+              ],
+              "estimate": 0.87975
+            },
+            "edge_index": 7,
+            "reserved_slots": 4,
+            "selected_residence_age_s": {
+              "absolute_mean_error": 0.00010226516828792248,
+              "analytic_mean": 0.03606607813438497,
+              "analytic_quantiles": {
+                "q10": 0.005029299013695131,
+                "q50": 0.030603571600804645,
+                "q90": 0.0771669232458013
+              },
+              "batch_standard_error_of_mean": 8.779216732948451e-05,
+              "empirical_mean": 0.03616834330267289,
+              "empirical_quantiles": {
+                "q10": 0.004982483142975979,
+                "q50": 0.03067513358882934,
+                "q90": 0.07747244295528621
+              },
+              "initial_memory_age_s": 0.00076,
+              "physical_age_mean_including_initial_s": 0.03692834330267289,
+              "sample_count": 87975
+            }
+          },
+          {
+            "availability": {
+              "absolute_error": 0.0012833555910868322,
+              "analytic": 0.8789833555910869,
+              "batch_count": 20,
+              "batch_standard_error": 0.0016715892217634633,
+              "confidence_interval_95_normal_batch_means": [
+                0.8744236851253436,
+                0.8809763148746564
+              ],
+              "estimate": 0.8777
+            },
+            "edge_index": 8,
+            "reserved_slots": 4,
+            "selected_residence_age_s": {
+              "absolute_mean_error": 1.2318574992301046e-05,
+              "analytic_mean": 0.03606607813438497,
+              "analytic_quantiles": {
+                "q10": 0.005029299013695131,
+                "q50": 0.030603571600804645,
+                "q90": 0.0771669232458013
+              },
+              "batch_standard_error_of_mean": 9.570556051570927e-05,
+              "empirical_mean": 0.03607839670937727,
+              "empirical_quantiles": {
+                "q10": 0.00504964053347976,
+                "q50": 0.03070828875047482,
+                "q90": 0.07721849902854956
+              },
+              "initial_memory_age_s": 0.00076,
+              "physical_age_mean_including_initial_s": 0.03683839670937727,
+              "sample_count": 87770
+            }
+          },
+          {
+            "availability": {
+              "absolute_error": 0.0015566444089131215,
+              "analytic": 0.8789833555910869,
+              "batch_count": 20,
+              "batch_standard_error": 0.0012408910211278777,
+              "confidence_interval_95_normal_batch_means": [
+                0.8781078535985893,
+                0.8829721464014106
+              ],
+              "estimate": 0.88054
+            },
+            "edge_index": 9,
+            "reserved_slots": 4,
+            "selected_residence_age_s": {
+              "absolute_mean_error": 0.0002453400953154397,
+              "analytic_mean": 0.03606607813438497,
+              "analytic_quantiles": {
+                "q10": 0.005029299013695131,
+                "q50": 0.030603571600804645,
+                "q90": 0.0771669232458013
+              },
+              "batch_standard_error_of_mean": 0.00010228757253437731,
+              "empirical_mean": 0.03582073803906953,
+              "empirical_quantiles": {
+                "q10": 0.004955890850033029,
+                "q50": 0.030360200302766316,
+                "q90": 0.07677343939296861
+              },
+              "initial_memory_age_s": 0.00076,
+              "physical_age_mean_including_initial_s": 0.03658073803906953,
+              "sample_count": 88054
+            }
+          },
+          {
+            "availability": {
+              "absolute_error": 0.0001633555910868223,
+              "analytic": 0.8789833555910869,
+              "batch_count": 20,
+              "batch_standard_error": 0.002072725132207408,
+              "confidence_interval_95_normal_batch_means": [
+                0.8747574587408735,
+                0.8828825412591266
+              ],
+              "estimate": 0.87882
+            },
+            "edge_index": 10,
+            "reserved_slots": 4,
+            "selected_residence_age_s": {
+              "absolute_mean_error": 7.409056354409915e-05,
+              "analytic_mean": 0.03606607813438497,
+              "analytic_quantiles": {
+                "q10": 0.005029299013695131,
+                "q50": 0.030603571600804645,
+                "q90": 0.0771669232458013
+              },
+              "batch_standard_error_of_mean": 9.605471986733843e-05,
+              "empirical_mean": 0.03614016869792907,
+              "empirical_quantiles": {
+                "q10": 0.005016566218318985,
+                "q50": 0.030884276553251766,
+                "q90": 0.07715435108243586
+              },
+              "initial_memory_age_s": 0.00076,
+              "physical_age_mean_including_initial_s": 0.036900168697929066,
+              "sample_count": 87882
+            }
+          },
+          {
+            "availability": {
+              "absolute_error": 0.0024933555910868765,
+              "analytic": 0.8789833555910869,
+              "batch_count": 20,
+              "batch_standard_error": 0.0015320763345006156,
+              "confidence_interval_95_normal_batch_means": [
+                0.8734871303843788,
+                0.8794928696156212
+              ],
+              "estimate": 0.87649
+            },
+            "edge_index": 11,
+            "reserved_slots": 4,
+            "selected_residence_age_s": {
+              "absolute_mean_error": 0.0001162168322004567,
+              "analytic_mean": 0.03606607813438497,
+              "analytic_quantiles": {
+                "q10": 0.005029299013695131,
+                "q50": 0.030603571600804645,
+                "q90": 0.0771669232458013
+              },
+              "batch_standard_error_of_mean": 7.90361324589024e-05,
+              "empirical_mean": 0.03618229496658543,
+              "empirical_quantiles": {
+                "q10": 0.005114738049769587,
+                "q50": 0.030718392065864464,
+                "q90": 0.07744465209125337
+              },
+              "initial_memory_age_s": 0.00076,
+              "physical_age_mean_including_initial_s": 0.03694229496658542,
+              "sample_count": 87649
+            }
+          },
+          {
+            "availability": {
+              "absolute_error": 0.0014566444089131325,
+              "analytic": 0.8789833555910869,
+              "batch_count": 20,
+              "batch_standard_error": 0.0012080083652551037,
+              "confidence_interval_95_normal_batch_means": [
+                0.8780723036041,
+                0.8828076963959
+              ],
+              "estimate": 0.88044
+            },
+            "edge_index": 12,
+            "reserved_slots": 4,
+            "selected_residence_age_s": {
+              "absolute_mean_error": 0.00015846685235209462,
+              "analytic_mean": 0.03606607813438497,
+              "analytic_quantiles": {
+                "q10": 0.005029299013695131,
+                "q50": 0.030603571600804645,
+                "q90": 0.0771669232458013
+              },
+              "batch_standard_error_of_mean": 9.868178499049494e-05,
+              "empirical_mean": 0.036224544986737064,
+              "empirical_quantiles": {
+                "q10": 0.005022637711090284,
+                "q50": 0.030709451395068754,
+                "q90": 0.07759609284298676
+              },
+              "initial_memory_age_s": 0.00076,
+              "physical_age_mean_including_initial_s": 0.03698454498673706,
+              "sample_count": 88044
+            }
+          },
+          {
+            "availability": {
+              "absolute_error": 0.001066644408913131,
+              "analytic": 0.8789833555910869,
+              "batch_count": 20,
+              "batch_standard_error": 0.001192421243123684,
+              "confidence_interval_95_normal_batch_means": [
+                0.8777128543634776,
+                0.8823871456365224
+              ],
+              "estimate": 0.88005
+            },
+            "edge_index": 13,
+            "reserved_slots": 4,
+            "selected_residence_age_s": {
+              "absolute_mean_error": 4.513737253879907e-05,
+              "analytic_mean": 0.03606607813438497,
+              "analytic_quantiles": {
+                "q10": 0.005029299013695131,
+                "q50": 0.030603571600804645,
+                "q90": 0.0771669232458013
+              },
+              "batch_standard_error_of_mean": 0.0001269520047167015,
+              "empirical_mean": 0.03611121550692377,
+              "empirical_quantiles": {
+                "q10": 0.005039074953037925,
+                "q50": 0.030641207339158427,
+                "q90": 0.07729381920780726
+              },
+              "initial_memory_age_s": 0.00076,
+              "physical_age_mean_including_initial_s": 0.036871215506923766,
+              "sample_count": 88005
+            }
+          },
+          {
+            "availability": {
+              "absolute_error": 0.0024533555910868365,
+              "analytic": 0.8789833555910869,
+              "batch_count": 20,
+              "batch_standard_error": 0.0017105416193647397,
+              "confidence_interval_95_normal_batch_means": [
+                0.8731773384260452,
+                0.8798826615739549
+              ],
+              "estimate": 0.87653
+            },
+            "edge_index": 14,
+            "reserved_slots": 4,
+            "selected_residence_age_s": {
+              "absolute_mean_error": 2.4408163129777116e-05,
+              "analytic_mean": 0.03606607813438497,
+              "analytic_quantiles": {
+                "q10": 0.005029299013695131,
+                "q50": 0.030603571600804645,
+                "q90": 0.0771669232458013
+              },
+              "batch_standard_error_of_mean": 0.00010450137786483179,
+              "empirical_mean": 0.03609048629751475,
+              "empirical_quantiles": {
+                "q10": 0.004988061583026138,
+                "q50": 0.03056480185455257,
+                "q90": 0.07730122481953004
+              },
+              "initial_memory_age_s": 0.00076,
+              "physical_age_mean_including_initial_s": 0.036850486297514744,
+              "sample_count": 87653
+            }
+          },
+          {
+            "availability": {
+              "absolute_error": 0.0004966444089131716,
+              "analytic": 0.8789833555910869,
+              "batch_count": 20,
+              "batch_standard_error": 0.0008267119399034627,
+              "confidence_interval_95_normal_batch_means": [
+                0.8778596445977892,
+                0.8811003554022109
+              ],
+              "estimate": 0.87948
+            },
+            "edge_index": 15,
+            "reserved_slots": 4,
+            "selected_residence_age_s": {
+              "absolute_mean_error": 4.179643015771173e-05,
+              "analytic_mean": 0.03606607813438497,
+              "analytic_quantiles": {
+                "q10": 0.005029299013695131,
+                "q50": 0.030603571600804645,
+                "q90": 0.0771669232458013
+              },
+              "batch_standard_error_of_mean": 8.570530072089521e-05,
+              "empirical_mean": 0.03610787456454268,
+              "empirical_quantiles": {
+                "q10": 0.005092425299596926,
+                "q50": 0.030641686236208443,
+                "q90": 0.077072692841125
+              },
+              "initial_memory_age_s": 0.00076,
+              "physical_age_mean_including_initial_s": 0.03686787456454268,
+              "sample_count": 87948
+            }
+          }
+        ],
+        "events_processed": 3212686,
+        "final_event_heap_entries": 64,
+        "process": {
+          "controller": "independent fixed-slot alternating renewal pools",
+          "demand_queue": false,
+          "empty_time_distribution": "exponential",
+          "live_time_distribution": "min(deterministic_staleness_cutoff, exponential_detected_decay)",
+          "pair_consumption": false,
+          "selection_policy_per_edge": [
+            "youngest_live",
+            "youngest_live",
+            "youngest_live",
+            "youngest_live",
+            "youngest_live",
+            "youngest_live",
+            "youngest_live",
+            "youngest_live",
+            "youngest_live",
+            "youngest_live",
+            "youngest_live",
+            "youngest_live",
+            "youngest_live",
+            "youngest_live",
+            "youngest_live",
+            "youngest_live"
+          ],
+          "snapshot_arrivals": "independent Poisson observation process"
+        },
+        "resource_estimate": {
+          "burn_in_s": 22.00232851888349,
+          "cache_semantics": "no histogram or route-attack cache in this event reference",
+          "edge_count": 16,
+          "estimated_peak_bytes": 29032768,
+          "estimated_peak_mib": 27.68780517578125,
+          "event_heap_upper_bound_entries": 64,
+          "expected_processed_events": 3212800,
+          "mean_sample_interval_s": 0.055005821297208726,
+          "route_attack_cache_entries": 0,
+          "sample_horizon_s_mean": 5500.582129720872,
+          "total_slots": 64
+        },
+        "route_availability": {
+          "absolute_error": 0.00040312756524141236,
+          "analytic": 0.1269668724347586,
+          "batch_count": 20,
+          "batch_standard_error": 0.0013277820842133301,
+          "confidence_interval_95_normal_batch_means": [
+            0.12476754711494188,
+            0.12997245288505813
+          ],
+          "estimate": 0.12737
+        },
+        "schema": "rolling_controller_event_reference.v1"
+      },
+      "hop_count": 16,
+      "passed": true
+    }
+  ],
+  "claim_boundary": "validates stationary rolling-pool availability and selected ages at production hop counts; does not validate optical states, swap gates, or a continuous-demand queue",
+  "empty_time_mapping": "profile completion_time_model=empirical_exponential_renewal mapped to independent exponential empty-slot durations with the adapter's per-lane mean completion time",
+  "passed": true,
+  "preflight": {
+    "cases_execute_sequentially": true,
+    "event_limit": 50000000,
+    "maximum_case_expected_events": 3212800,
+    "peak_case_estimated_ram_mib": 27.68780517578125,
+    "ram_limit_mib": 1024.0,
+    "route_attack_cache_entries": 0
+  },
+  "profile_id": "cui_2026_rolling_purified_near_term_composite",
+  "profile_path": "configs/physical/repeater_services/cui_2026_rolling_purified_near_term_composite.json",
+  "schema": "rolling_controller_production_hop_validation.v1"
+}

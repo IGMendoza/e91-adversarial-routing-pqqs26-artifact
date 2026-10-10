@@ -1,0 +1,29 @@
+{
+  "available_memory_mib": 14394.1484375,
+  "cache_execution": "one graph process owns one mutable on-demand physics pool; two learner threads share it; the complete audit follows learning",
+  "cpu_worker_limit": 6,
+  "created_at_utc": "2026-07-31T21:22:43.889196+00:00",
+  "initial_graphs": [
+    {
+      "estimated_cache_mib": 5808.9375,
+      "family": "eon",
+      "graph_id": "0026_topology_bench_eon_seed_na"
+    },
+    {
+      "estimated_cache_mib": 3379.5,
+      "family": "germany50",
+      "graph_id": "0035_topology_bench_germany50_seed_na"
+    }
+  ],
+  "initial_resident_upper_bound_mib": 10724.4375,
+  "learner_threads_per_graph": 2,
+  "logical_cpu_count": 12,
+  "memory_reserve_mib": 2048.0,
+  "pending_graph_count": 4,
+  "per_graph_overhead_mib": 768.0,
+  "requested_graph_workers": 2,
+  "resident_bound_semantics": "sum of the selected largest full-surface cache estimates plus one declared process/audit overhead allowance per graph worker; pending tasks are globally nonincreasing in estimated cache size",
+  "schema": "histogram_corpus_scale_execution_plan.v2",
+  "selected_graph_workers": 2,
+  "usable_memory_mib": 12346.1484375
+}

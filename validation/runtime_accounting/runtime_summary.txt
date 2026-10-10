@@ -1,0 +1,14 @@
+records 105 unique graph_ids 105
+schemas {'histogram_corpus_scale_physics_compilation.v2'}
+eager_full_surface_compilation {'False'}
+phase              total_h   median_s     min_s      max_s  share
+elapsed              32.37      868.1     694.2     9522.6 100.0%
+baseline              0.19        4.6       2.5       76.8   0.6%
+online               26.42      846.0     690.7     1808.8  81.6%
+audit                 5.64       16.5       0.1     7549.6  17.4%
+compile_init          0.17        3.9       2.2       70.6   0.5%
+compile_online        6.70      208.9      27.3     1146.6  20.7%
+compile_audit         4.83       10.4       0.0     6798.2  14.9%
+sample_online        22.32      767.1     351.4      970.9  68.9%
+sample_audit          0.33        2.4       0.0      308.4   1.0%
+other                 0.13        1.2       0.1      102.4   0.4%
